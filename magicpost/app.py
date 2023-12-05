@@ -1,15 +1,11 @@
 # flake8: noqa
-from sqlmodel import Session, SQLModel, select
-from fastapi import FastAPI
 from contextlib import asynccontextmanager
 
-from . import models
-from .database import engine
-from .crud import router
+from fastapi import FastAPI
+from sqlmodel import Session, SQLModel, select
 
-
-def create_db_and_tables():
-    SQLModel.metadata.create_all(engine)
+from magicpost.database import create_db_and_tables, engine
+from magicpost.hub import views as hub
 
 
 @asynccontextmanager
@@ -19,7 +15,8 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan)
-app.include_router(router)
+app.include_router(hub.router)
+# app.include_router(router)
 
 if __name__ == "__main__":
     create_db_and_tables()
