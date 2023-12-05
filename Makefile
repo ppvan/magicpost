@@ -3,7 +3,7 @@ install:
 	pipenv install
 
 dev:
-	uvicorn magicpost.main:app --reload
+	uvicorn magicpost.app:app --reload
 
 demo:
-	python -m magicpost.main
+	python -m magicpost.app

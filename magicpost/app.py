@@ -5,6 +5,7 @@ from contextlib import asynccontextmanager
 
 from . import models
 from .database import engine
+from .crud import router
 
 
 def create_db_and_tables():
@@ -18,6 +19,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan)
+app.include_router(router)
 
 if __name__ == "__main__":
     create_db_and_tables()

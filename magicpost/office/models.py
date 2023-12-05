@@ -11,7 +11,7 @@ class MyBaseModel(SQLModel):
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 
 
-class PackageType(str, enum.Enum):
+class ItemType(str, enum.Enum):
     DOCUMENT = "DOCUMENT"
     GOODS = "GOODS"
 
@@ -22,7 +22,7 @@ class FailureType(str, enum.Enum):
     CALL_SENDER = "CALL_SENDER"
 
 
-class Package(MyBaseModel, table=True):
+class Item(MyBaseModel, table=True):
     # Sender
     sender_name: str
     sender_address: str
@@ -41,7 +41,7 @@ class Package(MyBaseModel, table=True):
     weight: float
     base_fee: int
     additional_fee: int
-    type: PackageType
+    type: ItemType
     notes: Optional[str] = Field(default="")
 
 
@@ -52,7 +52,7 @@ class OrderType(str, enum.Enum):
 
 
 class Order(MyBaseModel, table=True):
-    package_id: int
+    Item_id: int
     state: str
     type: OrderType
     sender_zipcode: str
