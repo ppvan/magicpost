@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import TYPE_CHECKING, List, Optional
 
 from pydantic import ConfigDict
@@ -29,6 +30,9 @@ class HubBase(MyBaseModel):
 
 class Hub(HubBase, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
+    created_at: datetime = Field(default=datetime.utcnow())
+    updated_at: datetime = Field(default_factory=datetime.utcnow)
+
     offices: List["Office"] = Relationship(back_populates="hub")
 
 

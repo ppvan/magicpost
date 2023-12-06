@@ -2,11 +2,18 @@ from fastapi import Depends, HTTPException, status
 from sqlmodel import Session, select
 
 from magicpost.database import get_session
+from magicpost.hub.exceptions import HubNotFound
+from magicpost.hub.models import Hub
 from magicpost.office.models import Office, OfficeCreate, OfficeUpdate
 
 
 def create_office(office: OfficeCreate, db: Session = Depends(get_session)):
-    db_office = Office.from_orm(office)
+    hub = db.get(Hub, office.hub_id)
+    if not hub:
+        raise HubNotFound()
+
+    db_office = Office.model_validate(office)
+    db_office.hub = hub
     db.add(db_office)
     db.commit()
     db.refresh(db_office)

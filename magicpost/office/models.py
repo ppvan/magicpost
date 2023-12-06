@@ -5,13 +5,13 @@ from pydantic import ConfigDict
 from sqlmodel import Field, Relationship, SQLModel
 
 from magicpost.hub.models import Hub
-from magicpost.models import MyBaseModel
+from magicpost.models import PHONE_REGEX, MyBaseModel
 
 
 class OfficeBase(MyBaseModel):
-    name: str
-    address: str
-    phone: str
+    name: str = Field(min_length=1)
+    address: str = Field(min_length=1)
+    phone: str = Field(regex=PHONE_REGEX)
 
     model_config = ConfigDict(
         json_schema_extra={
@@ -20,6 +20,7 @@ class OfficeBase(MyBaseModel):
                 "name": "Điểm tập kết Cầu Giấy",
                 "phone": "098123543",
                 "address": "Cầu Giấy, Hà Nội",
+                "hub_id": 1,
             }
         }
     )
