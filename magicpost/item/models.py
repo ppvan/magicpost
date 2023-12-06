@@ -2,7 +2,6 @@ import enum
 from datetime import datetime
 from typing import Optional
 
-from pydantic import NonNegativeFloat, NonNegativeInt
 from sqlmodel import Field, SQLModel
 
 from magicpost.models import PHONE_REGEX, MyBaseModel
@@ -29,12 +28,12 @@ class ItemBase(MyBaseModel):
     receiver_address: str = Field(min_length=1)
     receiver_phone: str = Field(regex=PHONE_REGEX)
     # Cash on delivery
-    cod: NonNegativeInt
-    additional_cod: NonNegativeInt
+    cod: int = Field(default=0, ge=0)
+    additional_cod: int = Field(default=0, ge=0)
     # Delivery Fees
-    weight: NonNegativeFloat
-    base_fee: NonNegativeInt
-    additional_fee: NonNegativeInt
+    weight: float = Field(default=0, ge=0)
+    base_fee: int = Field(default=0, ge=0)
+    additional_fee: int = Field(default=0, ge=0)
     type: ItemType
     notes: Optional[str] = Field(default="")
 
