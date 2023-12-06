@@ -1,7 +1,8 @@
-from fastapi import Depends, HTTPException, status
+from fastapi import Depends
 from sqlmodel import Session, select
 
 from magicpost.database import get_session
+from magicpost.hub.exceptions import HubNotFound
 from magicpost.hub.models import Hub, HubCreate, HubUpdate
 
 
@@ -21,20 +22,14 @@ def read_hubs(offset: int = 0, limit: int = 20, db: Session = Depends(get_sessio
 def read_hub(hub_id: int, db: Session = Depends(get_session)):
     hub = db.get(Hub, hub_id)
     if not hub:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=f"Hub not found with id: {hub_id}",
-        )
+        raise HubNotFound()
     return hub
 
 
 def update_hub(hub_id: int, hub: HubUpdate, db: Session = Depends(get_session)):
     hub_to_update = db.get(Hub, hub_id)
     if not hub_to_update:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=f"hub not found with id: {hub_id}",
-        )
+        raise HubNotFound()
 
     team_data = hub.dict(exclude_unset=True)
     for key, value in team_data.items():
@@ -49,10 +44,7 @@ def update_hub(hub_id: int, hub: HubUpdate, db: Session = Depends(get_session)):
 def delete_hub(hub_id: int, db: Session = Depends(get_session)):
     hub = db.get(Hub, hub_id)
     if not hub:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=f"Hub not found with id: {hub_id}",
-        )
+        raise HubNotFound()
 
     db.delete(hub)
     db.commit()

@@ -1,7 +1,10 @@
-from sqlmodel import Field
-from magicpost.models import MyBaseModel
-from typing import Optional
 import enum
+from datetime import datetime
+from typing import Optional
+
+from sqlmodel import Field, SQLModel
+
+from magicpost.models import MyBaseModel
 
 
 class ItemType(str, enum.Enum):
@@ -15,18 +18,15 @@ class FailureType(str, enum.Enum):
     CALL_SENDER = "CALL_SENDER"
 
 
-class Item(MyBaseModel, table=True):
-    # Sender
+class ItemBase(MyBaseModel):
     sender_name: str
     sender_address: str
     sender_phone: str
-    sender_zipcode: str
 
     # Receiver
     receiver_name: str
     receiver_address: str
     receiver_phone: str
-    receiver_zipcode: str
     # Cash on delivery
     cod: int
     additional_cod: int
@@ -36,3 +36,25 @@ class Item(MyBaseModel, table=True):
     additional_fee: int
     type: ItemType
     notes: Optional[str] = Field(default="")
+
+
+class Item(ItemBase, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    created_at: datetime = Field(default=datetime.utcnow())
+    updated_at: datetime = Field(default_factory=datetime.utcnow)
+
+
+class ItemCreate(ItemBase):
+    pass
+
+
+class ItemRead(ItemBase):
+    id: int
+    created_at: datetime = Field(default=datetime.utcnow())
+    updated_at: datetime = Field(default_factory=datetime.utcnow)
+
+
+class ItemUpdate(SQLModel):
+    """Not sure if this is needed"""
+
+    pass

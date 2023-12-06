@@ -6,6 +6,7 @@ from sqlmodel import Session, SQLModel, select
 
 from magicpost.database import create_db_and_tables, engine
 from magicpost.hub import views as hub
+from magicpost.item import views as item
 from magicpost.office import views as office
 
 
@@ -18,6 +19,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 app.include_router(hub.router)
 app.include_router(office.router)
+app.include_router(item.router)
 
 if __name__ == "__main__":
     create_db_and_tables()
