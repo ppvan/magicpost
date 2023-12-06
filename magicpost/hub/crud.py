@@ -7,7 +7,7 @@ from magicpost.hub.models import Hub, HubCreate, HubUpdate
 
 
 def create_hub(hub: HubCreate, db: Session = Depends(get_session)):
-    db_hub = Hub.from_orm(hub)
+    db_hub = Hub.model_validate(hub)
     db.add(db_hub)
     db.commit()
     db.refresh(db_hub)
