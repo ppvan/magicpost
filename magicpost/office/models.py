@@ -1,18 +1,16 @@
+from datetime import datetime
 from typing import Optional
 
-from sqlmodel import Field, SQLModel
+from sqlmodel import Field, Relationship, SQLModel
 
+from magicpost.hub.models import Hub
 from magicpost.models import MyBaseModel
 
 
-class OfficeBase(SQLModel, table=True):
+class OfficeBase(MyBaseModel):
     name: str
     address: str
     phone: str
-
-
-class ServiceOffice(MyBaseModel, OfficeBase, table=True):
-    id: Optional[int] = Field(default=None, primary_key=True)
 
     class Config:
         schema_extra = {
@@ -25,11 +23,27 @@ class ServiceOffice(MyBaseModel, OfficeBase, table=True):
         }
 
 
-class ServiceOfficeCreate(OfficeBase):
+class Office(OfficeBase, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    created_at: datetime = Field(default=datetime.utcnow())
+    updated_at: datetime = Field(default_factory=datetime.utcnow)
+
+    hub_id: int = Field(foreign_key="hub.id")
+    hub: Hub = Relationship(back_populates="offices")
+
+
+class OfficeCreate(OfficeBase):
+    hub_id: int = Field(foreign_key="hub.id")
     pass
 
 
-class ServiceOfficeUpdate(SQLModel):
+class OfficeRead(OfficeBase):
+    id: int
+    created_at: datetime = Field(default=datetime.utcnow())
+    updated_at: datetime = Field(default_factory=datetime.utcnow)
+
+
+class OfficeUpdate(SQLModel):
     name: Optional[str] = None
     address: Optional[str] = None
     phone: Optional[str] = None

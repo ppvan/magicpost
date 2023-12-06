@@ -1,11 +1,15 @@
-from typing import Optional
+from typing import TYPE_CHECKING, List, Optional
 
-from sqlmodel import Field, SQLModel
+from sqlmodel import Field, Relationship
 
 from magicpost.models import MyBaseModel
 
+# This is only for editor support
+if TYPE_CHECKING:
+    from magicpost.office.models import Office
 
-class HubBase(SQLModel):
+
+class HubBase(MyBaseModel):
     name: str
     address: str
     phone: str
@@ -21,15 +25,16 @@ class HubBase(SQLModel):
         }
 
 
-class Hub(MyBaseModel, HubBase, table=True):
+class Hub(HubBase, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
+    offices: List["Office"] = Relationship(back_populates="hub")
 
 
 class HubCreate(HubBase):
     pass
 
 
-class HubRead(MyBaseModel, HubBase):
+class HubRead(HubBase):
     id: int
 
 
