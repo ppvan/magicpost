@@ -2,9 +2,10 @@ import enum
 from datetime import datetime
 from typing import Optional
 
+from pydantic import NonNegativeFloat, NonNegativeInt
 from sqlmodel import Field, SQLModel
 
-from magicpost.models import MyBaseModel
+from magicpost.models import PHONE_REGEX, MyBaseModel
 
 
 class ItemType(str, enum.Enum):
@@ -19,21 +20,21 @@ class FailureType(str, enum.Enum):
 
 
 class ItemBase(MyBaseModel):
-    sender_name: str
-    sender_address: str
-    sender_phone: str
+    sender_name: str = Field(min_length=1)
+    sender_address: str = Field(min_length=1)
+    sender_phone: str = Field(regex=PHONE_REGEX)
 
     # Receiver
-    receiver_name: str
-    receiver_address: str
-    receiver_phone: str
+    receiver_name: str = Field(min_length=1)
+    receiver_address: str = Field(min_length=1)
+    receiver_phone: str = Field(regex=PHONE_REGEX)
     # Cash on delivery
-    cod: int
-    additional_cod: int
+    cod: NonNegativeInt
+    additional_cod: NonNegativeInt
     # Delivery Fees
-    weight: float
-    base_fee: int
-    additional_fee: int
+    weight: NonNegativeFloat
+    base_fee: NonNegativeInt
+    additional_fee: NonNegativeInt
     type: ItemType
     notes: Optional[str] = Field(default="")
 

@@ -1,6 +1,7 @@
 from datetime import datetime
 from typing import Optional
 
+from pydantic import ConfigDict
 from sqlmodel import Field, Relationship, SQLModel
 
 from magicpost.hub.models import Hub
@@ -12,8 +13,8 @@ class OfficeBase(MyBaseModel):
     address: str
     phone: str
 
-    class Config:
-        schema_extra = {
+    model_config = ConfigDict(
+        json_schema_extra={
             "example": {
                 "id": 1,
                 "name": "Điểm tập kết Cầu Giấy",
@@ -21,6 +22,7 @@ class OfficeBase(MyBaseModel):
                 "address": "Cầu Giấy, Hà Nội",
             }
         }
+    )
 
 
 class Office(OfficeBase, table=True):

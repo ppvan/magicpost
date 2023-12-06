@@ -12,7 +12,7 @@ def valid_item_id(db: Session, item_id: int):
 
 
 def create_item(db: Session, item: ItemCreate):
-    db_item = Item(**item.dict())
+    db_item = Item(**item.model_dump())
     db.add(db_item)
     db.commit()
     db.refresh(db_item)

@@ -1,5 +1,6 @@
 from typing import TYPE_CHECKING, List, Optional
 
+from pydantic import ConfigDict
 from sqlmodel import Field, Relationship
 
 from magicpost.models import MyBaseModel
@@ -14,8 +15,8 @@ class HubBase(MyBaseModel):
     address: str
     phone: str
 
-    class Config:
-        schema_extra = {
+    model_config = ConfigDict(
+        json_schema_extra={
             "example": {
                 "id": 1,
                 "name": "Bưu điện Chùa Láng",
@@ -23,6 +24,7 @@ class HubBase(MyBaseModel):
                 "address": "23 Chùa Láng, Hà Nội",
             }
         }
+    )
 
 
 class Hub(HubBase, table=True):

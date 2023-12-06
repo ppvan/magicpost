@@ -7,6 +7,9 @@ name = "pypi"
 fastapi = "*"
 uvicorn = {extras = ["standard"], version = "*"}
 sqlmodel = "*"
+httpx = "*"
+pytest = "*"
+pydantic = "*"
 
 [dev-packages]
 
