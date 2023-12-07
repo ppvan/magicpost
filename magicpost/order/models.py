@@ -5,18 +5,19 @@ from sqlmodel import Field, Relationship
 
 from magicpost.hub.models import Hub
 from magicpost.models import MyBaseModel
-from magicpost.office.models import Office
+
+# from magicpost.office.models import Office
 
 
 class OrderStatus(str, enum.Enum):
-    PENDING = "PENDING"
-    COMPLETED = "COMPLETED"
+    PENDING = "pending"
+    COMPLETED = "completed"
 
 
 class OrderType(str, enum.Enum):
-    OFFICE2HUB = "OFFICE2HUB"
-    HUB2HUB = "HUB2HUB"
-    HUB2OFFICE = "HUB2OFFICE"
+    OFFICE2HUB = "office2hub"
+    HUB2HUB = "hub2hub"
+    HUB2OFFICE = "hub2office"
 
 
 class OrderBase(MyBaseModel):
@@ -39,9 +40,17 @@ class Hub2HubOrder(Order, table=True):
     receiver: Hub = Relationship()
 
 
-class Hub2HubOrderCreate(OrderBase):
-    sender_id: int = Field(foreign_key="hub.id")
-    receiver_id: int = Field(foreign_key="hub.id")
+class OrderRead(OrderBase):
+    id: int
+    sender_id: int
+    receiver_id: int
+    created_at: datetime = Field(default=datetime.utcnow())
+    updated_at: datetime = Field(default_factory=datetime.utcnow)
+
+
+class OrderCreate(OrderBase):
+    sender_id: int
+    receiver_id: int
 
 
 # /hub2hub-orders/?sender_id=1
@@ -50,7 +59,8 @@ class Hub2HubOrderCreate(OrderBase):
 #     "id": 1,
 #     "type": "hub2hub",
 #     "sender_id": 1,
-#     "receiver_id": 2
+#     "receiver_id": 2,
+#     "status": "pending",
 # }
 # class Office2HubOrder(Order, table=True):
 #     """Order going from Office to Hub"""

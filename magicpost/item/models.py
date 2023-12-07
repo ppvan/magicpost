@@ -8,14 +8,14 @@ from magicpost.models import PHONE_REGEX, MyBaseModel
 
 
 class ItemType(str, enum.Enum):
-    DOCUMENT = "DOCUMENT"
-    GOODS = "GOODS"
+    DOCUMENT = "document"
+    GOODS = "goods"
 
 
 class FailureType(str, enum.Enum):
-    RETURN = "RETURN"
-    CANCEL = "CANCEL"
-    CALL_SENDER = "CALL_SENDER"
+    RETURN = "return"
+    CANCEL = "cancel"
+    CALL_SENDER = "call sender"
 
 
 class ItemBase(MyBaseModel):
