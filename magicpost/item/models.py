@@ -2,6 +2,7 @@ import enum
 from datetime import datetime
 from typing import Optional
 
+from pydantic import Field as PydanticField
 from sqlmodel import Field, SQLModel
 
 from magicpost.models import PHONE_REGEX, MyBaseModel
@@ -21,12 +22,15 @@ class FailureType(str, enum.Enum):
 class ItemBase(MyBaseModel):
     sender_name: str = Field(min_length=1)
     sender_address: str = Field(min_length=1)
-    sender_phone: str = Field(regex=PHONE_REGEX)
+    # For some reason, sqlmodel regex does not validate, use pydantic instead
+    sender_phone: str = PydanticField(pattern=PHONE_REGEX, min_length=1)
+    sender_office_id: int = Field(foreign_key="office.id")
 
     # Receiver
     receiver_name: str = Field(min_length=1)
     receiver_address: str = Field(min_length=1)
-    receiver_phone: str = Field(regex=PHONE_REGEX)
+    receiver_phone: str = PydanticField(pattern=PHONE_REGEX, min_length=1)
+    receiver_office_id: int = Field(foreign_key="office.id")
     # Cash on delivery
     cod: int = Field(default=0, ge=0)
     additional_cod: int = Field(default=0, ge=0)

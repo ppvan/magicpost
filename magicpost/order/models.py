@@ -29,6 +29,8 @@ class Order(OrderBase):
     created_at: datetime = Field(default=datetime.utcnow())
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 
+    # items: List["Item"] = Relationship(back_populates="order")
+
 
 class Hub2HubOrder(Order, table=True):
     """Order from Hub to Hub"""
@@ -50,6 +52,8 @@ class OrderRead(OrderBase):
     receiver_id: int
     created_at: datetime = Field(default=datetime.utcnow())
     updated_at: datetime = Field(default_factory=datetime.utcnow)
+
+    # items: Optional[List["ItemRead"]]
 
 
 class OrderCreate(OrderBase):

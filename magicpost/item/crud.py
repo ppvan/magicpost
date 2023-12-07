@@ -2,6 +2,8 @@ from sqlmodel import Session
 
 from magicpost.item.exceptions import ItemNotFound
 from magicpost.item.models import Item, ItemCreate
+from magicpost.office.exceptions import OfficeNotFound
+from magicpost.office.models import Office
 
 
 def valid_item_id(db: Session, item_id: int):
@@ -12,7 +14,14 @@ def valid_item_id(db: Session, item_id: int):
 
 
 def create_item(db: Session, item: ItemCreate):
-    db_item = Item(**item.model_dump())
+    db_item = Item.model_validate(item)
+
+    sender_office = db.get(Office, db_item.sender_office_id)
+    receiver_office = db.get(Office, db_item.receiver_office_id)
+
+    if not sender_office or not receiver_office:
+        raise OfficeNotFound()
+
     db.add(db_item)
     db.commit()
     db.refresh(db_item)
