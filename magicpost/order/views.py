@@ -34,7 +34,7 @@ def create_an_order(
     return create_hub2hub_order(order=order, db=db)
 
 
-@router.patch("/", response_model=OrderRead)
+@router.patch("/{order_id}", response_model=OrderRead)
 def update_order(
     order_id: int,
     type: OrderType,
@@ -51,7 +51,7 @@ def update_order(
     if not order_to_update:
         raise OrderNotFound()
 
-    order_data = order.dict(exclude_unset=True)
+    order_data = order.model_dump(exclude_unset=True)
     for key, value in order_data.items():
         setattr(order_to_update, key, value)
 

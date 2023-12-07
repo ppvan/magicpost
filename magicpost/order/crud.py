@@ -2,12 +2,20 @@ from fastapi import Depends
 from sqlmodel import Session
 
 from magicpost.database import get_session
+from magicpost.hub.models import Hub
 from magicpost.order.exceptions import OrderNotFound
 from magicpost.order.models import Hub2HubOrder, OrderCreate, OrderUpdate
 
 
 def create_hub2hub_order(order: OrderCreate, db: Session = Depends(get_session)):
     db_order = Hub2HubOrder.model_validate(order)
+
+    sender = db.get(Hub, order.sender_id)
+    receiver = db.get(Hub, order.receiver_id)
+
+    if not sender or not receiver:
+        raise OrderNotFound()
+
     db.add(db_order)
     db.commit()
     db.refresh(db_order)

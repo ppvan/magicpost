@@ -36,8 +36,12 @@ class Hub2HubOrder(Order, table=True):
     sender_id: int = Field(foreign_key="hub.id")
     receiver_id: int = Field(foreign_key="hub.id")
 
-    sender: Hub = Relationship()
-    receiver: Hub = Relationship()
+    sender: Hub = Relationship(
+        sa_relationship_kwargs=dict(foreign_keys="[Hub2HubOrder.sender_id]")
+    )
+    receiver: Hub = Relationship(
+        sa_relationship_kwargs=dict(foreign_keys="[Hub2HubOrder.receiver_id]")
+    )
 
 
 class OrderRead(OrderBase):
