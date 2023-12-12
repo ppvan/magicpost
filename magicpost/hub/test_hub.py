@@ -4,6 +4,7 @@ from sqlmodel import Session, SQLModel, create_engine
 from sqlmodel.pool import StaticPool
 
 from magicpost.app import app
+from magicpost.auth.dependencies import president_required
 from magicpost.database import get_session
 from magicpost.hub.models import Hub
 
@@ -29,7 +30,11 @@ def client_fixture(session: Session):
     def get_session_override():
         return session
 
+    def president_required_override():
+        return None
+
     app.dependency_overrides[get_session] = get_session_override
+    app.dependency_overrides[president_required] = president_required_override
 
     client = TestClient(app)
     yield client

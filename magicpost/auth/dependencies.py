@@ -98,3 +98,10 @@ def login_required(allow_roles: Tuple[Role]):
         return current_user
 
     return wrapper
+
+
+def president_required(current_user: Annotated[User, Depends(get_current_active_user)]):
+    if current_user.role not in (Role.ADMIN, Role.PRESIDENT):
+        raise AuthorizationException()
+
+    return current_user
