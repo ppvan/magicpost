@@ -5,32 +5,17 @@ from fastapi import Depends
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
 from passlib.context import CryptContext
+from sqlmodel import Session
 
 from magicpost.auth.exceptions import InactiveUserException, InvalidCredentialsException
-from magicpost.auth.models import TokenData, User
+from magicpost.auth.models import User
+from magicpost.auth.schemas import TokenData
+from magicpost.database import get_session
 
 # TODO: Change this
 SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
-
-
-fake_users_db = {
-    "johndoe": {
-        "username": "johndoe",
-        "full_name": "John Doe",
-        "email": "johndoe@example.com",
-        "hashed_password": "$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW",
-        "disabled": False,
-    },
-    "alice": {
-        "username": "alice",
-        "full_name": "Alice Wonderson",
-        "email": "alice@example.com",
-        "hashed_password": "fakehashedsecret2",
-        "disabled": True,
-    },
-}
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
@@ -45,14 +30,14 @@ def get_password_hash(password):
     return pwd_context.hash(password)
 
 
-def get_user(db, username: str):
-    if username in db:
-        user_dict = db[username]
-        return User(**user_dict)
+def get_user(session: Session, username: str):
+    return session.query(User).filter(User.username == username).one()
 
 
-def authenticate_user(fake_db, username: str, password: str):
-    user = get_user(fake_db, username)
+def authenticate_user(
+    session: Annotated[Session, Depends(get_session)], username: str, password: str
+):
+    user = get_user(session, username)
     if not user:
         return False
     if not verify_password(password, user.hashed_password):
@@ -71,7 +56,7 @@ def create_access_token(data: dict, expires_delta: timedelta | None = None):
     return encoded_jwt
 
 
-def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
+def parse_jwt_data(token: Annotated[str, Depends(oauth2_scheme)]):
     credentials_exception = InvalidCredentialsException()
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
@@ -79,15 +64,23 @@ def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
         if username is None:
             raise credentials_exception
         token_data = TokenData(username=username)
+
+        return token_data
     except JWTError:
         raise credentials_exception
-    user = get_user(fake_users_db, username=token_data.username)
+
+
+def get_current_user(
+    token_data: Annotated[TokenData, Depends(parse_jwt_data)],
+    session: Annotated[Session, Depends(get_session)],
+):
+    user = get_user(session, username=token_data.username)
     if user is None:
-        raise credentials_exception
+        raise InvalidCredentialsException()
     return user
 
 
 def get_current_active_user(current_user: Annotated[User, Depends(get_current_user)]):
-    if current_user.disabled:
+    if not current_user.is_staff:
         raise InactiveUserException()
     return current_user

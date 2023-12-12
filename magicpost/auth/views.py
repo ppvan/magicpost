@@ -3,40 +3,37 @@ from typing import Annotated
 
 from fastapi import APIRouter, Depends
 from fastapi.security import OAuth2PasswordRequestForm
+from sqlmodel import Session
 
+from magicpost.auth.crud import create_user
 from magicpost.auth.dependencies import (
     authenticate_user,
     create_access_token,
-    fake_users_db,
     get_current_active_user,
 )
 from magicpost.auth.exceptions import InvalidUsernameOrPasswordException
 from magicpost.auth.models import User
-
-
-def fake_hash_password(password: str):
-    return "fakehashed" + password
-
-
-def get_user(db, username: str):
-    if username in db:
-        user_dict = db[username]
-        return User(**user_dict)
-
-
-def fake_decode_token(token):
-    # This doesn't provide any security at all
-    # Check the next version
-    user = get_user(fake_users_db, token)
-    return user
-
+from magicpost.auth.schemas import UserCreate, UserRead
+from magicpost.database import get_session
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
 
+# TODO: Role validation and protection
+
+
+@router.post("/signup", response_model=UserRead)
+def signup(user: UserCreate, session: Session = Depends(get_session)):
+    db_user = create_user(user=user, db=session)
+
+    return db_user
+
 
 @router.post("/token")
-async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
-    user = authenticate_user(fake_users_db, form_data.username, form_data.password)
+def login(
+    form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
+    session: Session = Depends(get_session),
+):
+    user = authenticate_user(session, form_data.username, form_data.password)
     if not user:
         raise InvalidUsernameOrPasswordException()
     access_token_expires = timedelta(minutes=30)
@@ -47,7 +44,5 @@ async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
 
 
 @router.get("/users/me")
-async def read_users_me(
-    current_user: Annotated[User, Depends(get_current_active_user)]
-):
+def read_users_me(current_user: Annotated[User, Depends(get_current_active_user)]):
     return current_user
