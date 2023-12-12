@@ -5,12 +5,12 @@
 ## Chức năng cho lãnh đạo công ty
 
 - [x] Quản lý hệ thống các điểm giao dịch và điểm tập kết.
-- [ ] Quản lý tài khoản trưởng điểm điểm tập kết và điểm giao dịch. Mỗi điểm giao dịch hoặc điểm tập kết có một tài khoản trưởng điểm.
+- [x] Quản lý tài khoản trưởng điểm điểm tập kết và điểm giao dịch. Mỗi điểm giao dịch hoặc điểm tập kết có một tài khoản trưởng điểm.
 - [ ] Thống kê hàng gửi, hàng nhận trên toàn quốc, từng điểm giao dịch hoặc điểm tập kết.
 
 ## Chức năng cho trưởng điểm tại điểm giao dịch
 
-- [ ] Cấp tài khoản cho giao dịch viên tại điểm giao dịch.
+- [x] Cấp tài khoản cho giao dịch viên tại điểm giao dịch.
 - [ ] Thống kê hàng gửi, hàng nhận tại điểm giao dịch.
 
 ## Chức năng cho giao dịch viên tại điểm giao dịch
@@ -25,7 +25,7 @@
 
 ## Chức năng cho trưởng điểm tại điểm tập kết
 
-- [ ] Quản lý tài khoản nhân viên tại điểm tập kết.
+- [x] Quản lý tài khoản nhân viên tại điểm tập kết.
 - [ ] Thống kê hàng đi, đến.
 
 ## Chức năng cho nhân viên tại điểm tập kết

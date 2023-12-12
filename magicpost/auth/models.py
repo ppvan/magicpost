@@ -20,10 +20,11 @@ class User(MyBaseModel, table=True):
     id: int = Field(default=None, primary_key=True)
     username: str = Field(min_length=1, sa_column_kwargs={"unique": True})
     hashed_password: str = Field(default=None)
-    is_staff: bool = Field(default=False)
+    is_staff: bool = Field(default=True)
     fullname: str = Field(min_length=1)
     birth: date
     phone: str = Field(min_length=1)
     role: Role
     managed_by: Optional[int] = Field(default=None, foreign_key="user.id")
-    department_id: int = Field(foreign_key="department.id")
+    office_id: Optional[int] = Field(default=None, foreign_key="office.id")
+    hub_id: Optional[int] = Field(default=None, foreign_key="hub.id")

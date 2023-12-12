@@ -18,12 +18,16 @@ from magicpost.database import get_session
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
 
-# TODO: Role validation and protection
+# TODO: Check for unique username
 
 
 @router.post("/signup", response_model=UserRead)
-def signup(user: UserCreate, session: Session = Depends(get_session)):
-    db_user = create_user(user=user, db=session)
+def signup(
+    user: UserCreate,
+    authorized_user: Annotated[User, Depends(get_current_active_user)],
+    session: Session = Depends(get_session),
+):
+    db_user = create_user(user=user, authorized_user=authorized_user, db=session)
 
     return db_user
 
