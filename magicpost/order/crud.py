@@ -76,7 +76,7 @@ def update_hub2hub_order(
     if not order_to_update:
         raise OrderNotFound()
 
-    order_data = order.dict(exclude_unset=True)
+    order_data = order.model_dump(exclude_unset=True)
     for key, value in order_data.items():
         setattr(order_to_update, key, value)
 

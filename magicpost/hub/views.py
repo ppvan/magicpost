@@ -2,8 +2,7 @@ from fastapi import APIRouter, Depends, Query
 from pydantic.types import List
 from sqlmodel import Session
 
-from magicpost.auth.dependencies import login_required, president_required
-from magicpost.auth.models import Role
+from magicpost.auth.dependencies import president_required
 from magicpost.database import get_session
 from magicpost.hub.crud import create_hub, delete_hub, read_hub, read_hubs, update_hub
 from magicpost.hub.models import HubCreate, HubRead, HubUpdate
