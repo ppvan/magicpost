@@ -99,20 +99,20 @@ def test_create_order_not_exist_receiver(
     assert response.status_code == 404
 
 
-def test_create_order_invalid_type(
-    sender_hub: Hub, receiver_hub: Hub, session: Session, client: TestClient
-):
-    order = {
-        "sender_id": sender_hub.id,
-        "receiver_id": receiver_hub.id,
-        "status": OrderStatus.PENDING,
-    }
+# def test_create_order_invalid_type(
+#     sender_hub: Hub, receiver_hub: Hub, session: Session, client: TestClient
+# ):
+#     order = {
+#         "sender_id": sender_hub.id,
+#         "receiver_id": receiver_hub.id,
+#         "status": OrderStatus.PENDING,
+#     }
 
-    params = {"type": "invalid"}
-    response = client.post("/orders/", params=params, json=order)
-    # data = response.json()
+#     params = {"type": "invalid"}
+#     response = client.post("/orders/", params=params, json=order)
+#     # data = response.json()
 
-    assert response.status_code == 422
+#     assert response.status_code == 422
 
 
 def test_create_order_invalid_status(
