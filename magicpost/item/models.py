@@ -19,6 +19,13 @@ class FailureType(str, enum.Enum):
     CALL_SENDER = "call sender"
 
 
+class ItemStatus(str, enum.Enum):
+    PENDING = "pending"
+    ON_DELIVERY = "on delivery"
+    SUCCESS = "success"
+    FAILED = "failed"
+
+
 class ItemBase(MyBaseModel):
     sender_name: str = Field(min_length=1)
     sender_address: str = Field(min_length=1)
@@ -39,6 +46,7 @@ class ItemBase(MyBaseModel):
     base_fee: int = Field(default=0, ge=0)
     additional_fee: int = Field(default=0, ge=0)
     type: ItemType
+    status: ItemStatus = Field(default=ItemStatus.PENDING)
     notes: Optional[str] = Field(default="")
 
 
@@ -59,6 +67,4 @@ class ItemRead(ItemBase):
 
 
 class ItemUpdate(SQLModel):
-    """Not sure if this is needed"""
-
-    pass
+    status: ItemStatus

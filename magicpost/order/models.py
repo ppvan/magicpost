@@ -5,6 +5,7 @@ from sqlmodel import Field, Relationship
 
 from magicpost.hub.models import Hub
 from magicpost.models import MyBaseModel
+from magicpost.office.models import Office
 
 # from magicpost.office.models import Office
 
@@ -43,6 +44,34 @@ class Hub2HubOrder(Order, table=True):
     )
     receiver: Hub = Relationship(
         sa_relationship_kwargs=dict(foreign_keys="[Hub2HubOrder.receiver_id]")
+    )
+
+
+class Office2HubOrder(Order, table=True):
+    """Order from Office to Hub"""
+
+    sender_id: int = Field(foreign_key="office.id")
+    receiver_id: int = Field(foreign_key="hub.id")
+
+    sender: Office = Relationship(
+        sa_relationship_kwargs=dict(foreign_keys="[Office2HubOrder.sender_id]")
+    )
+    receiver: Hub = Relationship(
+        sa_relationship_kwargs=dict(foreign_keys="[Office2HubOrder.receiver_id]")
+    )
+
+
+class Hub2OfficeOrder(Order, table=True):
+    """Order from Hub to Office"""
+
+    sender_id: int = Field(foreign_key="hub.id")
+    receiver_id: int = Field(foreign_key="office.id")
+
+    sender: Hub = Relationship(
+        sa_relationship_kwargs=dict(foreign_keys="[Hub2OfficeOrder.sender_id]")
+    )
+    receiver: Office = Relationship(
+        sa_relationship_kwargs=dict(foreign_keys="[Hub2OfficeOrder.receiver_id]")
     )
 
 

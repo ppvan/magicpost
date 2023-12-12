@@ -1,61 +1,25 @@
-from fastapi import APIRouter, Depends, Query
-from pydantic.types import List
+from fastapi import APIRouter, Depends
 from sqlmodel import Session
 
 from magicpost.database import get_session
-from magicpost.order.crud import (
-    create_hub2hub_order,
-    delete_hub2hub_order,
-    read_hub2hub_order,
-    update_hub2hub_order,
-)
-from magicpost.order.exceptions import OrderNotFound
-from magicpost.order.models import (
-    Hub2HubOrder,
-    OrderCreate,
-    OrderRead,
-    OrderType,
-    OrderUpdate,
-)
+from magicpost.order.crud import create_hub2hub_order, update_hub2hub_order
+from magicpost.order.models import OrderCreate, OrderRead, OrderUpdate
+
+hub2hub_order = APIRouter(prefix="/hub-to-hub", tags=["Hub to Hub"])
+office2hub_order = APIRouter(prefix="/office-to-hub", tags=["Office to Hub"])
+hub2office_order = APIRouter(prefix="/hub-to-office", tags=["Hub to Office"])
 
 router = APIRouter(prefix="/orders", tags=["Order"])
+router.include_router(hub2hub_order)
+router.include_router(office2hub_order)
+router.include_router(hub2office_order)
 
 
-@router.post("/", response_model=OrderRead)
-def create_an_order(
-    order: OrderCreate, type: OrderType, db: Session = Depends(get_session)
-):
-    match type:
-        case OrderType.HUB2HUB:
-            return create_hub2hub_order(order=order, db=db)
-        case _:
-            raise NotImplementedError
-
+@hub2hub_order.post("/", response_model=OrderRead)
+def create_an_order(order: OrderCreate, db: Session = Depends(get_session)):
     return create_hub2hub_order(order=order, db=db)
 
 
-@router.patch("/{order_id}", response_model=OrderRead)
-def update_order(
-    order_id: int,
-    type: OrderType,
-    order: OrderUpdate,
-    db: Session = Depends(get_session),
-):
-    order_to_update = None
-    match type:
-        case OrderType.HUB2HUB:
-            order_to_update = db.get(Hub2HubOrder, order_id)
-        case _:
-            raise NotImplementedError
-
-    if not order_to_update:
-        raise OrderNotFound()
-
-    order_data = order.model_dump(exclude_unset=True)
-    for key, value in order_data.items():
-        setattr(order_to_update, key, value)
-
-    db.add(order_to_update)
-    db.commit()
-    db.refresh(order_to_update)
-    return order_to_update
+@hub2hub_order.patch("/{order_id}", response_model=OrderRead)
+def update_order(order_id: int, order: OrderUpdate, db: Session = Depends(get_session)):
+    return update_hub2hub_order(order_id=order_id, order=order, db=db)
