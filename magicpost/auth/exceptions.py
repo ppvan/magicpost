@@ -18,6 +18,14 @@ class InactiveUserException(HTTPException):
         )
 
 
+class AuthorizationException(HTTPException):
+    def __init__(self):
+        super().__init__(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Not authorized to access this resource",
+        )
+
+
 class InvalidUsernameOrPasswordException(HTTPException):
     def __init__(self):
         super().__init__(

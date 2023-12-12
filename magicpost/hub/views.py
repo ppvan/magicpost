@@ -2,11 +2,17 @@ from fastapi import APIRouter, Depends, Query
 from pydantic.types import List
 from sqlmodel import Session
 
+from magicpost.auth.dependencies import login_required
+from magicpost.auth.models import Role
 from magicpost.database import get_session
 from magicpost.hub.crud import create_hub, delete_hub, read_hub, read_hubs, update_hub
 from magicpost.hub.models import HubCreate, HubRead, HubUpdate
 
-router = APIRouter(prefix="/hubs", tags=["Hubs"])
+router = APIRouter(
+    prefix="/hubs",
+    tags=["Hubs"],
+    dependencies=[Depends(login_required(allow_roles=(Role.ADMIN, Role.PRESIDENT)))],
+)
 
 
 @router.post("/", response_model=HubRead)

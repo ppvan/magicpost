@@ -8,6 +8,7 @@ from magicpost.models import MyBaseModel
 
 
 class Role(str, enum.Enum):
+    ADMIN = "admin"
     PRESIDENT = "president"
     HUB_MANAGER = "hub_manager"
     OFFICE_MANAGER = "office_manager"

@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from typing import Annotated
+from typing import Annotated, Tuple
 
 from fastapi import Depends
 from fastapi.security import OAuth2PasswordBearer
@@ -7,8 +7,12 @@ from jose import JWTError, jwt
 from passlib.context import CryptContext
 from sqlmodel import Session
 
-from magicpost.auth.exceptions import InactiveUserException, InvalidCredentialsException
-from magicpost.auth.models import User
+from magicpost.auth.exceptions import (
+    AuthorizationException,
+    InactiveUserException,
+    InvalidCredentialsException,
+)
+from magicpost.auth.models import Role, User
 from magicpost.auth.schemas import TokenData
 from magicpost.database import get_session
 
@@ -84,3 +88,13 @@ def get_current_active_user(current_user: Annotated[User, Depends(get_current_us
     if not current_user.is_staff:
         raise InactiveUserException()
     return current_user
+
+
+def login_required(allow_roles: Tuple[Role]):
+    def wrapper(current_user: Annotated[User, Depends(get_current_active_user)]):
+        if current_user.role not in allow_roles:
+            raise AuthorizationException()
+
+        return current_user
+
+    return wrapper
