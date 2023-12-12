@@ -10,6 +10,10 @@ sqlmodel = "*"
 httpx = "*"
 pytest = "*"
 pydantic = "*"
+python-multipart = "*"
+install = "*"
+python-jose = {extras = ["cryptography"], version = "*"}
+passlib = {extras = ["bcrypt"], version = "*"}
 
 [dev-packages]
 
