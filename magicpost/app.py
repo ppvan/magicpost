@@ -5,6 +5,7 @@ from fastapi import FastAPI
 from sqlmodel import Session, SQLModel, select
 
 from magicpost.auth import views as auth
+from magicpost.auth.crud import create_super_user
 from magicpost.database import create_db_and_tables, engine
 from magicpost.hub import views as hub
 from magicpost.item import views as item
@@ -15,6 +16,11 @@ from magicpost.order import views as order
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     create_db_and_tables()
+
+    with Session(engine) as session:
+        create_super_user(session)
+
+    # create_super_user()
     yield
 
 
