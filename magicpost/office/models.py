@@ -50,17 +50,3 @@ class OfficeUpdate(SQLModel):
     name: Optional[str] = None
     address: Optional[str] = None
     phone: Optional[str] = None
-
-
-# class Staff(MyBaseModel):
-#     name: str
-#     phone: str
-#     manage_by: int
-
-
-# class ServiceStaff(Staff, table=True):
-#     pass
-
-
-# class HubStaff(Staff, table=True):
-#     pass
