@@ -21,8 +21,8 @@ router = APIRouter(prefix="/auth", tags=["Auth"])
 # TODO: Check for unique username
 
 
-@router.post("/signup", response_model=UserRead)
-def signup(
+@router.post("/register", response_model=UserRead)
+def register(
     user: UserCreate,
     authorized_user: Annotated[User, Depends(get_current_active_user)],
     session: Session = Depends(get_session),

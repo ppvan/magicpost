@@ -5,7 +5,7 @@ from fastapi import Depends
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
 from passlib.context import CryptContext
-from sqlmodel import Session
+from sqlmodel import Session, select
 
 from magicpost.auth.exceptions import (
     AuthorizationException,
@@ -40,7 +40,7 @@ def get_password_hash(password):
 
 
 def get_user(session: Session, username: str):
-    return session.query(User).filter(User.username == username).one()
+    return session.exec(select(User).where(User.username == username)).one()
 
 
 def authenticate_user(session: Session, username: str, password: str):

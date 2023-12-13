@@ -34,7 +34,7 @@ def create_user(user: UserCreate, authorized_user: User, db: Session):
 
 
 def create_president(user: UserCreate, authorized_user: User):
-    if authorized_user.role not in (Role.ADMIN, Role.PRESIDENT):
+    if authorized_user.role not in (Role.ADMIN):
         raise AuthorizationException()
 
     if user.role != Role.PRESIDENT:
