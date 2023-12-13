@@ -7,17 +7,16 @@ name = "pypi"
 fastapi = "*"
 uvicorn = {extras = ["standard"], version = "*"}
 sqlmodel = "*"
-httpx = "*"
-pytest = "*"
 pydantic = "*"
 python-multipart = "*"
-install = "*"
 python-jose = {extras = ["cryptography"], version = "*"}
 passlib = {extras = ["bcrypt"], version = "*"}
 pydantic-settings = "*"
 python-dotenv = "*"
 
 [dev-packages]
+httpx = "*"
+pytest = "*"
 
 [requires]
 python_version = "3.10"
