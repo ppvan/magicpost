@@ -14,16 +14,21 @@ from magicpost.auth.exceptions import (
 )
 from magicpost.auth.models import Role, User
 from magicpost.auth.schemas import TokenData
+from magicpost.config import get_settings
 from magicpost.database import get_session
 
-# TODO: Change this in production
-SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+settings = get_settings()
+
+SECRET_KEY = settings.secret_key
+ALGORITHM = settings.algorithm
+ACCESS_TOKEN_EXPIRE_MINUTES = settings.access_token_expire_minutes
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/token")
+
+
+# Normal functions
 
 
 def verify_password(plain_password, hashed_password):
@@ -38,9 +43,7 @@ def get_user(session: Session, username: str):
     return session.query(User).filter(User.username == username).one()
 
 
-def authenticate_user(
-    session: Annotated[Session, Depends(get_session)], username: str, password: str
-):
+def authenticate_user(session: Session, username: str, password: str):
     user = get_user(session, username)
     if not user:
         return False
@@ -58,6 +61,9 @@ def create_access_token(data: dict, expires_delta: timedelta | None = None):
     to_encode.update({"exp": expire})
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
+
+
+# Dependencies below
 
 
 def parse_jwt_data(token: Annotated[str, Depends(oauth2_scheme)]):

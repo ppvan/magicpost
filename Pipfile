@@ -14,6 +14,8 @@ python-multipart = "*"
 install = "*"
 python-jose = {extras = ["cryptography"], version = "*"}
 passlib = {extras = ["bcrypt"], version = "*"}
+pydantic-settings = "*"
+python-dotenv = "*"
 
 [dev-packages]
 

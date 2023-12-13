@@ -1,8 +1,10 @@
 # flake8: noqa
 from sqlmodel import Session, SQLModel, create_engine
 
-sqlite_file_name = "database.sqlite3"
-sqlite_url = f"sqlite:///{sqlite_file_name}"
+from magicpost.config import get_settings
+
+settings = get_settings()
+sqlite_url = settings.database_url
 
 connect_args = {"check_same_thread": False}
 engine = create_engine(sqlite_url, echo=True, connect_args=connect_args)
