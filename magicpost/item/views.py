@@ -4,8 +4,15 @@ from fastapi import APIRouter, Depends, Query
 from sqlmodel import Session
 
 from magicpost.database import get_session
-from magicpost.item.crud import create_item, delete_item, read_item, read_items
+from magicpost.item.crud import (
+    create_item,
+    delete_item,
+    read_item,
+    read_item_detail,
+    read_items,
+)
 from magicpost.item.models import ItemCreate, ItemRead
+from magicpost.item.schemas import ItemDetail
 
 router = APIRouter(prefix="/items", tags=["Items"])
 
@@ -30,6 +37,11 @@ def create_a_item(
 @router.get("/{item_id}", response_model=ItemRead)
 def get_a_item(item_id: int, db: Session = Depends(get_session)):
     return read_item(db=db, item_id=item_id)
+
+
+@router.get("/{item_id}/detail", response_model=ItemDetail)
+def get_item_path(item_id: int, db: Session = Depends(get_session)):
+    return read_item_detail(db=db, item_id=item_id)
 
 
 @router.delete("/{item_id}")

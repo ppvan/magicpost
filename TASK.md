@@ -37,4 +37,4 @@
 
 ## Chức năng cho khách hàng
 
-- [ ] Tra cứu trạng thái và tiến trình chuyển phát của kiện hàng mình gửi.
+- [x] Tra cứu trạng thái và tiến trình chuyển phát của kiện hàng mình gửi.

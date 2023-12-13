@@ -13,12 +13,6 @@ class ItemType(str, enum.Enum):
     GOODS = "goods"
 
 
-class FailureType(str, enum.Enum):
-    RETURN = "return"
-    CANCEL = "cancel"
-    CALL_SENDER = "call sender"
-
-
 class ItemStatus(str, enum.Enum):
     PENDING = "pending"
     ON_DELIVERY = "on delivery"
@@ -47,6 +41,7 @@ class ItemBase(MyBaseModel):
     additional_fee: int = Field(default=0, ge=0)
     type: ItemType
     status: ItemStatus = Field(default=ItemStatus.PENDING)
+    position: Optional[str] = Field(default="")
     notes: Optional[str] = Field(default="")
 
 
