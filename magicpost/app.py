@@ -10,7 +10,6 @@ from magicpost.database import create_db_and_tables, engine
 from magicpost.hub import views as hub
 from magicpost.item import views as item
 from magicpost.office import views as office
-from magicpost.order import views as order
 
 
 @asynccontextmanager
@@ -20,7 +19,6 @@ async def lifespan(app: FastAPI):
     with Session(engine) as session:
         create_super_user(session)
 
-    # create_super_user()
     yield
 
 
@@ -28,7 +26,6 @@ app = FastAPI(lifespan=lifespan)
 app.include_router(hub.router)
 app.include_router(office.router)
 app.include_router(item.router)
-app.include_router(order.router)
 app.include_router(auth.router)
 
 if __name__ == "__main__":
