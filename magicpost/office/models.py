@@ -26,7 +26,7 @@ class OfficeBase(MyBaseModel):
     )
 
 
-class Office(OfficeBase, table=True):
+class Office(MyBaseModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     created_at: datetime = Field(default=datetime.utcnow())
     updated_at: datetime = Field(default_factory=datetime.utcnow)

@@ -38,3 +38,18 @@
 ## Chức năng cho khách hàng
 
 - [x] Tra cứu trạng thái và tiến trình chuyển phát của kiện hàng mình gửi.
+
+
+--------------------------------
+
+zipcode = 100920
+status: ['']
+
+path
+|item_id| zipcode | is_here
+    1        100      false
+    1         101      true
+
+paths
+|item_id| office1| office2|hub1|hub2|
+1          2'     3   1      1  2

@@ -28,7 +28,7 @@ def president_fixture(session: Session):
         role=Role.PRESIDENT,
         fullname="president",
         birth=date(2000, 1, 1),
-        phone="0123456789",
+        phone="0981272356",
     )
     president.hashed_password = get_password_hash("president")
     session.add(president)
@@ -45,7 +45,7 @@ def admin_fixture(session: Session):
         role=Role.ADMIN,
         fullname="admin",
         birth=date(2000, 1, 1),
-        phone="0123456789",
+        phone="0981272356",
     )
     admin.hashed_password = get_password_hash("admin")
     session.add(admin)
@@ -62,7 +62,7 @@ def hub_manager_fixture(session: Session):
         role=Role.HUB_MANAGER,
         fullname="hub_manager",
         birth=date(2000, 1, 1),
-        phone="0123456789",
+        phone="0981272356",
     )
     hub_manager.hashed_password = get_password_hash("hub_manager")
     session.add(hub_manager)
@@ -79,7 +79,7 @@ def office_manager_fixture(session: Session):
         role=Role.OFFICE_MANAGER,
         fullname="office_manager",
         birth=date(2000, 1, 1),
-        phone="0123456789",
+        phone="0981272356",
     )
     office_manager.hashed_password = get_password_hash("office_manager")
     session.add(office_manager)
@@ -96,7 +96,7 @@ def hub_staff_fixture(session: Session):
         role=Role.HUB_STAFF,
         fullname="hub_staff",
         birth=date(2000, 1, 1),
-        phone="0123456789",
+        phone="0981272356",
     )
     hub_staff.hashed_password = get_password_hash("hub_staff")
     session.add(hub_staff)
@@ -113,7 +113,7 @@ def office_staff_fixture(session: Session):
         role=Role.OFFICE_STAFF,
         fullname="office_staff",
         birth=date(2000, 1, 1),
-        phone="0123456789",
+        phone="0981272356",
     )
     office_staff.hashed_password = get_password_hash("office_staff")
     session.add(office_staff)
@@ -234,7 +234,7 @@ def test_create_president_ok(admin_token: str, client: TestClient):
         "password": "president",
         "fullname": "president",
         "birth": "2000-01-01",
-        "phone": "0123456789",
+        "phone": "0981272356",
         "role": Role.PRESIDENT.value,
         "department_id": 1,
     }
@@ -244,6 +244,11 @@ def test_create_president_ok(admin_token: str, client: TestClient):
         json=user_data,
         headers={"Authorization": f"Bearer {admin_token}"},
     )
+
+    data = response.json()
+
+    print(data)
+
     assert response.status_code == 200
 
 
@@ -253,7 +258,7 @@ def test_create_president_not_admin(president_token: str, client: TestClient):
         "password": "president",
         "fullname": "president",
         "birth": "2000-01-01",
-        "phone": "0123456789",
+        "phone": "0981272356",
         "role": Role.PRESIDENT.value,
         "department_id": 1,
     }
@@ -272,7 +277,7 @@ def test_create_hub_manager_not_president(hub_manager_token: str, client: TestCl
         "password": "hub_manager",
         "fullname": "hub_manager",
         "birth": "2000-01-01",
-        "phone": "0123456789",
+        "phone": "0981272356",
         "role": Role.HUB_MANAGER.value,
         "department_id": 1,
     }
@@ -291,7 +296,7 @@ def test_create_hub_staff_not_manager(hub_staff_token: str, client: TestClient):
         "password": "hub_staff",
         "fullname": "hub_staff",
         "birth": "2000-01-01",
-        "phone": "0123456789",
+        "phone": "0981272356",
         "role": Role.HUB_STAFF.value,
         "department_id": 1,
     }
@@ -310,7 +315,7 @@ def test_create_office_staff_not_manager(office_staff_token: str, client: TestCl
         "password": "office_staff",
         "fullname": "office_staff",
         "birth": "2000-01-01",
-        "phone": "0123456789",
+        "phone": "0981272356",
         "role": Role.OFFICE_STAFF.value,
         "department_id": 1,
     }
@@ -331,7 +336,7 @@ def test_create_office_manager_not_president(
         "password": "office_manager",
         "fullname": "office_manager",
         "birth": "2000-01-01",
-        "phone": "0123456789",
+        "phone": "0981272356",
         "role": Role.OFFICE_MANAGER.value,
         "department_id": 1,
     }
@@ -350,7 +355,7 @@ def test_create_hub_manager_admin_ok(admin_token: str, client: TestClient):
         "password": "hub_manager",
         "fullname": "hub_manager",
         "birth": "2000-01-01",
-        "phone": "0123456789",
+        "phone": "0981272356",
         "role": Role.HUB_MANAGER.value,
         "department_id": 1,
     }
@@ -374,7 +379,7 @@ def test_create_hub_manager_president_ok(president_token: str, client: TestClien
         "password": "hub_manager",
         "fullname": "hub_manager",
         "birth": "2000-01-01",
-        "phone": "0123456789",
+        "phone": "0981272356",
         "role": Role.HUB_MANAGER.value,
         "department_id": 1,
     }
@@ -398,7 +403,7 @@ def test_create_office_manager_ok(admin_token: str, client: TestClient):
         "password": "office_manager",
         "fullname": "office_manager",
         "birth": "2000-01-01",
-        "phone": "0123456789",
+        "phone": "0981272356",
         "role": Role.OFFICE_MANAGER.value,
         "department_id": 1,
     }
@@ -422,7 +427,7 @@ def test_create_hub_staff_ok(admin_token: str, client: TestClient):
         "password": "hub_staff",
         "fullname": "hub_staff",
         "birth": "2000-01-01",
-        "phone": "0123456789",
+        "phone": "0981272356",
         "role": Role.HUB_STAFF.value,
         "department_id": 1,
     }
@@ -446,7 +451,7 @@ def test_create_office_staff_ok(admin_token: str, client: TestClient):
         "password": "office_staff",
         "fullname": "office_staff",
         "birth": "2000-01-01",
-        "phone": "0123456789",
+        "phone": "0981272356",
         "role": Role.OFFICE_STAFF.value,
         "department_id": 1,
     }
@@ -470,7 +475,7 @@ def test_register_not_login(client: TestClient):
         "password": "president",
         "fullname": "president",
         "birth": "2000-01-01",
-        "phone": "0123456789",
+        "phone": "0981272356",
         "role": Role.PRESIDENT.value,
         "department_id": 1,
     }
