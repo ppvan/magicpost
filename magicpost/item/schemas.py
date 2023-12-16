@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field, NonNegativeFloat, NonNegativeInt
 from magicpost.hub.schemas import HubRead
 from magicpost.item.models import ItemStatus, ItemType
 from magicpost.models import PHONE_REGEX, ZIPCODE_REGEX
-from magicpost.office.models import OfficeRead
+from magicpost.office.schemas import OfficeRead
 
 
 class ItemCreate(BaseModel):

@@ -11,8 +11,9 @@ from magicpost.office.models import Office
 
 test_office = {
     "name": "Điểm tập kết Cầu Giấy",
-    "phone": "098123543",
+    "phone": "0981272356",
     "address": "Cầu Giấy, Hà Nội",
+    "zipcode": "10000",
     "hud_id": 1,
 }
 
@@ -45,7 +46,9 @@ def client_fixture(session: Session):
 
 @pytest.fixture(name="hub")
 def hub_fixture(session: Session):
-    hub = Hub(name="test", address="23 Chùa Láng, Hà Nội", phone="0981234567")
+    hub = Hub(
+        name="test", address="23 Chùa Láng, Hà Nội", zipcode="10000", phone="0981234567"
+    )
     session.add(hub)
     session.commit()
     yield hub
@@ -56,18 +59,21 @@ def test_get_offices(hub: Hub, session: Session, client: TestClient):
         hub=hub,
         name="test1",
         address="23 Chùa Láng, Hà Nội",
+        zipcode="10001",
         phone="0981234567",
     )
     office2 = Office(
         hub=hub,
         name="test2",
         address="23 Chùa Láng, Hà Nội",
+        zipcode="10002",
         phone="0981234567",
     )
     office3 = Office(
         hub=hub,
         name="test3",
         address="23 Chùa Láng, Hà Nội",
+        zipcode="10003",
         phone="0981234567",
     )
 
@@ -89,6 +95,7 @@ def test_get_a_office(hub: Hub, session: Session, client: TestClient):
         hub=hub,
         name="test1",
         address="23 Chùa Láng, Hà Nội",
+        zipcode="10004",
         phone="0981234567",
     )
 
@@ -107,6 +114,7 @@ def test_delete_office(hub: Hub, session: Session, client: TestClient):
         hub=hub,
         name="test1",
         address="23 Chùa Láng, Hà Nội",
+        zipcode="10005",
         phone="0981234567",
     )
 
@@ -131,6 +139,8 @@ def test_create_office_ok(hub: Hub, client: TestClient):
 
     response = client.post("/offices/", json=test_office)
     data = response.json()
+
+    print(data)
 
     assert response.status_code == 200
     assert data["name"] == test_office["name"]

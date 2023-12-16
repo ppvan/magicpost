@@ -11,7 +11,7 @@ from magicpost.office.crud import (
     read_offices,
     update_office,
 )
-from magicpost.office.models import OfficeCreate, OfficeRead, OfficeUpdate
+from magicpost.office.schemas import OfficeCreate, OfficeRead, OfficeUpdate
 
 router = APIRouter(prefix="/offices", tags=["Offices"])
 president_required_deps = [Depends(president_required)]

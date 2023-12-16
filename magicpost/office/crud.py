@@ -4,7 +4,8 @@ from sqlmodel import Session, select
 from magicpost.database import get_session
 from magicpost.hub.exceptions import HubNotFound
 from magicpost.hub.models import Hub
-from magicpost.office.models import Office, OfficeCreate, OfficeUpdate
+from magicpost.office.models import Office
+from magicpost.office.schemas import OfficeCreate, OfficeUpdate
 
 
 def create_office(office: OfficeCreate, db: Session = Depends(get_session)):
