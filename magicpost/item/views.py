@@ -11,8 +11,8 @@ from magicpost.item.crud import (
     read_item_detail,
     read_items,
 )
-from magicpost.item.models import ItemCreate, ItemRead
-from magicpost.item.schemas import ItemDetail
+from magicpost.item.models import Item
+from magicpost.item.schemas import ItemCreate, ItemDetail, ItemRead
 
 router = APIRouter(prefix="/items", tags=["Items"])
 
@@ -47,3 +47,13 @@ def get_item_path(item_id: int, db: Session = Depends(get_session)):
 @router.delete("/{item_id}")
 def delete_a_item(item_id: int, db: Session = Depends(get_session)):
     return delete_item(db=db, item_id=item_id)
+
+
+@router.post("/test")
+def test_pydantic(item: ItemCreate, db: Session = Depends(get_session)):
+    db_item = Item.model_validate(item)
+    db.add(db_item)
+    db.commit()
+    db.refresh(db_item)
+
+    return {"db_item": db_item}

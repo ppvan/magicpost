@@ -2,10 +2,11 @@ import enum
 from datetime import datetime
 from typing import Optional
 
+# For some reason, sqlmodel regex does not validate, use pydantic instead
 from pydantic import Field as PydanticField
 from sqlmodel import Field, SQLModel
 
-from magicpost.models import PHONE_REGEX, MyBaseModel
+from magicpost.models import PHONE_REGEX, ZIPCODE_REGEX, MyBaseModel
 
 
 class ItemType(str, enum.Enum):
@@ -23,36 +24,46 @@ class ItemStatus(str, enum.Enum):
 class ItemBase(MyBaseModel):
     sender_name: str = Field(min_length=1)
     sender_address: str = Field(min_length=1)
-    # For some reason, sqlmodel regex does not validate, use pydantic instead
-    sender_phone: str = PydanticField(pattern=PHONE_REGEX, min_length=1)
-    sender_office_id: int = Field(foreign_key="office.id")
-
+    sender_phone: str = PydanticField(pattern=PHONE_REGEX)
+    sender_zipcode: str = PydanticField(pattern=ZIPCODE_REGEX)
     # Receiver
     receiver_name: str = Field(min_length=1)
     receiver_address: str = Field(min_length=1)
     receiver_phone: str = PydanticField(pattern=PHONE_REGEX, min_length=1)
-    receiver_office_id: int = Field(foreign_key="office.id")
+    server_zipcode: str = Field(min_length=1)
     # Cash on delivery
     cod: int = Field(default=0, ge=0)
-    additional_cod: int = Field(default=0, ge=0)
     # Delivery Fees
     weight: float = Field(default=0, ge=0)
-    base_fee: int = Field(default=0, ge=0)
-    additional_fee: int = Field(default=0, ge=0)
+    fee: int = Field(default=0, ge=0)
+
     type: ItemType
     status: ItemStatus = Field(default=ItemStatus.PENDING)
-    position: Optional[str] = Field(default="")
     notes: Optional[str] = Field(default="")
 
 
-class Item(ItemBase, table=True):
+class Item(MyBaseModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
+    sender_name: str
+    sender_address: str
+    sender_phone: str
+    sender_zipcode: str
+    # Receiver
+    receiver_name: str
+    receiver_address: str
+    receiver_phone: str
+    receiver_zipcode: str
+    # Cash on delivery
+    cod: int
+    # Delivery Fees
+    weight: float
+    fee: int
+
+    type: ItemType
+    status: ItemStatus = Field(default=ItemStatus.PENDING)
+    notes: Optional[str] = Field(default="")
     created_at: datetime = Field(default=datetime.utcnow())
     updated_at: datetime = Field(default_factory=datetime.utcnow)
-
-
-class ItemCreate(ItemBase):
-    pass
 
 
 class ItemRead(ItemBase):

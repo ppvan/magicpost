@@ -1,8 +1,8 @@
 from sqlmodel import Session
 
 from magicpost.item.exceptions import ItemNotFound
-from magicpost.item.models import Item, ItemCreate
-from magicpost.item.schemas import ItemDetail, ItemPath
+from magicpost.item.models import Item
+from magicpost.item.schemas import ItemCreate, ItemDetail, ItemPath
 from magicpost.office.exceptions import OfficeNotFound
 from magicpost.office.models import Office
 
@@ -44,12 +44,6 @@ def read_item_detail(db: Session, item_id: int):
 
 def create_item(db: Session, item: ItemCreate):
     db_item = Item.model_validate(item)
-
-    sender_office = db.get(Office, db_item.sender_office_id)
-    receiver_office = db.get(Office, db_item.receiver_office_id)
-
-    if not sender_office or not receiver_office:
-        raise OfficeNotFound()
 
     db.add(db_item)
     db.commit()
