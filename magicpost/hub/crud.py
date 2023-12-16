@@ -3,7 +3,8 @@ from sqlmodel import Session, select
 
 from magicpost.database import get_session
 from magicpost.hub.exceptions import HubNotFound
-from magicpost.hub.models import Hub, HubCreate, HubUpdate
+from magicpost.hub.models import Hub
+from magicpost.hub.schemas import HubCreate, HubUpdate
 
 
 def create_hub(hub: HubCreate, db: Session = Depends(get_session)):

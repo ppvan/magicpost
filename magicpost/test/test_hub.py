@@ -12,6 +12,7 @@ test_hub = {
     "name": "Bưu điện Chùa Láng",
     "phone": "0981235431",
     "address": "23 Chùa Láng, Hà Nội",
+    "zipcode": "10000",
 }
 
 
@@ -42,9 +43,24 @@ def client_fixture(session: Session):
 
 
 def test_get_hubs(session: Session, client: TestClient):
-    hub1 = Hub(name="test1", address="23 Chùa Láng, Hà Nội", phone="0981234567")
-    hub2 = Hub(name="test2", address="23 Chùa Láng, Hà Nội", phone="0981234567")
-    hub3 = Hub(name="test3", address="23 Chùa Láng, Hà Nội", phone="0981234567")
+    hub1 = Hub(
+        name="test1",
+        address="23 Chùa Láng, Hà Nội",
+        zipcode="10000",
+        phone="0981234567",
+    )
+    hub2 = Hub(
+        name="test2",
+        address="23 Chùa Láng, Hà Nội",
+        zipcode="10001",
+        phone="0981234567",
+    )
+    hub3 = Hub(
+        name="test3",
+        address="23 Chùa Láng, Hà Nội",
+        zipcode="10002",
+        phone="0981234567",
+    )
 
     session.add_all([hub1, hub2, hub3])
     session.commit()
@@ -58,7 +74,12 @@ def test_get_hubs(session: Session, client: TestClient):
 
 
 def test_get_one_hub(session: Session, client: TestClient):
-    hub1 = Hub(name="test1", address="23 Chùa Láng, Hà Nội", phone="0981234567")
+    hub1 = Hub(
+        name="test1",
+        address="23 Chùa Láng, Hà Nội",
+        zipcode="10000",
+        phone="0981234567",
+    )
 
     session.add(hub1)
     session.commit()
@@ -76,8 +97,13 @@ def test_get_hub_not_found(client: TestClient):
     assert response.status_code == 404
 
 
-def test_delete_hub(session: Session, client: TestClient):
-    hub1 = Hub(name="test1", address="23 Chùa Láng, Hà Nội", phone="0981234567")
+def test_delete_hub_ok(session: Session, client: TestClient):
+    hub1 = Hub(
+        name="test1",
+        address="23 Chùa Láng, Hà Nội",
+        zipcode="10000",
+        phone="0981234567",
+    )
 
     session.add(hub1)
     session.commit()
@@ -89,9 +115,17 @@ def test_delete_hub(session: Session, client: TestClient):
     assert data["ok"]
 
 
-def test_create_hub(client: TestClient):
+def test_delete_hub_not_found(client: TestClient):
+    response = client.delete("/hubs/100")
+
+    assert response.status_code == 404
+
+
+def test_create_hub_ok(client: TestClient):
     response = client.post("/hubs/", json=test_hub)
     data = response.json()
+
+    print(data)
 
     assert response.status_code == 200
     assert data["name"] == test_hub["name"]
@@ -108,6 +142,14 @@ def test_create_hub_blank_name(client: TestClient):
 
 def test_create_hub_empty_address(client: TestClient):
     test_hub["address"] = ""
+    response = client.post("/hubs/", json=test_hub)
+    # data = response.json()
+
+    assert response.status_code == 422
+
+
+def test_create_hub_blank_zipcode(client: TestClient):
+    test_hub["zipcode"] = ""
     response = client.post("/hubs/", json=test_hub)
     # data = response.json()
 
