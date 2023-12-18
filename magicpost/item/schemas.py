@@ -1,12 +1,10 @@
 from datetime import datetime
-from typing import Optional
+from typing import List, Optional
 
 from pydantic import BaseModel, Field, NonNegativeFloat, NonNegativeInt
 
-from magicpost.hub.schemas import HubRead
 from magicpost.item.models import ItemStatus, ItemType
 from magicpost.models import PHONE_REGEX, ZIPCODE_REGEX
-from magicpost.office.schemas import OfficeRead
 
 
 class ItemCreate(BaseModel):
@@ -56,14 +54,14 @@ class ItemRead(BaseModel):
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 
 
-class ItemPath(BaseModel):
-    start_office: OfficeRead
-    end_office: OfficeRead
+class OrderCreate(BaseModel):
+    """Use to move items between hub and office"""
 
-    start_hub: HubRead
-    end_hub: HubRead
+    status: Optional[ItemStatus] = Field(default=ItemStatus.ON_DELIVERY)
+    items: List[ItemRead]
+    zipcode: str = Field(pattern=ZIPCODE_REGEX, min_length=1, max_length=5)
 
 
-class ItemDetail(BaseModel):
-    item: ItemRead
-    path: ItemPath
+class OrderUpdate(BaseModel):
+    items: List[ItemRead]
+    zipcode: str = Field(pattern=ZIPCODE_REGEX, min_length=1, max_length=5)

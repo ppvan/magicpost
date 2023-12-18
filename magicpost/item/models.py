@@ -1,10 +1,10 @@
 import enum
 from datetime import datetime
-from typing import Optional
+from typing import List, Optional
 
 # For some reason, sqlmodel regex does not validate, use pydantic instead
 from pydantic import Field as PydanticField
-from sqlmodel import Field, SQLModel
+from sqlmodel import Field, Relationship, SQLModel
 
 from magicpost.models import PHONE_REGEX, ZIPCODE_REGEX, MyBaseModel
 
@@ -19,6 +19,11 @@ class ItemStatus(str, enum.Enum):
     ON_DELIVERY = "on delivery"
     SUCCESS = "success"
     FAILED = "failed"
+
+
+class ItemPathState(str, enum.Enum):
+    PENDDING = "pending"
+    DONE = "done"
 
 
 class ItemBase(MyBaseModel):
@@ -62,6 +67,19 @@ class Item(MyBaseModel, table=True):
     type: ItemType
     status: ItemStatus = Field(default=ItemStatus.PENDING)
     notes: Optional[str] = Field(default="")
+
+    paths: List["ItemPath"] = Relationship(back_populates="item")
+
+    created_at: datetime = Field(default=datetime.utcnow())
+    updated_at: datetime = Field(default_factory=datetime.utcnow)
+
+
+class ItemPath(MyBaseModel, table=True):
+    id: int = Field(default=None, primary_key=True)
+    item_id: int = Field(foreign_key="item.id")
+    item: Item = Relationship(back_populates="paths")
+    zipcode: str = Field(min_length=1)
+    state: ItemPathState = Field(default=ItemPathState.PENDDING)
     created_at: datetime = Field(default=datetime.utcnow())
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 
