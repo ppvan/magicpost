@@ -1,9 +1,12 @@
+from typing import Optional
+
 from fastapi import Depends, HTTPException, status
-from sqlmodel import Session, select
+from sqlmodel import Session, or_, select
 
 from magicpost.database import get_session
 from magicpost.hub.exceptions import HubNotFound
 from magicpost.hub.models import Hub
+from magicpost.item.models import Item, ItemStatus
 from magicpost.office.models import Office
 from magicpost.office.schemas import OfficeCreate, OfficeUpdate
 
@@ -67,3 +70,26 @@ def delete_office(office_id: int, db: Session = Depends(get_session)):
     db.delete(office)
     db.commit()
     return {"ok": True}
+
+
+def read_office_items(office_id: int, status: Optional[ItemStatus], db: Session):
+    office = db.get(Office, office_id)
+    if not office:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Office not found with id: {office_id}",
+        )
+
+    if status:
+        stmt = select(Item).filter_by(status=status)
+    else:
+        stmt = select(Item)
+
+    stmt = stmt.filter(
+        or_(
+            Item.sender_zipcode == office.zipcode,
+            Item.receiver_zipcode == office.zipcode,
+        )
+    )
+
+    return db.exec(stmt)

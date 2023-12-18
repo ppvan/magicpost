@@ -1,13 +1,18 @@
+from typing import Optional
+
 from fastapi import APIRouter, Depends, Query
 from pydantic.types import List
 from sqlmodel import Session
 
 from magicpost.auth.dependencies import president_required
 from magicpost.database import get_session
+from magicpost.item.models import ItemStatus
+from magicpost.item.schemas import ItemRead
 from magicpost.office.crud import (
     create_office,
     delete_office,
     read_office,
+    read_office_items,
     read_offices,
     update_office,
 )
@@ -34,6 +39,13 @@ def get_offices(
 @router.get("/{office_id}", response_model=OfficeRead)
 def get_a_office(office_id: int, db: Session = Depends(get_session)):
     return read_office(office_id=office_id, db=db)
+
+
+@router.get("/{office_id}/items", response_model=List[ItemRead])
+def get_office_items(
+    status: Optional[ItemStatus] = None, db: Session = Depends(get_session)
+):
+    return read_office_items(status=status, db=db)
 
 
 @router.patch(
