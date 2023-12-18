@@ -16,7 +16,7 @@ from magicpost.auth.models import User
 from magicpost.auth.schemas import UserCreate, UserRead
 from magicpost.database import get_session
 
-router = APIRouter(prefix="/auth", tags=["Auth"])
+router = APIRouter(prefix="/api/v1/auth", tags=["Auth"])
 
 # TODO: Check for unique username
 
@@ -27,6 +27,7 @@ def register(
     authorized_user: Annotated[User, Depends(get_current_active_user)],
     session: Session = Depends(get_session),
 ):
+    """Tạo tài khoản mới. Lưu ý phải đăng nhập vói role cao hơn mới tạo được tài khoản."""
     db_user = create_user(user=user, authorized_user=authorized_user, db=session)
 
     return db_user
@@ -37,6 +38,7 @@ def login(
     form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
     session: Session = Depends(get_session),
 ):
+    """Đăng nhập với form-data theo chuẩn từ OAuth2"""
     user = authenticate_user(session, form_data.username, form_data.password)
     if not user:
         raise InvalidUsernameOrPasswordException()

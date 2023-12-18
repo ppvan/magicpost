@@ -18,7 +18,7 @@ from magicpost.office.crud import (
 )
 from magicpost.office.schemas import OfficeCreate, OfficeRead, OfficeUpdate
 
-router = APIRouter(prefix="/offices", tags=["Offices"])
+router = APIRouter(prefix="/api/v1/offices", tags=["Offices"])
 president_required_deps = [Depends(president_required)]
 
 

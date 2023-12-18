@@ -7,10 +7,7 @@ from magicpost.database import get_session
 from magicpost.hub.crud import create_hub, delete_hub, read_hub, read_hubs, update_hub
 from magicpost.hub.schemas import HubCreate, HubRead, HubUpdate
 
-router = APIRouter(
-    prefix="/hubs",
-    tags=["Hubs"],
-)
+router = APIRouter(prefix="/api/v1/hubs", tags=["Hubs"])
 
 protected_deps = [Depends(president_required)]
 

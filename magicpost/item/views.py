@@ -22,7 +22,7 @@ from magicpost.item.schemas import (
     OrderUpdate,
 )
 
-router = APIRouter(prefix="/items", tags=["Items"])
+router = APIRouter(prefix="/api/v1/items", tags=["Items"])
 
 
 @router.get("", response_model=List[ItemRead])
@@ -34,10 +34,9 @@ def get_items(
     limit: int = Query(default=100, lte=100),
     db: Session = Depends(get_session),
 ):
+    """Trả về tất cả đơn hàng, có thể page offset và limit, lọc để thống kê."""
+
     return read_items(db=db, offset=offset, limit=limit)
-
-
-# /items/stats/?zipcode=10000
 
 
 @router.post("/", response_model=ItemRead)
