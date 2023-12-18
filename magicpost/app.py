@@ -23,10 +23,10 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan)
+app.include_router(auth.router)
+app.include_router(item.router)
 app.include_router(hub.router)
 app.include_router(office.router)
-app.include_router(item.router)
-app.include_router(auth.router)
 
 if __name__ == "__main__":
     create_db_and_tables()

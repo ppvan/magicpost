@@ -10,10 +10,17 @@ from magicpost.item.crud import (
     delete_item,
     move_items,
     read_item,
+    read_item_paths,
     read_items,
 )
-from magicpost.item.models import Item, ItemStatus
-from magicpost.item.schemas import ItemCreate, ItemRead, OrderCreate, OrderUpdate
+from magicpost.item.models import ItemStatus
+from magicpost.item.schemas import (
+    ItemCreate,
+    ItemPathRead,
+    ItemRead,
+    OrderCreate,
+    OrderUpdate,
+)
 
 router = APIRouter(prefix="/items", tags=["Items"])
 
@@ -51,9 +58,10 @@ def delete_a_item(item_id: int, db: Session = Depends(get_session)):
     return delete_item(db=db, item_id=item_id)
 
 
-@router.get("/stats")
-def get_items_stats(zipcode: str, db: Session = Depends(get_session)):
-    return {"count": db.query(Item).count()}
+@router.get("{item_id}/paths", response_model=List[ItemPathRead])
+def get_items_path(item_id: str, db: Session = Depends(get_session)):
+    """Tiến trình hiện tại của đơn hàng, sắp xếp theo thời gian"""
+    return read_item_paths(db=db, item_id=item_id)
 
 
 @router.post("/move")
@@ -69,13 +77,3 @@ def move_items_to_another_department(
 def confirm_items_arrived(order: OrderUpdate, db: Session = Depends(get_session)):
     """Xác nhận các đơn hàng đã đến nơi"""
     return confirm_items(db=db, order=order)
-
-
-@router.post("/test")
-def test_pydantic(item: ItemCreate, db: Session = Depends(get_session)):
-    db_item = Item.model_validate(item)
-    db.add(db_item)
-    db.commit()
-    db.refresh(db_item)
-
-    return {"db_item": db_item}

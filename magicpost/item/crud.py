@@ -116,3 +116,12 @@ def delete_item(db: Session, item_id: int):
     db.commit()
 
     return {"ok": True}
+
+
+def read_item_paths(db: Session, item_id: int):
+    stmt = (
+        select(ItemPath)
+        .where(ItemPath.item_id == item_id)
+        .order_by(ItemPath.updated_at.desc())
+    )
+    return db.exec(stmt).all()

@@ -3,7 +3,7 @@ from typing import List, Optional
 
 from pydantic import BaseModel, Field, NonNegativeFloat, NonNegativeInt
 
-from magicpost.item.models import ItemStatus, ItemType
+from magicpost.item.models import ItemPathState, ItemStatus, ItemType
 from magicpost.models import PHONE_REGEX, ZIPCODE_REGEX
 
 
@@ -50,6 +50,14 @@ class ItemRead(BaseModel):
     type: ItemType
     status: ItemStatus = Field(default=ItemStatus.PENDING)
     notes: Optional[str] = Field(default="")
+    created_at: datetime = Field(default=datetime.utcnow())
+    updated_at: datetime = Field(default_factory=datetime.utcnow)
+
+
+class ItemPathRead(BaseModel):
+    id: int = Field(default=None, primary_key=True)
+    zipcode: str = Field(min_length=1)
+    state: ItemPathState = Field(default=ItemPathState.PENDDING)
     created_at: datetime = Field(default=datetime.utcnow())
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 
