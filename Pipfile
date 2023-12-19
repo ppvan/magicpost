@@ -14,6 +14,7 @@ passlib = {extras = ["bcrypt"], version = "*"}
 pydantic-settings = "*"
 python-dotenv = "*"
 vietnam-provinces = "*"
+fastenum = "*"
 
 [dev-packages]
 httpx = "*"

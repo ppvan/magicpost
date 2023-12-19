@@ -20,10 +20,10 @@ class ItemCreate(BaseModel):
     receiver_phone: str = Field(pattern=PHONE_REGEX, min_length=1, max_length=10)
     receiver_zipcode: str = Field(min_length=1)
     # Cash on delivery
-    cod: NonNegativeInt
+    cod: NonNegativeInt = Field(default=0)
     # Delivery Fees
-    weight: NonNegativeFloat
-    fee: NonNegativeInt
+    weight: NonNegativeFloat = Field(default=0.0)
+    fee: NonNegativeInt = Field(default=0)
 
     type: ItemType
     status: ItemStatus = Field(default=ItemStatus.PENDING)
@@ -42,10 +42,10 @@ class ItemRead(BaseModel):
     receiver_phone: str = Field(pattern=PHONE_REGEX, min_length=1, max_length=10)
     receiver_zipcode: str = Field(min_length=1)
     # Cash on delivery
-    cod: int = NonNegativeInt
+    cod: NonNegativeInt = Field(default=0)
     # Delivery Fees
-    weight: float = NonNegativeFloat
-    fee: int = NonNegativeInt
+    weight: NonNegativeFloat = Field(default=0.0)
+    fee: NonNegativeInt = Field(default=0)
 
     type: ItemType
     status: ItemStatus = Field(default=ItemStatus.PENDING)
