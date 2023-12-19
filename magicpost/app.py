@@ -23,7 +23,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI(lifespan=lifespan, title="MagicPost")
 app.include_router(auth.router)
 app.include_router(item.router)
 app.include_router(hub.router)
