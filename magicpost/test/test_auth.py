@@ -138,7 +138,7 @@ def client_fixture(session: Session):
 @pytest.fixture(name="admin_token")
 def token_fixture(admin: User, client: TestClient):
     response = client.post(
-        "/auth/token", data={"username": "admin", "password": "admin"}
+        "/api/v1/auth/token", data={"username": "admin", "password": "admin"}
     )
     token = response.json().get("access_token", None)
 
@@ -151,7 +151,7 @@ def token_fixture(admin: User, client: TestClient):
 @pytest.fixture(name="president_token")
 def president_token_fixture(president: User, client: TestClient):
     response = client.post(
-        "/auth/token",
+        "/api/v1/auth/token",
         data={"username": president.username, "password": "president"},
     )
     token = response.json().get("access_token", None)
@@ -165,7 +165,7 @@ def president_token_fixture(president: User, client: TestClient):
 @pytest.fixture(name="hub_manager_token")
 def hub_manager_token_fixture(hub_manager: User, client: TestClient):
     response = client.post(
-        "/auth/token",
+        "/api/v1/auth/token",
         data={"username": hub_manager.username, "password": "hub_manager"},
     )
     token = response.json().get("access_token", None)
@@ -179,7 +179,7 @@ def hub_manager_token_fixture(hub_manager: User, client: TestClient):
 @pytest.fixture(name="office_manager_token")
 def office_manager_token_fixture(office_manager: User, client: TestClient):
     response = client.post(
-        "/auth/token",
+        "/api/v1/auth/token",
         data={"username": office_manager.username, "password": "office_manager"},
     )
     token = response.json().get("access_token", None)
@@ -193,7 +193,7 @@ def office_manager_token_fixture(office_manager: User, client: TestClient):
 @pytest.fixture(name="hub_staff_token")
 def hub_staff_token_fixture(hub_staff: User, client: TestClient):
     response = client.post(
-        "/auth/token",
+        "/api/v1/auth/token",
         data={"username": hub_staff.username, "password": "hub_staff"},
     )
     token = response.json().get("access_token", None)
@@ -207,7 +207,7 @@ def hub_staff_token_fixture(hub_staff: User, client: TestClient):
 @pytest.fixture(name="office_staff_token")
 def office_staff_token_fixture(office_staff: User, client: TestClient):
     response = client.post(
-        "/auth/token",
+        "/api/v1/auth/token",
         data={"username": office_staff.username, "password": "office_staff"},
     )
     token = response.json().get("access_token", None)
@@ -220,7 +220,7 @@ def office_staff_token_fixture(office_staff: User, client: TestClient):
 
 def test_login_admin_ok(admin: User, client: TestClient):
     response = client.post(
-        "/auth/token", data={"username": "admin", "password": "admin"}
+        "/api/v1/auth/token", data={"username": "admin", "password": "admin"}
     )
     token = response.json().get("access_token", None)
 
@@ -240,7 +240,7 @@ def test_create_president_ok(admin_token: str, client: TestClient):
     }
 
     response = client.post(
-        "/auth/register",
+        "/api/v1/auth/register",
         json=user_data,
         headers={"Authorization": f"Bearer {admin_token}"},
     )
@@ -264,7 +264,7 @@ def test_create_president_not_admin(president_token: str, client: TestClient):
     }
 
     response = client.post(
-        "/auth/register",
+        "/api/v1/auth/register",
         json=user_data,
         headers={"Authorization": f"Bearer {president_token}"},
     )
@@ -283,7 +283,7 @@ def test_create_hub_manager_not_president(hub_manager_token: str, client: TestCl
     }
 
     response = client.post(
-        "/auth/register",
+        "/api/v1/auth/register",
         json=user_data,
         headers={"Authorization": f"Bearer {hub_manager_token}"},
     )
@@ -302,7 +302,7 @@ def test_create_hub_staff_not_manager(hub_staff_token: str, client: TestClient):
     }
 
     response = client.post(
-        "/auth/register",
+        "/api/v1/auth/register",
         json=user_data,
         headers={"Authorization": f"Bearer {hub_staff_token}"},
     )
@@ -321,7 +321,7 @@ def test_create_office_staff_not_manager(office_staff_token: str, client: TestCl
     }
 
     response = client.post(
-        "/auth/register",
+        "/api/v1/auth/register",
         json=user_data,
         headers={"Authorization": f"Bearer {office_staff_token}"},
     )
@@ -342,7 +342,7 @@ def test_create_office_manager_not_president(
     }
 
     response = client.post(
-        "/auth/register",
+        "/api/v1/auth/register",
         json=user_data,
         headers={"Authorization": f"Bearer {hub_manager_token}"},
     )
@@ -361,7 +361,7 @@ def test_create_hub_manager_admin_ok(admin_token: str, client: TestClient):
     }
 
     response = client.post(
-        "/auth/register",
+        "/api/v1/auth/register",
         json=user_data,
         headers={"Authorization": f"Bearer {admin_token}"},
     )
@@ -385,7 +385,7 @@ def test_create_hub_manager_president_ok(president_token: str, client: TestClien
     }
 
     response = client.post(
-        "/auth/register",
+        "/api/v1/auth/register",
         json=user_data,
         headers={"Authorization": f"Bearer {president_token}"},
     )
@@ -409,7 +409,7 @@ def test_create_office_manager_ok(admin_token: str, client: TestClient):
     }
 
     response = client.post(
-        "/auth/register",
+        "/api/v1/auth/register",
         json=user_data,
         headers={"Authorization": f"Bearer {admin_token}"},
     )
@@ -433,7 +433,7 @@ def test_create_hub_staff_ok(admin_token: str, client: TestClient):
     }
 
     response = client.post(
-        "/auth/register",
+        "/api/v1/auth/register",
         json=user_data,
         headers={"Authorization": f"Bearer {admin_token}"},
     )
@@ -457,7 +457,7 @@ def test_create_office_staff_ok(admin_token: str, client: TestClient):
     }
 
     response = client.post(
-        "/auth/register",
+        "/api/v1/auth/register",
         json=user_data,
         headers={"Authorization": f"Bearer {admin_token}"},
     )
@@ -480,7 +480,7 @@ def test_register_not_login(client: TestClient):
         "department_id": 1,
     }
 
-    response = client.post("/auth/register", json=user_data)
+    response = client.post("/api/v1/auth/register", json=user_data)
 
     assert response.status_code == 401
     assert response.json() == {"detail": "Not authenticated"}

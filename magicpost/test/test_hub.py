@@ -65,7 +65,7 @@ def test_get_hubs(session: Session, client: TestClient):
     session.add_all([hub1, hub2, hub3])
     session.commit()
 
-    response = client.get("/hubs/")
+    response = client.get("/api/v1/hubs/")
     data = response.json()
 
     assert response.status_code == 200
@@ -84,7 +84,7 @@ def test_get_one_hub(session: Session, client: TestClient):
     session.add(hub1)
     session.commit()
 
-    response = client.get("/hubs/1")
+    response = client.get("/api/v1/hubs/1")
     data = response.json()
 
     assert response.status_code == 200
@@ -92,7 +92,7 @@ def test_get_one_hub(session: Session, client: TestClient):
 
 
 def test_get_hub_not_found(client: TestClient):
-    response = client.get("/hubs/100")
+    response = client.get("/api/v1/hubs/100")
 
     assert response.status_code == 404
 
@@ -108,7 +108,7 @@ def test_delete_hub_ok(session: Session, client: TestClient):
     session.add(hub1)
     session.commit()
 
-    response = client.delete("/hubs/1")
+    response = client.delete("/api/v1/hubs/1")
     data = response.json()
 
     assert response.status_code == 200
@@ -116,13 +116,13 @@ def test_delete_hub_ok(session: Session, client: TestClient):
 
 
 def test_delete_hub_not_found(client: TestClient):
-    response = client.delete("/hubs/100")
+    response = client.delete("/api/v1/hubs/100")
 
     assert response.status_code == 404
 
 
 def test_create_hub_ok(client: TestClient):
-    response = client.post("/hubs/", json=test_hub)
+    response = client.post("/api/v1/hubs/", json=test_hub)
     data = response.json()
 
     print(data)
@@ -134,7 +134,7 @@ def test_create_hub_ok(client: TestClient):
 
 def test_create_hub_blank_name(client: TestClient):
     test_hub["name"] = ""
-    response = client.post("/hubs/", json=test_hub)
+    response = client.post("/api/v1/hubs/", json=test_hub)
     # data = response.json()
 
     assert response.status_code == 422
@@ -142,7 +142,7 @@ def test_create_hub_blank_name(client: TestClient):
 
 def test_create_hub_empty_address(client: TestClient):
     test_hub["address"] = ""
-    response = client.post("/hubs/", json=test_hub)
+    response = client.post("/api/v1/hubs/", json=test_hub)
     # data = response.json()
 
     assert response.status_code == 422
@@ -150,7 +150,7 @@ def test_create_hub_empty_address(client: TestClient):
 
 def test_create_hub_blank_zipcode(client: TestClient):
     test_hub["zipcode"] = ""
-    response = client.post("/hubs/", json=test_hub)
+    response = client.post("/api/v1/hubs/", json=test_hub)
     # data = response.json()
 
     assert response.status_code == 422
@@ -158,7 +158,7 @@ def test_create_hub_blank_zipcode(client: TestClient):
 
 def test_create_hub_invalid_phone(client: TestClient):
     test_hub["phone"] = "+8417227"
-    response = client.post("/hubs/", json=test_hub)
+    response = client.post("/api/v1/hubs/", json=test_hub)
     # data = response.json()
 
     assert response.status_code == 422

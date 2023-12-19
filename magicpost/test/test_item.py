@@ -51,7 +51,7 @@ def client_fixture(session: Session):
 def test_create_item_ok(client: TestClient):
     test_item = g_test_item.copy()
 
-    response = client.post("/items/", json=test_item)
+    response = client.post("/api/v1/items/", json=test_item)
     data = response.json()
 
     print(data)
@@ -64,7 +64,7 @@ def test_create_item_ok(client: TestClient):
 def test_create_item_incorrect_type(client: TestClient):
     test_item = g_test_item.copy()
     test_item["type"] = "invalid"
-    response = client.post("/items/", json=test_item)
+    response = client.post("/api/v1/items/", json=test_item)
     # data = response.json()
 
     assert response.status_code == 422
@@ -73,7 +73,7 @@ def test_create_item_incorrect_type(client: TestClient):
 def test_create_item_negative_fees(client: TestClient):
     test_item = g_test_item.copy()
     test_item["fee"] = -1
-    response = client.post("/items/", json=test_item)
+    response = client.post("/api/v1/items/", json=test_item)
     # data = response.json()
 
     assert response.status_code == 422
@@ -82,7 +82,7 @@ def test_create_item_negative_fees(client: TestClient):
 def test_create_item_negative_cod(client: TestClient):
     test_item = g_test_item.copy()
     test_item["cod"] = -1
-    response = client.post("/items/", json=test_item)
+    response = client.post("/api/v1/items/", json=test_item)
     # data = response.json()
 
     assert response.status_code == 422
@@ -91,7 +91,7 @@ def test_create_item_negative_cod(client: TestClient):
 def test_create_item_negative_weight(client: TestClient):
     test_item = g_test_item.copy()
     test_item["weight"] = -1
-    response = client.post("/items/", json=test_item)
+    response = client.post("/api/v1/items/", json=test_item)
     # data = response.json()
 
     assert response.status_code == 422
@@ -100,7 +100,7 @@ def test_create_item_negative_weight(client: TestClient):
 def test_create_item_empty_address(client: TestClient):
     test_item = g_test_item.copy()
     test_item["sender_address"] = ""
-    response = client.post("/items/", json=test_item)
+    response = client.post("/api/v1/items/", json=test_item)
     # data = response.json()
 
     assert response.status_code == 422
@@ -109,7 +109,7 @@ def test_create_item_empty_address(client: TestClient):
 def test_create_item_empty_name(client: TestClient):
     test_item = g_test_item.copy()
     test_item["sender_name"] = ""
-    response = client.post("/items/", json=test_item)
+    response = client.post("/api/v1/items/", json=test_item)
     # data = response.json()
 
     assert response.status_code == 422
@@ -118,7 +118,7 @@ def test_create_item_empty_name(client: TestClient):
 def test_create_item_empty_zipcode(client: TestClient):
     test_item = g_test_item.copy()
     test_item["sender_zipcode"] = ""
-    response = client.post("/items/", json=test_item)
+    response = client.post("/api/v1/items/", json=test_item)
     # data = response.json()
 
     assert response.status_code == 422
@@ -127,7 +127,7 @@ def test_create_item_empty_zipcode(client: TestClient):
 def test_create_item_empty_reveiver_address(client: TestClient):
     test_item = g_test_item.copy()
     test_item["receiver_address"] = ""
-    response = client.post("/items/", json=test_item)
+    response = client.post("/api/v1/items/", json=test_item)
     # data = response.json()
 
     assert response.status_code == 422
@@ -136,7 +136,7 @@ def test_create_item_empty_reveiver_address(client: TestClient):
 def test_create_item_empty_phone(client: TestClient):
     test_item = g_test_item.copy()
     test_item["sender_phone"] = ""
-    response = client.post("/items/", json=test_item)
+    response = client.post("/api/v1/items/", json=test_item)
     # data = response.json()
 
     assert response.status_code == 422
@@ -145,7 +145,7 @@ def test_create_item_empty_phone(client: TestClient):
 def test_create_item_invalid_phone(client: TestClient):
     test_item = g_test_item.copy()
     test_item["sender_phone"] = "abc124"
-    response = client.post("/items/", json=test_item)
+    response = client.post("/api/v1/items/", json=test_item)
     # data = response.json()
 
     assert response.status_code == 422
@@ -155,7 +155,7 @@ def test_create_item_invalid_phone(client: TestClient):
 # def test_cteate_item_office_notfound(client: TestClient):
 #     test_item = g_test_item.copy()
 #     test_item["sender_office_id"] = 10
-#     response = client.post("/items/", json=test_item)
+#     response = client.post("/api/v1/items/", json=test_item)
 #     data = response.json()
 #     print(data)
 

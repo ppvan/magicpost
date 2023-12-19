@@ -55,7 +55,7 @@ class ItemRead(BaseModel):
 
 
 class ItemPathRead(BaseModel):
-    id: int = Field(default=None, primary_key=True)
+    id: int
     zipcode: str = Field(min_length=1)
     state: ItemPathState = Field(default=ItemPathState.PENDDING)
     created_at: datetime = Field(default=datetime.utcnow())

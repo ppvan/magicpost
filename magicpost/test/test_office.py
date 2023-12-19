@@ -80,7 +80,7 @@ def test_get_offices(hub: Hub, session: Session, client: TestClient):
     session.add_all([office1, office2, office3])
     session.commit()
 
-    response = client.get("/offices/")
+    response = client.get("/api/v1/offices/")
     data = response.json()
 
     assert response.status_code == 200
@@ -102,7 +102,7 @@ def test_get_a_office(hub: Hub, session: Session, client: TestClient):
     session.add(office1)
     session.commit()
 
-    response = client.get("/offices/1")
+    response = client.get("/api/v1/offices/1")
     data = response.json()
 
     assert response.status_code == 200
@@ -121,7 +121,7 @@ def test_delete_office(hub: Hub, session: Session, client: TestClient):
     session.add(office1)
     session.commit()
 
-    response = client.delete("/offices/1")
+    response = client.delete("/api/v1/offices/1")
     data = response.json()
 
     assert response.status_code == 200
@@ -129,7 +129,7 @@ def test_delete_office(hub: Hub, session: Session, client: TestClient):
 
 
 def test_get_office_not_found(session: Session, client: TestClient):
-    response = client.get("/offices/10")
+    response = client.get("/api/v1/offices/10")
 
     assert response.status_code == 404
 
@@ -137,7 +137,7 @@ def test_get_office_not_found(session: Session, client: TestClient):
 def test_create_office_ok(hub: Hub, client: TestClient):
     test_office["hub_id"] = hub.id
 
-    response = client.post("/offices/", json=test_office)
+    response = client.post("/api/v1/offices/", json=test_office)
     data = response.json()
 
     print(data)
@@ -149,7 +149,7 @@ def test_create_office_ok(hub: Hub, client: TestClient):
 
 def test_create_office_hub_notfound(hub: Hub, client: TestClient):
     test_office["hub_id"] = 10
-    response = client.post("/offices/", json=test_office)
+    response = client.post("/api/v1/offices/", json=test_office)
     # data = response.json()
 
     assert response.status_code == 404
@@ -158,7 +158,7 @@ def test_create_office_hub_notfound(hub: Hub, client: TestClient):
 def test_create_office_blank_name(hub: Hub, client: TestClient):
     test_office["hub_id"] = hub.id
     test_office["name"] = ""
-    response = client.post("/offices/", json=test_office)
+    response = client.post("/api/v1/offices/", json=test_office)
     # data = response.json()
 
     assert response.status_code == 422
@@ -167,7 +167,7 @@ def test_create_office_blank_name(hub: Hub, client: TestClient):
 def test_create_office_empty_address(hub: Hub, client: TestClient):
     test_office["hub_id"] = hub.id
     test_office["address"] = ""
-    response = client.post("/offices/", json=test_office)
+    response = client.post("/api/v1/offices/", json=test_office)
     # data = response.json()
 
     assert response.status_code == 422
@@ -176,7 +176,7 @@ def test_create_office_empty_address(hub: Hub, client: TestClient):
 def test_create_office_invalid_phone(hub: Hub, client: TestClient):
     test_office["hub_id"] = hub.id
     test_office["phone"] = "+8417227"
-    response = client.post("/offices/", json=test_office)
+    response = client.post("/api/v1/offices/", json=test_office)
     # data = response.json()
 
     assert response.status_code == 422
