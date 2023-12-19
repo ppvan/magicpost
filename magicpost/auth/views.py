@@ -3,7 +3,7 @@ from typing import Annotated
 
 from fastapi import APIRouter, Depends
 from fastapi.security import OAuth2PasswordRequestForm
-from sqlmodel import Session
+from sqlmodel import Session, select
 
 from magicpost.auth.crud import create_user
 from magicpost.auth.dependencies import (
@@ -11,7 +11,10 @@ from magicpost.auth.dependencies import (
     create_access_token,
     get_current_active_user,
 )
-from magicpost.auth.exceptions import InvalidUsernameOrPasswordException
+from magicpost.auth.exceptions import (
+    InvalidUsernameOrPasswordException,
+    UsernameAlreadyExists,
+)
 from magicpost.auth.models import User
 from magicpost.auth.schemas import UserCreate, UserRead
 from magicpost.database import get_session
@@ -28,6 +31,13 @@ def register(
     session: Session = Depends(get_session),
 ):
     """Tạo tài khoản mới. Lưu ý phải đăng nhập vói role cao hơn mới tạo được tài khoản."""
+
+    stmt = select(User).where(User.username == user.username)
+    existed_user = session.exec(stmt).one_or_none()
+
+    if existed_user:
+        raise UsernameAlreadyExists(username=user.username)
+
     db_user = create_user(user=user, authorized_user=authorized_user, db=session)
 
     return db_user
