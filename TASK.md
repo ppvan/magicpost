@@ -6,12 +6,12 @@
 
 - [x] Quản lý hệ thống các điểm giao dịch và điểm tập kết.
 - [x] Quản lý tài khoản trưởng điểm điểm tập kết và điểm giao dịch. Mỗi điểm giao dịch hoặc điểm tập kết có một tài khoản trưởng điểm.
-- [ ] Thống kê hàng gửi, hàng nhận trên toàn quốc, từng điểm giao dịch hoặc điểm tập kết.
+- [x] Thống kê hàng gửi, hàng nhận trên toàn quốc, từng điểm giao dịch hoặc điểm tập kết.
 
 ## Chức năng cho trưởng điểm tại điểm giao dịch
 
 - [x] Cấp tài khoản cho giao dịch viên tại điểm giao dịch.
-- [ ] Thống kê hàng gửi, hàng nhận tại điểm giao dịch.
+- [x] Thống kê hàng gửi, hàng nhận tại điểm giao dịch.
 
 ## Chức năng cho giao dịch viên tại điểm giao dịch
 
@@ -26,14 +26,14 @@
 ## Chức năng cho trưởng điểm tại điểm tập kết
 
 - [x] Quản lý tài khoản nhân viên tại điểm tập kết.
-- [ ] Thống kê hàng đi, đến.
+- [x] Thống kê hàng đi, đến.
 
 ## Chức năng cho nhân viên tại điểm tập kết
 
-- [x] Xác nhận (đơn) hàng đi từ điểm giao dịch chuyển đến.
-- [x] Tạo đơn chuyển hàng đến điểm tập kết đích (ứng với điểm giao dịch đích, tức điểm giao dịch phụ trách vùng ứng với địa chỉ của người nhận).
-- [x] Xác nhận (đơn) hàng nhận về từ điểm tập kết khác.
-- [x] Tạo đơn chuyển hàng đến điểm giao dịch đích.
+- [ ] Xác nhận (đơn) hàng đi từ điểm giao dịch chuyển đến.
+- [ ] Tạo đơn chuyển hàng đến điểm tập kết đích (ứng với điểm giao dịch đích, tức điểm giao dịch phụ trách vùng ứng với địa chỉ của người nhận).
+- [ ] Xác nhận (đơn) hàng nhận về từ điểm tập kết khác.
+- [ ] Tạo đơn chuyển hàng đến điểm giao dịch đích.
 
 ## Chức năng cho khách hàng
 

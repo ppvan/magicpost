@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from fastapi import APIRouter, Depends, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlmodel import Session
 
 from magicpost.database import get_session
@@ -12,6 +12,7 @@ from magicpost.item.crud import (
     read_item,
     read_item_paths,
     read_items,
+    read_items_at_zipcode,
 )
 from magicpost.item.models import ItemStatus
 from magicpost.item.schemas import (
@@ -21,6 +22,7 @@ from magicpost.item.schemas import (
     OrderCreate,
     OrderUpdate,
 )
+from magicpost.utils import is_valid_zipcode
 
 router = APIRouter(prefix="/api/v1/items", tags=["Items"])
 
@@ -37,6 +39,19 @@ def get_items(
     """Trả về tất cả đơn hàng, có thể page offset và limit, lọc để thống kê."""
 
     return read_items(db=db, offset=offset, limit=limit)
+
+
+@router.get("/stats/{zipcode}")
+def get_items_go_through_zipcode(zipcode: str, db: Session = Depends(get_session)):
+    """Trả về tất cả đơn hàng đi qua một điểm giao dịch hoặc tập kết có {zipcode}"""
+
+    if not is_valid_zipcode(zipcode):
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Zipcode not exist",
+        )
+
+    return read_items_at_zipcode(db=db, zipcode=zipcode)
 
 
 @router.post("/", response_model=ItemRead)

@@ -125,3 +125,15 @@ def read_item_paths(db: Session, item_id: int):
         .order_by(ItemPath.updated_at.desc())
     )
     return db.exec(stmt).all()
+
+
+def read_items_at_zipcode(db: Session, zipcode: str):
+    stmt = (
+        select(Item)
+        .join(ItemPath)
+        .where(ItemPath.item_id == Item.id)
+        .where(ItemPath.state == ItemPathState.DONE)
+    )
+    results = db.exec(stmt)
+
+    return results.all()
