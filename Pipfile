@@ -15,6 +15,7 @@ pydantic-settings = "*"
 python-dotenv = "*"
 vietnam-provinces = "*"
 fastenum = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 httpx = "*"

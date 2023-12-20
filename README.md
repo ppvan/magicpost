@@ -2,60 +2,7 @@
 
 ## Project Overview
 
-Welcome to the FastAPI project! This project is built using FastAPI, a modern, fast, web framework for building APIs with Python 3.10+ based on standard Python type hints.
-
-## Project Structure
-
-```plaintext
-.
-├── magicpost
-│  ├── __init__.py
-│  ├── app.py
-│  ├── auth
-│  │  ├── __init__.py
-│  │  ├── crud.py
-│  │  ├── dependencies.py
-│  │  ├── exceptions.py
-│  │  ├── models.py
-│  │  ├── schemas.py
-│  │  └── views.py
-│  ├── config.py
-│  ├── database.py
-│  ├── hub
-│  │  ├── __init__.py
-│  │  ├── crud.py
-│  │  ├── exceptions.py
-│  │  ├── models.py
-│  │  ├── schemas.py
-│  │  └── views.py
-│  ├── item
-│  │  ├── __init__.py
-│  │  ├── crud.py
-│  │  ├── exceptions.py
-│  │  ├── models.py
-│  │  ├── schemas.py
-│  │  └── views.py
-│  ├── models.py
-│  ├── office
-│  │  ├── __init__.py
-│  │  ├── crud.py
-│  │  ├── exceptions.py
-│  │  ├── models.py
-│  │  ├── schemas.py
-│  │  └── views.py
-│  ├── test
-│  │  ├── __init__.py
-│  │  ├── test_auth.py
-│  │  ├── test_hub.py
-│  │  ├── test_item.py
-│  │  └── test_office.py
-│  └── utils.py
-├── Makefile
-├── Pipfile
-├── Pipfile.lock
-├── README.md
-└── TASK.md
-```
+A Restful API for post delivery system.
 
 ## Getting Started
 
