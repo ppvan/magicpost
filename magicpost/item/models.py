@@ -17,6 +17,7 @@ class ItemType(str, enum.Enum):
 class ItemStatus(str, enum.Enum):
     PENDING = "pending"
     ON_DELIVERY = "on delivery"
+    SHIPPED = "shipped"
     SUCCESS = "success"
     FAILED = "failed"
 

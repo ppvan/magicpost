@@ -65,7 +65,7 @@ class ItemPathRead(BaseModel):
 class OrderCreate(BaseModel):
     """Use to move items between hub and office"""
 
-    status: Optional[ItemStatus] = Field(default=ItemStatus.ON_DELIVERY)
+    status: ItemStatus = Field(default=ItemStatus.ON_DELIVERY)
     items: List[ItemRead]
     zipcode: str = Field(pattern=ZIPCODE_REGEX, min_length=1, max_length=5)
 
@@ -73,3 +73,7 @@ class OrderCreate(BaseModel):
 class OrderUpdate(BaseModel):
     items: List[ItemRead]
     zipcode: str = Field(pattern=ZIPCODE_REGEX, min_length=1, max_length=5)
+
+
+class ItemUpdate(BaseModel):
+    status: ItemStatus

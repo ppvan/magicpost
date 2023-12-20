@@ -4,7 +4,7 @@ from sqlmodel import Session, select
 
 from magicpost.item.exceptions import ItemNotFound
 from magicpost.item.models import Item, ItemPath, ItemPathState, ItemStatus
-from magicpost.item.schemas import ItemCreate, OrderCreate, OrderUpdate
+from magicpost.item.schemas import ItemCreate, ItemUpdate, OrderCreate, OrderUpdate
 from magicpost.office.exceptions import OfficeNotFound
 from magicpost.utils import is_valid_zipcode
 
@@ -160,3 +160,12 @@ def read_items_unconfirmed(db: Session, zipcode: str):
     results = db.exec(stmt)
 
     return results.all()
+
+
+def update_item_status(db: Session, item_id: int, item: ItemUpdate):
+    db_item = valid_item_id(db, item_id)
+    db_item.status = item.status
+    db.add(db_item)
+    db.commit()
+
+    return db_item

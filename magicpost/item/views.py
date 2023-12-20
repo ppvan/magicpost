@@ -14,12 +14,14 @@ from magicpost.item.crud import (
     read_items,
     read_items_at_zipcode,
     read_items_unconfirmed,
+    update_item_status,
 )
 from magicpost.item.models import ItemStatus
 from magicpost.item.schemas import (
     ItemCreate,
     ItemPathRead,
     ItemRead,
+    ItemUpdate,
     OrderCreate,
     OrderUpdate,
 )
@@ -99,3 +101,8 @@ def get_items_unconfirmed(
 def confirm_items_arrived(order: OrderUpdate, db: Session = Depends(get_session)):
     """Xác nhận các đơn hàng đã đến nơi"""
     return confirm_items(db=db, order=order)
+
+
+@router.patch("/{item_id}")
+def update_item(item_id: int, item: ItemUpdate, db: Session = Depends(get_session)):
+    return update_item_status(db=db, item_id=item_id, item=item)

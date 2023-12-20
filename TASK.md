@@ -18,9 +18,9 @@
 - [x] Ghi nhận hàng cần gửi của khách (người gửi), in giấy biên nhận chuyển phát và phát cho khách hàng (tham khảo Hình 1 trong phụ lục).
 - [x] Tạo đơn chuyển hàng gửi đến điểm tập kết mỗi/trước khi đem hàng gửi đến điểm tập kết.
 - [x] Xác nhận (đơn) hàng về từ điểm tập kết.
-- [ ] Tạo đơn hàng cần chuyển đến tay người nhận.
-- [ ] Xác nhận hàng đã chuyển đến tay người nhận theo .
-- [ ] Xác nhận hàng không chuyển được đến người nhận và trả lại điểm giao dịch.
+- [x] Tạo đơn hàng cần chuyển đến tay người nhận.
+- [x] Xác nhận hàng đã chuyển đến tay người nhận theo .
+- [x] Xác nhận hàng không chuyển được đến người nhận và trả lại điểm giao dịch.
 - [x] Thống kê các hàng đã chuyển thành công, các hàng chuyển không thành công và trả lại điểm giao dịch.
 
 ## Chức năng cho trưởng điểm tại điểm tập kết
