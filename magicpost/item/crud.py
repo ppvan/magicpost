@@ -6,7 +6,7 @@ from magicpost.item.exceptions import ItemNotFound
 from magicpost.item.models import Item, ItemPath, ItemPathState, ItemStatus
 from magicpost.item.schemas import ItemCreate, OrderCreate, OrderUpdate
 from magicpost.office.exceptions import OfficeNotFound
-from magicpost.office.models import Office
+from magicpost.utils import is_valid_zipcode
 
 
 def valid_item_id(db: Session, item_id: int):
@@ -14,10 +14,9 @@ def valid_item_id(db: Session, item_id: int):
     if not item:
         raise ItemNotFound()
 
-    sender_office = db.get(Office, item.sender_office_id)
-    receiver_office = db.get(Office, item.receiver_office_id)
-
-    if not sender_office or not receiver_office:
+    if not all(
+        [is_valid_zipcode(x) for x in (item.sender_zipcode, item.receiver_zipcode)]
+    ):
         raise OfficeNotFound()
 
     return item
@@ -29,8 +28,11 @@ def read_item_detail(db: Session, item_id: int):
 
 def create_item(db: Session, item: ItemCreate):
     db_item = Item.model_validate(item)
-
+    item_path = ItemPath(
+        item=db_item, state=ItemPathState.DONE, zipcode=item.sender_zipcode
+    )
     db.add(db_item)
+    db.add(item_path)
     db.commit()
     db.refresh(db_item)
     return db_item
@@ -49,10 +51,10 @@ def move_items(db: Session, order: OrderCreate):
     db_items = []
 
     for item in order.items:
+        db_item = db.get(Item, item.id)
         if order.status:
-            item.status = order.status
-        db_item = Item.model_validate(item)
-        path = ItemPath(db_item, order.zipcode)
+            db_item.status = order.status
+        path = ItemPath(item=db_item, zipcode=order.zipcode)
         db.add(db_item)
         db.add(path)
         db_items.append(db_item)
@@ -134,6 +136,27 @@ def read_items_at_zipcode(db: Session, zipcode: str):
         .where(ItemPath.item_id == Item.id)
         .where(ItemPath.state == ItemPathState.DONE)
     )
+    results = db.exec(stmt)
+
+    return results.all()
+
+
+def read_items_unconfirmed(db: Session, zipcode: str):
+    if zipcode:
+        stmt = (
+            select(Item)
+            .join(ItemPath)
+            .where(ItemPath.item_id == Item.id)
+            .where(ItemPath.zipcode == zipcode)
+            .where(ItemPath.state == ItemPathState.PENDDING)
+        )
+    else:
+        stmt = (
+            select(Item)
+            .join(ItemPath)
+            .where(ItemPath.item_id == Item.id)
+            .where(ItemPath.state == ItemPathState.PENDDING)
+        )
     results = db.exec(stmt)
 
     return results.all()

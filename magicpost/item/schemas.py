@@ -18,7 +18,7 @@ class ItemCreate(BaseModel):
     receiver_name: str = Field(min_length=1)
     receiver_address: str = Field(min_length=1)
     receiver_phone: str = Field(pattern=PHONE_REGEX, min_length=1, max_length=10)
-    receiver_zipcode: str = Field(min_length=1)
+    receiver_zipcode: str = Field(pattern=ZIPCODE_REGEX, min_length=1)
     # Cash on delivery
     cod: NonNegativeInt = Field(default=0)
     # Delivery Fees

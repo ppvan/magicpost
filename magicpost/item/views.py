@@ -13,6 +13,7 @@ from magicpost.item.crud import (
     read_item_paths,
     read_items,
     read_items_at_zipcode,
+    read_items_unconfirmed,
 )
 from magicpost.item.models import ItemStatus
 from magicpost.item.schemas import (
@@ -78,13 +79,20 @@ def get_items_path(item_id: str, db: Session = Depends(get_session)):
     return read_item_paths(db=db, item_id=item_id)
 
 
-@router.post("/move")
+@router.post("/move", response_model=List[ItemRead])
 def move_items_to_another_department(
     order: OrderCreate, db: Session = Depends(get_session)
 ):
     """Chuyển các đơn hàng đến zipcode xác định, có thể là hub hoặc office"""
 
     return move_items(db=db, order=order)
+
+
+@router.get("/unconfirm")
+def get_items_unconfirmed(
+    zipcode: Optional[str] = None, db: Session = Depends(get_session)
+):
+    return read_items_unconfirmed(db=db, zipcode=zipcode)
 
 
 @router.post("/confirm")
