@@ -4,6 +4,7 @@ from sqlmodel import Session, SQLModel, create_engine
 from sqlmodel.pool import StaticPool
 
 from magicpost.app import app
+from magicpost.auth.dependencies import login_required
 from magicpost.database import get_session
 from magicpost.item.models import ItemType
 
@@ -41,7 +42,11 @@ def client_fixture(session: Session):
     def get_session_override():
         return session
 
+    def login_required_override():
+        return None
+
     app.dependency_overrides[get_session] = get_session_override
+    app.dependency_overrides[login_required] = login_required_override
 
     client = TestClient(app)
     yield client
