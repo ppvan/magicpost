@@ -1,0 +1,24 @@
+name: Python package
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pipenv'
+      - name: Install pipenv
+        run: curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
+      - name: Install pipenv dependencies
+        run: pipenv install
+      - name: Test with pytest
+        run: pipenv run pytest
