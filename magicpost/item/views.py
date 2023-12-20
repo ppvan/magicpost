@@ -3,6 +3,7 @@ from typing import List, Optional
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlmodel import Session
 
+from magicpost.auth.dependencies import login_required
 from magicpost.database import get_session
 from magicpost.item.crud import (
     confirm_items,
@@ -27,6 +28,7 @@ from magicpost.item.schemas import (
 )
 from magicpost.utils import is_valid_zipcode
 
+protected_deps = [Depends(login_required)]
 router = APIRouter(prefix="/api/v1/items", tags=["Items"])
 
 
@@ -57,7 +59,7 @@ def get_items_go_through_zipcode(zipcode: str, db: Session = Depends(get_session
     return read_items_at_zipcode(db=db, zipcode=zipcode)
 
 
-@router.post("/", response_model=ItemRead)
+@router.post("/", response_model=ItemRead, dependencies=protected_deps)
 def create_a_item(
     item: ItemCreate,
     db: Session = Depends(get_session),
@@ -70,7 +72,7 @@ def get_a_item(item_id: int, db: Session = Depends(get_session)):
     return read_item(db=db, item_id=item_id)
 
 
-@router.delete("/{item_id}")
+@router.delete("/{item_id}", dependencies=protected_deps)
 def delete_a_item(item_id: int, db: Session = Depends(get_session)):
     return delete_item(db=db, item_id=item_id)
 
@@ -81,7 +83,7 @@ def get_items_path(item_id: str, db: Session = Depends(get_session)):
     return read_item_paths(db=db, item_id=item_id)
 
 
-@router.post("/move", response_model=List[ItemRead])
+@router.post("/move", response_model=List[ItemRead], dependencies=protected_deps)
 def move_items_to_another_department(
     order: OrderCreate, db: Session = Depends(get_session)
 ):
@@ -97,12 +99,12 @@ def get_items_unconfirmed(
     return read_items_unconfirmed(db=db, zipcode=zipcode)
 
 
-@router.post("/confirm")
+@router.post("/confirm", dependencies=protected_deps)
 def confirm_items_arrived(order: OrderUpdate, db: Session = Depends(get_session)):
     """Xác nhận các đơn hàng đã đến nơi"""
     return confirm_items(db=db, order=order)
 
 
-@router.patch("/{item_id}")
+@router.patch("/{item_id}", dependencies=protected_deps)
 def update_item(item_id: int, item: ItemUpdate, db: Session = Depends(get_session)):
     return update_item_status(db=db, item_id=item_id, item=item)
