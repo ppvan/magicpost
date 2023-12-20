@@ -2,11 +2,13 @@ from typing import Optional
 
 from sqlmodel import Session, select
 
-from magicpost.item.exceptions import ItemNotFound
+from magicpost.hub.models import Hub
+from magicpost.item.exceptions import ItemNotFound, NoNextZipcodeFound
 from magicpost.item.models import Item, ItemPath, ItemPathState, ItemStatus
 from magicpost.item.schemas import ItemCreate, ItemUpdate, OrderCreate, OrderUpdate
 from magicpost.office.exceptions import OfficeNotFound
-from magicpost.utils import is_valid_zipcode
+from magicpost.office.models import Office
+from magicpost.utils import find_next, is_valid_zipcode
 
 
 def valid_item_id(db: Session, item_id: int):
@@ -169,3 +171,26 @@ def update_item_status(db: Session, item_id: int, item: ItemUpdate):
     db.commit()
 
     return db_item
+
+
+def read_next_zipcode(db: Session, item_id: int, zipcode: str):
+    db_item = valid_item_id(db, item_id)
+    stmt1 = select(Office).where(Office.zipcode == db_item.sender_zipcode)
+    office1: Office = db.exec(stmt1).one()
+    hub1: Hub = office1.hub
+
+    stmt2 = select(Office).where(Office.zipcode == db_item.receiver_zipcode)
+    office2: Office = db.exec(stmt2).one()
+    hub2: Hub = office2.hub
+
+    if hub1 == hub2:
+        zipcodes = [office1.zipcode, hub1.zipcode, office2.zipcode]
+    else:
+        zipcodes = [office1.zipcode, hub1.zipcode, hub2.zipcode, office2.zipcode]
+
+    next_zipcode = find_next(zipcodes, zipcode)
+
+    if next_zipcode:
+        return next_zipcode
+    else:
+        raise NoNextZipcodeFound()

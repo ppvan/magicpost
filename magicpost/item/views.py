@@ -15,6 +15,7 @@ from magicpost.item.crud import (
     read_items,
     read_items_at_zipcode,
     read_items_unconfirmed,
+    read_next_zipcode,
     update_item_status,
 )
 from magicpost.item.models import ItemStatus
@@ -75,6 +76,12 @@ def get_a_item(item_id: int, db: Session = Depends(get_session)):
 @router.delete("/{item_id}", dependencies=protected_deps)
 def delete_a_item(item_id: int, db: Session = Depends(get_session)):
     return delete_item(db=db, item_id=item_id)
+
+
+@router.get("/{item_id}")
+def get_next_zipcode(item_id: int, zipcode: str, db: Session = Depends(get_session)):
+    """Trả về địa điểm tiếp theo nên gửi hàng đến."""
+    return read_next_zipcode(db=db, item_id=item_id, zipcode=zipcode)
 
 
 @router.get("{item_id}/paths", response_model=List[ItemPathRead])
