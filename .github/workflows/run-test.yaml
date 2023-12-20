@@ -21,4 +21,4 @@ jobs:
       - name: Install pipenv dependencies
         run: pipenv install
       - name: Test with pytest
-        run: pytest
+        run: pipenv run pytest
