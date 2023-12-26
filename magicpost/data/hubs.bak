@@ -1,0 +1,380 @@
+[
+    {
+        "name": "Điểm tập kết Thành phố Hà Nội",
+        "address": "Phường Thanh Lương, Quận Hai Bà Trưng, Thành phố Hà Nội",
+        "phone": "0355599168",
+        "zipcode": "11623"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Hà Giang",
+        "address": "Xã Phương Thiện, Thành phố Hà Giang, Tỉnh Hà Giang",
+        "phone": "0555551396",
+        "zipcode": "20113"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Cao Bằng",
+        "address": "Xã Quốc Toản, Huyện Quảng Hòa, Tỉnh Cao Bằng",
+        "phone": "0355590019",
+        "zipcode": "21265"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bắc Kạn",
+        "address": "Xã Công Bằng, Huyện Pác Nặm, Tỉnh Bắc Kạn",
+        "phone": "0355544835",
+        "zipcode": "23410"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Tuyên Quang",
+        "address": "Xã Khau Tinh, Huyện Na Hang, Tỉnh Tuyên Quang",
+        "phone": "0955503109",
+        "zipcode": "22415"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Lào Cai",
+        "address": "Thị trấn Phố Lu, Huyện Bảo Thắng, Tỉnh Lào Cai",
+        "phone": "0855542616",
+        "zipcode": "31206"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Điện Biên",
+        "address": "Xã Nậm Kè, Huyện Mường Nhé, Tỉnh Điện Biên",
+        "phone": "0355582374",
+        "zipcode": "32912"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Lai Châu",
+        "address": "Xã Trung Đồng, Huyện Tân Uyên, Tỉnh Lai Châu",
+        "phone": "0755518470",
+        "zipcode": "30715"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Sơn La",
+        "address": "Xã Mường Hung, Huyện Sông Mã, Tỉnh Sơn La",
+        "phone": "0755551850",
+        "zipcode": "34421"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Yên Bái",
+        "address": "Xã Phúc Ninh, Huyện Yên Bình, Tỉnh Yên Bái",
+        "phone": "0955578575",
+        "zipcode": "33219"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Hoà Bình",
+        "address": "Xã Trung Thành, Huyện Đà Bắc, Tỉnh Hoà Bình",
+        "phone": "0755511409",
+        "zipcode": "36319"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Thái Nguyên",
+        "address": "Xã Phú Thịnh, Huyện Đại Từ, Tỉnh Thái Nguyên",
+        "phone": "0955517477",
+        "zipcode": "24616"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Lạng Sơn",
+        "address": "Xã Yên Khoái, Huyện Lộc Bình, Tỉnh Lạng Sơn",
+        "phone": "0555594646",
+        "zipcode": "25808"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Quảng Ninh",
+        "address": "Xã Hải Tiến, Thành phố Móng Cái, Tỉnh Quảng Ninh",
+        "phone": "0955540229",
+        "zipcode": "01515"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bắc Giang",
+        "address": "Xã Hương Mai, Huyện Việt Yên, Tỉnh Bắc Giang",
+        "phone": "0355502769",
+        "zipcode": "26161"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Phú Thọ",
+        "address": "Thị trấn Thanh Thủy, Huyện Thanh Thuỷ, Tỉnh Phú Thọ",
+        "phone": "0855501766",
+        "zipcode": "35856"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Vĩnh Phúc",
+        "address": "Xã Hoàng Lâu, Huyện Tam Dương, Tỉnh Vĩnh Phúc",
+        "phone": "0955502771",
+        "zipcode": "15212"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bắc Ninh",
+        "address": "Phường Phù Chẩn, Thành phố Từ Sơn, Tỉnh Bắc Ninh",
+        "phone": "0555581119",
+        "zipcode": "16316"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Hải Dương",
+        "address": "Xã Đoàn Tùng, Huyện Thanh Miện, Tỉnh Hải Dương",
+        "phone": "0555517553",
+        "zipcode": "03760"
+    },
+    {
+        "name": "Điểm tập kết Thành phố Hải Phòng",
+        "address": "Phường Trại Cau, Quận Lê Chân, Thành phố Hải Phòng",
+        "phone": "0555517553",
+        "zipcode": "04706"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Hưng Yên",
+        "address": "Xã Cương Chính, Huyện Tiên Lữ, Tỉnh Hưng Yên",
+        "phone": "0555517933",
+        "zipcode": "17219"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Thái Bình",
+        "address": "Xã Đông Phong, Huyện Tiền Hải, Tỉnh Thái Bình",
+        "phone": "0355587452",
+        "zipcode": "06317"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Hà Nam",
+        "address": "Thị trấn Tân Thanh, Huyện Thanh Liêm, Tỉnh Hà Nam",
+        "phone": "0955531815",
+        "zipcode": "10000"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Nam Định",
+        "address": "Xã Trực Thanh, Huyện Trực Ninh, Tỉnh Nam Định",
+        "phone": "0955507393",
+        "zipcode": "07610"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Ninh Bình",
+        "address": "Phường Phúc Thành, Thành phố Ninh Bình, Tỉnh Ninh Bình",
+        "phone": "0355540739",
+        "zipcode": "08117"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Thanh Hóa",
+        "address": "Xã Đa Lộc, Huyện Hậu Lộc, Tỉnh Thanh Hóa",
+        "phone": "0955595101",
+        "zipcode": "40415"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Nghệ An",
+        "address": "Phường Nghi Hương, Thị xã Cửa Lò, Tỉnh Nghệ An",
+        "phone": "0355535314",
+        "zipcode": "43206"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Hà Tĩnh",
+        "address": "Xã Hương Minh, Huyện Vũ Quang, Tỉnh Hà Tĩnh",
+        "phone": "0755525238",
+        "zipcode": "45915"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Quảng Bình",
+        "address": "Xã An Ninh, Huyện Quảng Ninh, Tỉnh Quảng Bình",
+        "phone": "0355599168",
+        "zipcode": "47712"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Quảng Trị",
+        "address": "Xã Vĩnh Chấp, Huyện Vĩnh Linh, Tỉnh Quảng Trị",
+        "phone": "0555591626",
+        "zipcode": "48412"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Thừa Thiên Huế",
+        "address": "Xã Bình Tiến, Thị xã Hương Trà, Tỉnh Thừa Thiên Huế",
+        "phone": "0555594646",
+        "zipcode": "49450"
+    },
+    {
+        "name": "Điểm tập kết Thành phố Đà Nẵng",
+        "address": "Phường Xuân Hà, Quận Thanh Khê, Thành phố Đà Nẵng",
+        "phone": "0355540739",
+        "zipcode": "50306"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Quảng Nam",
+        "address": "Xã A Tiêng, Huyện Tây Giang, Tỉnh Quảng Nam",
+        "phone": "0755511409",
+        "zipcode": "51806"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Quảng Ngãi",
+        "address": "Phường Trương Quang Trọng, Thành phố Quảng Ngãi, Tỉnh Quảng Ngãi",
+        "phone": "0955507393",
+        "zipcode": "53111"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bình Định",
+        "address": "Phường Bùi Thị Xuân, Thành phố Quy Nhơn, Tỉnh Bình Định",
+        "phone": "0355520370",
+        "zipcode": "55120"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Phú Yên",
+        "address": "Xã Hòa Phong, Huyện Tây Hoà, Tỉnh Phú Yên",
+        "phone": "0955595101",
+        "zipcode": "56713"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Khánh Hòa",
+        "address": "Xã Sơn Trung, Huyện Khánh Sơn, Tỉnh Khánh Hòa",
+        "phone": "0955507393",
+        "zipcode": "57563"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Ninh Thuận",
+        "address": "Xã Nhị Hà, Huyện Thuận Nam, Tỉnh Ninh Thuận",
+        "phone": "0555558822",
+        "zipcode": "59708"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bình Thuận",
+        "address": "Xã Tân Đức, Huyện Hàm Tân, Tỉnh Bình Thuận",
+        "phone": "0955561085",
+        "zipcode": "77610"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Kon Tum",
+        "address": "Xã Hà Mòn, Huyện Đắk Hà, Tỉnh Kon Tum",
+        "phone": "0955561085",
+        "zipcode": "60613"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Gia Lai",
+        "address": "Xã Ia Ake, Huyện Phú Thiện, Tỉnh Gia Lai",
+        "phone": "0355585631",
+        "zipcode": "61709"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Đắk Lắk",
+        "address": "Xã Cuôr KNia, Huyện Buôn Đôn, Tỉnh Đắk Lắk",
+        "phone": "0355544835",
+        "zipcode": "63810"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Đắk Nông",
+        "address": "Xã Đắk Lao, Huyện Đắk Mil, Tỉnh Đắk Nông",
+        "phone": "0555522327",
+        "zipcode": "65515"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Lâm Đồng",
+        "address": "Xã Đạ Chais, Huyện Lạc Dương, Tỉnh Lâm Đồng",
+        "phone": "0755505233",
+        "zipcode": "66211"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bình Phước",
+        "address": "Xã Tân Tiến, Huyện Đồng Phú, Tỉnh Bình Phước",
+        "phone": "0355535314",
+        "zipcode": "67207"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Tây Ninh",
+        "address": "Xã Thạnh Bắc, Huyện Tân Biên, Tỉnh Tây Ninh",
+        "phone": "0355540739",
+        "zipcode": "80408"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bình Dương",
+        "address": "Xã Tân Mỹ, Huyện Bắc Tân Uyên, Tỉnh Bình Dương",
+        "phone": "0555564519",
+        "zipcode": "75514"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Đồng Nai",
+        "address": "Xã Nhân Nghĩa, Huyện Cẩm Mỹ, Tỉnh Đồng Nai",
+        "phone": "0955595101",
+        "zipcode": "76515"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bà Rịa - Vũng Tàu",
+        "address": "Xã Hòa Hưng, Huyện Xuyên Mộc, Tỉnh Bà Rịa - Vũng Tàu",
+        "phone": "0755525238",
+        "zipcode": "78515"
+    },
+    {
+        "name": "Điểm tập kết Thành phố Hồ Chí Minh",
+        "address": "Phường 26, Quận Bình Thạnh, Thành phố Hồ Chí Minh",
+        "phone": "0355537047",
+        "zipcode": "72310"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Long An",
+        "address": "Phường Khánh Hậu, Thành phố Tân An, Tỉnh Long An",
+        "phone": "0555519416",
+        "zipcode": "82113"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Tiền Giang",
+        "address": "Xã Tân Lập 1, Huyện Tân Phước, Tỉnh Tiền Giang",
+        "phone": "0355575083",
+        "zipcode": "84708"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bến Tre",
+        "address": "Xã An Khánh, Huyện Châu Thành, Tỉnh Bến Tre",
+        "phone": "0555579674",
+        "zipcode": "10000"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Trà Vinh",
+        "address": "Xã Tập Sơn, Huyện Trà Cú, Tỉnh Trà Vinh",
+        "phone": "0855588611",
+        "zipcode": "87511"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Vĩnh Long",
+        "address": "Xã Mỹ Lộc, Huyện Tam Bình, Tỉnh Vĩnh Long",
+        "phone": "0955531952",
+        "zipcode": "85318"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Đồng Tháp",
+        "address": "Xã Thường Thới Hậu A, Huyện Hồng Ngự, Tỉnh Đồng Tháp",
+        "phone": "0355575924",
+        "zipcode": "81556"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh An Giang",
+        "address": "Phường Long Hưng, Thị xã Tân Châu, Tỉnh An Giang",
+        "phone": "0955560106",
+        "zipcode": "90407"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Kiên Giang",
+        "address": "Xã Tân Thành, Huyện Tân Hiệp, Tỉnh Kiên Giang",
+        "phone": "0555597774",
+        "zipcode": "91209"
+    },
+    {
+        "name": "Điểm tập kết Thành phố Cần Thơ",
+        "address": "Phường Tân An, Quận Ninh Kiều, Thành phố Cần Thơ",
+        "phone": "0555561654",
+        "zipcode": "94112"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Hậu Giang",
+        "address": "Xã Vị Trung, Huyện Vị Thuỷ, Tỉnh Hậu Giang",
+        "phone": "0955540229",
+        "zipcode": "95208"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Sóc Trăng",
+        "address": "Xã Thạnh Thới An, Huyện Trần Đề, Tỉnh Sóc Trăng",
+        "phone": "0555579674",
+        "zipcode": "96715"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bạc Liêu",
+        "address": "Xã An Phúc, Huyện Đông Hải, Tỉnh Bạc Liêu",
+        "phone": "0855542616",
+        "zipcode": "97616"
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Cà Mau",
+        "address": "Xã Tân Duyệt, Huyện Đầm Dơi, Tỉnh Cà Mau",
+        "phone": "0355575924",
+        "zipcode": "98711"
+    }
+]

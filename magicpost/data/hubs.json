@@ -1,0 +1,2396 @@
+[
+    {
+        "name": "Điểm tập kết Thành phố Hà Nội",
+        "address": "Xã Trường Thịnh, Huyện Ứng Hòa, Thành phố Hà Nội",
+        "phone": "0555566521",
+        "zipcode": "13810",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Cao Thành",
+                "address": "Xã Cao Thành, Huyện Ứng Hòa, Thành phố Hà Nội",
+                "phone": "0555551396",
+                "zipcode": "13814"
+            },
+            {
+                "name": "Điểm giao dịch Xã Trung Tú",
+                "address": "Xã Trung Tú, Huyện Ứng Hòa, Thành phố Hà Nội",
+                "phone": "0555553208",
+                "zipcode": "13833"
+            },
+            {
+                "name": "Điểm giao dịch Xã Viên An",
+                "address": "Xã Viên An, Huyện Ứng Hòa, Thành phố Hà Nội",
+                "phone": "0555517553",
+                "zipcode": "13813"
+            },
+            {
+                "name": "Điểm giao dịch Xã Trầm Lộng",
+                "address": "Xã Trầm Lộng, Huyện Ứng Hòa, Thành phố Hà Nội",
+                "phone": "0955574980",
+                "zipcode": "13827"
+            },
+            {
+                "name": "Điểm giao dịch Xã Tảo Dương Văn",
+                "address": "Xã Tảo Dương Văn, Huyện Ứng Hòa, Thành phố Hà Nội",
+                "phone": "0355520370",
+                "zipcode": "13834"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Hà Giang",
+        "address": "Xã Phố Là, Huyện Đồng Văn, Tỉnh Hà Giang",
+        "phone": "0555592815",
+        "zipcode": "20513",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Vần Chải",
+                "address": "Xã Vần Chải, Huyện Đồng Văn, Tỉnh Hà Giang",
+                "phone": "0555597774",
+                "zipcode": "20516"
+            },
+            {
+                "name": "Điểm giao dịch Xã Xà Phìn",
+                "address": "Xã Xà Phìn, Huyện Đồng Văn, Tỉnh Hà Giang",
+                "phone": "0555584266",
+                "zipcode": "20510"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phố Là",
+                "address": "Xã Phố Là, Huyện Đồng Văn, Tỉnh Hà Giang",
+                "phone": "0555558822",
+                "zipcode": "20513"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phố Cáo",
+                "address": "Xã Phố Cáo, Huyện Đồng Văn, Tỉnh Hà Giang",
+                "phone": "0855588611",
+                "zipcode": "20514"
+            },
+            {
+                "name": "Điểm giao dịch Xã Lũng Thầu",
+                "address": "Xã Lũng Thầu, Huyện Đồng Văn, Tỉnh Hà Giang",
+                "phone": "0355590019",
+                "zipcode": "20515"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Cao Bằng",
+        "address": "Xã Mai Long, Huyện Nguyên Bình, Tỉnh Cao Bằng",
+        "phone": "0355544835",
+        "zipcode": "21515",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Hoa Thám",
+                "address": "Xã Hoa Thám, Huyện Nguyên Bình, Tỉnh Cao Bằng",
+                "phone": "0955581083",
+                "zipcode": "21521"
+            },
+            {
+                "name": "Điểm giao dịch Thị trấn Nguyên Bình",
+                "address": "Thị trấn Nguyên Bình, Huyện Nguyên Bình, Tỉnh Cao Bằng",
+                "phone": "0955502771",
+                "zipcode": "21506"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phan Thanh",
+                "address": "Xã Phan Thanh, Huyện Nguyên Bình, Tỉnh Cao Bằng",
+                "phone": "0555574693",
+                "zipcode": "21516"
+            },
+            {
+                "name": "Điểm giao dịch Xã Ca Thành",
+                "address": "Xã Ca Thành, Huyện Nguyên Bình, Tỉnh Cao Bằng",
+                "phone": "0755577153",
+                "zipcode": "21512"
+            },
+            {
+                "name": "Điểm giao dịch Xã Mai Long",
+                "address": "Xã Mai Long, Huyện Nguyên Bình, Tỉnh Cao Bằng",
+                "phone": "0355537047",
+                "zipcode": "21515"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bắc Kạn",
+        "address": "Xã Thanh Mai, Huyện Chợ Mới, Tỉnh Bắc Kạn",
+        "phone": "0755541949",
+        "zipcode": "23714",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Thanh Thịnh",
+                "address": "Xã Thanh Thịnh, Huyện Chợ Mới, Tỉnh Bắc Kạn",
+                "phone": "0555591637",
+                "zipcode": "23716"
+            },
+            {
+                "name": "Điểm giao dịch Xã Bình Văn",
+                "address": "Xã Bình Văn, Huyện Chợ Mới, Tỉnh Bắc Kạn",
+                "phone": "0755578171",
+                "zipcode": "23719"
+            },
+            {
+                "name": "Điểm giao dịch Xã Thanh Mai",
+                "address": "Xã Thanh Mai, Huyện Chợ Mới, Tỉnh Bắc Kạn",
+                "phone": "0355591454",
+                "zipcode": "23714"
+            },
+            {
+                "name": "Điểm giao dịch Xã Như Cố",
+                "address": "Xã Như Cố, Huyện Chợ Mới, Tỉnh Bắc Kạn",
+                "phone": "0855535190",
+                "zipcode": "23708"
+            },
+            {
+                "name": "Điểm giao dịch Thị trấn Đồng Tâm",
+                "address": "Thị trấn Đồng Tâm, Huyện Chợ Mới, Tỉnh Bắc Kạn",
+                "phone": "0355540739",
+                "zipcode": "33707"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Tuyên Quang",
+        "address": "Thị trấn Lăng Can, Huyện Lâm Bình, Tỉnh Tuyên Quang",
+        "phone": "0955540229",
+        "zipcode": "22506",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Bình An",
+                "address": "Xã Bình An, Huyện Lâm Bình, Tỉnh Tuyên Quang",
+                "phone": "0955560106",
+                "zipcode": "22511"
+            },
+            {
+                "name": "Điểm giao dịch Xã Minh Quang",
+                "address": "Xã Minh Quang, Huyện Lâm Bình, Tỉnh Tuyên Quang",
+                "phone": "0355598765",
+                "zipcode": "22550"
+            },
+            {
+                "name": "Điểm giao dịch Xã Khuôn Hà",
+                "address": "Xã Khuôn Hà, Huyện Lâm Bình, Tỉnh Tuyên Quang",
+                "phone": "0555517553",
+                "zipcode": "22508"
+            },
+            {
+                "name": "Điểm giao dịch Xã Thượng Lâm",
+                "address": "Xã Thượng Lâm, Huyện Lâm Bình, Tỉnh Tuyên Quang",
+                "phone": "0555584266",
+                "zipcode": "22507"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hồng Quang",
+                "address": "Xã Hồng Quang, Huyện Lâm Bình, Tỉnh Tuyên Quang",
+                "phone": "0555599992",
+                "zipcode": "22512"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Lào Cai",
+        "address": "Phường Ô Quý Hồ, Thị xã Sa Pa, Tỉnh Lào Cai",
+        "phone": "0355591454",
+        "zipcode": "31712",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Hoàng Liên",
+                "address": "Xã Hoàng Liên, Thị xã Sa Pa, Tỉnh Lào Cai",
+                "phone": "0955574980",
+                "zipcode": "31726"
+            },
+            {
+                "name": "Điểm giao dịch Phường Cầu Mây",
+                "address": "Phường Cầu Mây, Thị xã Sa Pa, Tỉnh Lào Cai",
+                "phone": "0755533516",
+                "zipcode": "31713"
+            },
+            {
+                "name": "Điểm giao dịch Xã Thanh Bình",
+                "address": "Xã Thanh Bình, Thị xã Sa Pa, Tỉnh Lào Cai",
+                "phone": "0755525238",
+                "zipcode": "31720"
+            },
+            {
+                "name": "Điểm giao dịch Xã Liên Minh",
+                "address": "Xã Liên Minh, Thị xã Sa Pa, Tỉnh Lào Cai",
+                "phone": "0355537047",
+                "zipcode": "31716"
+            },
+            {
+                "name": "Điểm giao dịch Xã Tả Van",
+                "address": "Xã Tả Van, Thị xã Sa Pa, Tỉnh Lào Cai",
+                "phone": "0555538473",
+                "zipcode": "31714"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Điện Biên",
+        "address": "Xã Thanh Yên, Huyện Điện Biên, Tỉnh Điện Biên",
+        "phone": "0555519416",
+        "zipcode": "32220",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Noọng Hẹt",
+                "address": "Xã Noọng Hẹt, Huyện Điện Biên, Tỉnh Điện Biên",
+                "phone": "0355587452",
+                "zipcode": "32207"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hua Thanh",
+                "address": "Xã Hua Thanh, Huyện Điện Biên, Tỉnh Điện Biên",
+                "phone": "0955574980",
+                "zipcode": "32215"
+            },
+            {
+                "name": "Điểm giao dịch Xã Thanh Luông",
+                "address": "Xã Thanh Luông, Huyện Điện Biên, Tỉnh Điện Biên",
+                "phone": "0355537047",
+                "zipcode": "32217"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phu Luông",
+                "address": "Xã Phu Luông, Huyện Điện Biên, Tỉnh Điện Biên",
+                "phone": "0555517933",
+                "zipcode": "32229"
+            },
+            {
+                "name": "Điểm giao dịch Xã Thanh Yên",
+                "address": "Xã Thanh Yên, Huyện Điện Biên, Tỉnh Điện Biên",
+                "phone": "0555592815",
+                "zipcode": "32220"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Lai Châu",
+        "address": "Xã Nậm Cần, Huyện Tân Uyên, Tỉnh Lai Châu",
+        "phone": "0355540739",
+        "zipcode": "30710",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Nậm Sỏ",
+                "address": "Xã Nậm Sỏ, Huyện Tân Uyên, Tỉnh Lai Châu",
+                "phone": "0555500202",
+                "zipcode": "30711"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hố Mít",
+                "address": "Xã Hố Mít, Huyện Tân Uyên, Tỉnh Lai Châu",
+                "phone": "0355540739",
+                "zipcode": "30714"
+            },
+            {
+                "name": "Điểm giao dịch Xã Mường Khoa",
+                "address": "Xã Mường Khoa, Huyện Tân Uyên, Tỉnh Lai Châu",
+                "phone": "0355598765",
+                "zipcode": "30708"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phúc Khoa",
+                "address": "Xã Phúc Khoa, Huyện Tân Uyên, Tỉnh Lai Châu",
+                "phone": "0955578575",
+                "zipcode": "30707"
+            },
+            {
+                "name": "Điểm giao dịch Xã Nậm Cần",
+                "address": "Xã Nậm Cần, Huyện Tân Uyên, Tỉnh Lai Châu",
+                "phone": "0955587096",
+                "zipcode": "30710"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Sơn La",
+        "address": "Phường Tô Hiệu, Thành phố Sơn La, Tỉnh Sơn La",
+        "phone": "0855535190",
+        "zipcode": "34112",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Phường Chiềng Cơi",
+                "address": "Phường Chiềng Cơi, Thành phố Sơn La, Tỉnh Sơn La",
+                "phone": "0355551099",
+                "zipcode": "34111"
+            },
+            {
+                "name": "Điểm giao dịch Phường Chiềng Sinh",
+                "address": "Phường Chiềng Sinh, Thành phố Sơn La, Tỉnh Sơn La",
+                "phone": "0555597774",
+                "zipcode": "34116"
+            },
+            {
+                "name": "Điểm giao dịch Xã Chiềng Cọ",
+                "address": "Xã Chiềng Cọ, Thành phố Sơn La, Tỉnh Sơn La",
+                "phone": "0555522327",
+                "zipcode": "34110"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hua La",
+                "address": "Xã Hua La, Thành phố Sơn La, Tỉnh Sơn La",
+                "phone": "0555517553",
+                "zipcode": "34115"
+            },
+            {
+                "name": "Điểm giao dịch Phường Quyết Tâm",
+                "address": "Phường Quyết Tâm, Thành phố Sơn La, Tỉnh Sơn La",
+                "phone": "0355584583",
+                "zipcode": "34114"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Yên Bái",
+        "address": "Xã An Phú, Huyện Lục Yên, Tỉnh Yên Bái",
+        "phone": "0755599631",
+        "zipcode": "33326",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Tân Lĩnh",
+                "address": "Xã Tân Lĩnh, Huyện Lục Yên, Tỉnh Yên Bái",
+                "phone": "0955507393",
+                "zipcode": "33316"
+            },
+            {
+                "name": "Điểm giao dịch Xã Lâm Thượng",
+                "address": "Xã Lâm Thượng, Huyện Lục Yên, Tỉnh Yên Bái",
+                "phone": "0555566158",
+                "zipcode": "33312"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phan Thanh",
+                "address": "Xã Phan Thanh, Huyện Lục Yên, Tỉnh Yên Bái",
+                "phone": "0355598031",
+                "zipcode": "33325"
+            },
+            {
+                "name": "Điểm giao dịch Xã Mường Lai",
+                "address": "Xã Mường Lai, Huyện Lục Yên, Tỉnh Yên Bái",
+                "phone": "0555500202",
+                "zipcode": "33308"
+            },
+            {
+                "name": "Điểm giao dịch Xã Vĩnh Lạc",
+                "address": "Xã Vĩnh Lạc, Huyện Lục Yên, Tỉnh Yên Bái",
+                "phone": "0555574693",
+                "zipcode": "33329"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Hoà Bình",
+        "address": "Xã Ngọc Sơn, Huyện Lạc Sơn, Tỉnh Hoà Bình",
+        "phone": "0955502771",
+        "zipcode": "36624",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Thượng Cốc",
+                "address": "Xã Thượng Cốc, Huyện Lạc Sơn, Tỉnh Hoà Bình",
+                "phone": "0355582374",
+                "zipcode": "36618"
+            },
+            {
+                "name": "Điểm giao dịch Xã Tự Do",
+                "address": "Xã Tự Do, Huyện Lạc Sơn, Tỉnh Hoà Bình",
+                "phone": "0355598765",
+                "zipcode": "36625"
+            },
+            {
+                "name": "Điểm giao dịch Xã Quý Hòa",
+                "address": "Xã Quý Hòa, Huyện Lạc Sơn, Tỉnh Hoà Bình",
+                "phone": "0855535190",
+                "zipcode": "36611"
+            },
+            {
+                "name": "Điểm giao dịch Xã Yên Phú",
+                "address": "Xã Yên Phú, Huyện Lạc Sơn, Tỉnh Hoà Bình",
+                "phone": "0755524154",
+                "zipcode": "36607"
+            },
+            {
+                "name": "Điểm giao dịch Xã Ân Nghĩa",
+                "address": "Xã Ân Nghĩa, Huyện Lạc Sơn, Tỉnh Hoà Bình",
+                "phone": "0755511409",
+                "zipcode": "36633"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Thái Nguyên",
+        "address": "Xã Tân Lợi, Huyện Đồng Hỷ, Tỉnh Thái Nguyên",
+        "phone": "0555591626",
+        "zipcode": "24217",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Nam Hòa",
+                "address": "Xã Nam Hòa, Huyện Đồng Hỷ, Tỉnh Thái Nguyên",
+                "phone": "0355502769",
+                "zipcode": "24215"
+            },
+            {
+                "name": "Điểm giao dịch Xã Minh Lập",
+                "address": "Xã Minh Lập, Huyện Đồng Hỷ, Tỉnh Thái Nguyên",
+                "phone": "0755551850",
+                "zipcode": "24213"
+            },
+            {
+                "name": "Điểm giao dịch Xã Văn Lăng",
+                "address": "Xã Văn Lăng, Huyện Đồng Hỷ, Tỉnh Thái Nguyên",
+                "phone": "0755577153",
+                "zipcode": "24211"
+            },
+            {
+                "name": "Điểm giao dịch Xã Quang Sơn",
+                "address": "Xã Quang Sơn, Huyện Đồng Hỷ, Tỉnh Thái Nguyên",
+                "phone": "0955503109",
+                "zipcode": "24209"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hòa Bình",
+                "address": "Xã Hòa Bình, Huyện Đồng Hỷ, Tỉnh Thái Nguyên",
+                "phone": "0355551099",
+                "zipcode": "24212"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Lạng Sơn",
+        "address": "Xã Hồng Thái, Huyện Văn Lãng, Tỉnh Lạng Sơn",
+        "phone": "0755578171",
+        "zipcode": "25221",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Thụy Hùng",
+                "address": "Xã Thụy Hùng, Huyện Văn Lãng, Tỉnh Lạng Sơn",
+                "phone": "0755525238",
+                "zipcode": "25209"
+            },
+            {
+                "name": "Điểm giao dịch Thị trấn Na Sầm",
+                "address": "Thị trấn Na Sầm, Huyện Văn Lãng, Tỉnh Lạng Sơn",
+                "phone": "0355540739",
+                "zipcode": "25206"
+            },
+            {
+                "name": "Điểm giao dịch Xã Trùng Khánh",
+                "address": "Xã Trùng Khánh, Huyện Văn Lãng, Tỉnh Lạng Sơn",
+                "phone": "0855542616",
+                "zipcode": "25210"
+            },
+            {
+                "name": "Điểm giao dịch Xã Nhạc Kỳ",
+                "address": "Xã Nhạc Kỳ, Huyện Văn Lãng, Tỉnh Lạng Sơn",
+                "phone": "0955595101",
+                "zipcode": "25222"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hồng Thái",
+                "address": "Xã Hồng Thái, Huyện Văn Lãng, Tỉnh Lạng Sơn",
+                "phone": "0555564519",
+                "zipcode": "25221"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Quảng Ninh",
+        "address": "Xã Liên Hòa, Thị xã Quảng Yên, Tỉnh Quảng Ninh",
+        "phone": "0355598031",
+        "zipcode": "02222",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Hoàng Tân",
+                "address": "Xã Hoàng Tân, Thị xã Quảng Yên, Tỉnh Quảng Ninh",
+                "phone": "0555566158",
+                "zipcode": "02208"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hiệp Hòa",
+                "address": "Xã Hiệp Hòa, Thị xã Quảng Yên, Tỉnh Quảng Ninh",
+                "phone": "0355582374",
+                "zipcode": "02215"
+            },
+            {
+                "name": "Điểm giao dịch Phường Hà An",
+                "address": "Phường Hà An, Thị xã Quảng Yên, Tỉnh Quảng Ninh",
+                "phone": "0755577355",
+                "zipcode": "02207"
+            },
+            {
+                "name": "Điểm giao dịch Phường Yên Hải",
+                "address": "Phường Yên Hải, Thị xã Quảng Yên, Tỉnh Quảng Ninh",
+                "phone": "0855535190",
+                "zipcode": "02218"
+            },
+            {
+                "name": "Điểm giao dịch Phường Đông Mai",
+                "address": "Phường Đông Mai, Thị xã Quảng Yên, Tỉnh Quảng Ninh",
+                "phone": "0855588611",
+                "zipcode": "02212"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bắc Giang",
+        "address": "Thị trấn Thắng, Huyện Hiệp Hòa, Tỉnh Bắc Giang",
+        "phone": "0755533516",
+        "zipcode": "26906",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Hoàng Vân",
+                "address": "Xã Hoàng Vân, Huyện Hiệp Hòa, Tỉnh Bắc Giang",
+                "phone": "0555519416",
+                "zipcode": "26912"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hùng Sơn",
+                "address": "Xã Hùng Sơn, Huyện Hiệp Hòa, Tỉnh Bắc Giang",
+                "phone": "0355582374",
+                "zipcode": "26918"
+            },
+            {
+                "name": "Điểm giao dịch Xã Thanh Vân",
+                "address": "Xã Thanh Vân, Huyện Hiệp Hòa, Tỉnh Bắc Giang",
+                "phone": "0755577153",
+                "zipcode": "26910"
+            },
+            {
+                "name": "Điểm giao dịch Xã Mai Trung",
+                "address": "Xã Mai Trung, Huyện Hiệp Hòa, Tỉnh Bắc Giang",
+                "phone": "0555597774",
+                "zipcode": "26923"
+            },
+            {
+                "name": "Điểm giao dịch Xã Ngọc Sơn",
+                "address": "Xã Ngọc Sơn, Huyện Hiệp Hòa, Tỉnh Bắc Giang",
+                "phone": "0555501147",
+                "zipcode": "26907"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Phú Thọ",
+        "address": "Xã Đào Xá, Huyện Thanh Thuỷ, Tỉnh Phú Thọ",
+        "phone": "0555584729",
+        "zipcode": "35860",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Đồng Trung",
+                "address": "Xã Đồng Trung, Huyện Thanh Thuỷ, Tỉnh Phú Thọ",
+                "phone": "0355599168",
+                "zipcode": "47818"
+            },
+            {
+                "name": "Điểm giao dịch Thị trấn Thanh Thủy",
+                "address": "Thị trấn Thanh Thủy, Huyện Thanh Thuỷ, Tỉnh Phú Thọ",
+                "phone": "0555591626",
+                "zipcode": "35856"
+            },
+            {
+                "name": "Điểm giao dịch Xã Thạch Đồng",
+                "address": "Xã Thạch Đồng, Huyện Thanh Thuỷ, Tỉnh Phú Thọ",
+                "phone": "0555566521",
+                "zipcode": "35858"
+            },
+            {
+                "name": "Điểm giao dịch Xã Đào Xá",
+                "address": "Xã Đào Xá, Huyện Thanh Thuỷ, Tỉnh Phú Thọ",
+                "phone": "0555561654",
+                "zipcode": "35860"
+            },
+            {
+                "name": "Điểm giao dịch Xã Bảo Yên",
+                "address": "Xã Bảo Yên, Huyện Thanh Thuỷ, Tỉnh Phú Thọ",
+                "phone": "0555511516",
+                "zipcode": "35870"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Vĩnh Phúc",
+        "address": "Xã Quất Lưu, Huyện Bình Xuyên, Tỉnh Vĩnh Phúc",
+        "phone": "0355570458",
+        "zipcode": "15814",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Thị trấn Bá Hiến",
+                "address": "Thị trấn Bá Hiến, Huyện Bình Xuyên, Tỉnh Vĩnh Phúc",
+                "phone": "0555555505",
+                "zipcode": "15808"
+            },
+            {
+                "name": "Điểm giao dịch Thị trấn Đạo Đức",
+                "address": "Thị trấn Đạo Đức, Huyện Bình Xuyên, Tỉnh Vĩnh Phúc",
+                "phone": "0555500202",
+                "zipcode": "15818"
+            },
+            {
+                "name": "Điểm giao dịch Thị trấn Gia Khánh",
+                "address": "Thị trấn Gia Khánh, Huyện Bình Xuyên, Tỉnh Vĩnh Phúc",
+                "phone": "0955560106",
+                "zipcode": "15811"
+            },
+            {
+                "name": "Điểm giao dịch Xã Trung Mỹ",
+                "address": "Xã Trung Mỹ, Huyện Bình Xuyên, Tỉnh Vĩnh Phúc",
+                "phone": "0855535190",
+                "zipcode": "15809"
+            },
+            {
+                "name": "Điểm giao dịch Xã Tân Phong",
+                "address": "Xã Tân Phong, Huyện Bình Xuyên, Tỉnh Vĩnh Phúc",
+                "phone": "0555576408",
+                "zipcode": "15815"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bắc Ninh",
+        "address": "Phường Hương Mạc, Thành phố Từ Sơn, Tỉnh Bắc Ninh",
+        "phone": "0955531815",
+        "zipcode": "16310",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Phường Đồng Nguyên",
+                "address": "Phường Đồng Nguyên, Thành phố Từ Sơn, Tỉnh Bắc Ninh",
+                "phone": "0755524154",
+                "zipcode": "16307"
+            },
+            {
+                "name": "Điểm giao dịch Phường Châu Khê",
+                "address": "Phường Châu Khê, Thành phố Từ Sơn, Tỉnh Bắc Ninh",
+                "phone": "0555561654",
+                "zipcode": "16313"
+            },
+            {
+                "name": "Điểm giao dịch Phường Tam Sơn",
+                "address": "Phường Tam Sơn, Thành phố Từ Sơn, Tỉnh Bắc Ninh",
+                "phone": "0855583428",
+                "zipcode": "25110"
+            },
+            {
+                "name": "Điểm giao dịch Phường Phù Chẩn",
+                "address": "Phường Phù Chẩn, Thành phố Từ Sơn, Tỉnh Bắc Ninh",
+                "phone": "0355544835",
+                "zipcode": "16316"
+            },
+            {
+                "name": "Điểm giao dịch Phường Tương Giang",
+                "address": "Phường Tương Giang, Thành phố Từ Sơn, Tỉnh Bắc Ninh",
+                "phone": "0555519416",
+                "zipcode": "16308"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Hải Dương",
+        "address": "Xã Ngũ Hùng, Huyện Thanh Miện, Tỉnh Hải Dương",
+        "phone": "0555517553",
+        "zipcode": "03772",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Thị trấn Thanh Miện",
+                "address": "Thị trấn Thanh Miện, Huyện Thanh Miện, Tỉnh Hải Dương",
+                "phone": "0555584266",
+                "zipcode": "03756"
+            },
+            {
+                "name": "Điểm giao dịch Xã Tứ Cường",
+                "address": "Xã Tứ Cường, Huyện Thanh Miện, Tỉnh Hải Dương",
+                "phone": "0755577355",
+                "zipcode": "03773"
+            },
+            {
+                "name": "Điểm giao dịch Xã Chi Lăng Bắc",
+                "address": "Xã Chi Lăng Bắc, Huyện Thanh Miện, Tỉnh Hải Dương",
+                "phone": "0555597774",
+                "zipcode": "03767"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hồng Phong",
+                "address": "Xã Hồng Phong, Huyện Thanh Miện, Tỉnh Hải Dương",
+                "phone": "0755505233",
+                "zipcode": "03761"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phạm Kha",
+                "address": "Xã Phạm Kha, Huyện Thanh Miện, Tỉnh Hải Dương",
+                "phone": "0955531815",
+                "zipcode": "03758"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Thành phố Hải Phòng",
+        "address": "Thị trấn Trường Sơn, Huyện An Lão, Thành phố Hải Phòng",
+        "phone": "0555576408",
+        "zipcode": "04521",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Quang Trung",
+                "address": "Xã Quang Trung, Huyện An Lão, Thành phố Hải Phòng",
+                "phone": "0555597774",
+                "zipcode": "04512"
+            },
+            {
+                "name": "Điểm giao dịch Thị trấn Trường Sơn",
+                "address": "Thị trấn Trường Sơn, Huyện An Lão, Thành phố Hải Phòng",
+                "phone": "0355594725",
+                "zipcode": "04521"
+            },
+            {
+                "name": "Điểm giao dịch Xã Tân Dân",
+                "address": "Xã Tân Dân, Huyện An Lão, Thành phố Hải Phòng",
+                "phone": "0355520370",
+                "zipcode": "04520"
+            },
+            {
+                "name": "Điểm giao dịch Xã Bát Trang",
+                "address": "Xã Bát Trang, Huyện An Lão, Thành phố Hải Phòng",
+                "phone": "0855542616",
+                "zipcode": "04510"
+            },
+            {
+                "name": "Điểm giao dịch Xã Chiến Thắng",
+                "address": "Xã Chiến Thắng, Huyện An Lão, Thành phố Hải Phòng",
+                "phone": "0555584729",
+                "zipcode": "04515"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Hưng Yên",
+        "address": "Phường Hiến Nam, Thành phố Hưng Yên, Tỉnh Hưng Yên",
+        "phone": "0355598031",
+        "zipcode": "17106",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Trung Nghĩa",
+                "address": "Xã Trung Nghĩa, Thành phố Hưng Yên, Tỉnh Hưng Yên",
+                "phone": "0555597774",
+                "zipcode": "17114"
+            },
+            {
+                "name": "Điểm giao dịch Xã Liên Phương",
+                "address": "Xã Liên Phương, Thành phố Hưng Yên, Tỉnh Hưng Yên",
+                "phone": "0755541949",
+                "zipcode": "17115"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hoàng Hanh",
+                "address": "Xã Hoàng Hanh, Thành phố Hưng Yên, Tỉnh Hưng Yên",
+                "phone": "0555553208",
+                "zipcode": "17122"
+            },
+            {
+                "name": "Điểm giao dịch Phường Hồng Châu",
+                "address": "Phường Hồng Châu, Thành phố Hưng Yên, Tỉnh Hưng Yên",
+                "phone": "0555592815",
+                "zipcode": "17110"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hùng Cường",
+                "address": "Xã Hùng Cường, Thành phố Hưng Yên, Tỉnh Hưng Yên",
+                "phone": "0555517553",
+                "zipcode": "17119"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Thái Bình",
+        "address": "Xã Văn Cẩm, Huyện Hưng Hà, Tỉnh Thái Bình",
+        "phone": "0855588611",
+        "zipcode": "06715",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Thái Hưng",
+                "address": "Xã Thái Hưng, Huyện Hưng Hà, Tỉnh Thái Bình",
+                "phone": "0955507393",
+                "zipcode": "06731"
+            },
+            {
+                "name": "Điểm giao dịch Xã Bắc Sơn",
+                "address": "Xã Bắc Sơn, Huyện Hưng Hà, Tỉnh Thái Bình",
+                "phone": "0355590019",
+                "zipcode": "06714"
+            },
+            {
+                "name": "Điểm giao dịch Xã Canh Tân",
+                "address": "Xã Canh Tân, Huyện Hưng Hà, Tỉnh Thái Bình",
+                "phone": "0555514427",
+                "zipcode": "06725"
+            },
+            {
+                "name": "Điểm giao dịch Xã Tây Đô",
+                "address": "Xã Tây Đô, Huyện Hưng Hà, Tỉnh Thái Bình",
+                "phone": "0555514427",
+                "zipcode": "06711"
+            },
+            {
+                "name": "Điểm giao dịch Xã Liên Hiệp",
+                "address": "Xã Liên Hiệp, Huyện Hưng Hà, Tỉnh Thái Bình",
+                "phone": "0555517553",
+                "zipcode": "06729"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Hà Nam",
+        "address": "Xã Tượng Lĩnh, Huyện Kim Bảng, Tỉnh Hà Nam",
+        "phone": "0555591626",
+        "zipcode": "18315",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Tân Sơn",
+                "address": "Xã Tân Sơn, Huyện Kim Bảng, Tỉnh Hà Nam",
+                "phone": "0755577153",
+                "zipcode": "18316"
+            },
+            {
+                "name": "Điểm giao dịch Xã Văn Xá",
+                "address": "Xã Văn Xá, Huyện Kim Bảng, Tỉnh Hà Nam",
+                "phone": "0355502769",
+                "zipcode": "18307"
+            },
+            {
+                "name": "Điểm giao dịch Xã Ngọc Sơn",
+                "address": "Xã Ngọc Sơn, Huyện Kim Bảng, Tỉnh Hà Nam",
+                "phone": "0955506092",
+                "zipcode": "18318"
+            },
+            {
+                "name": "Điểm giao dịch Xã Nguyễn Úy",
+                "address": "Xã Nguyễn Úy, Huyện Kim Bảng, Tỉnh Hà Nam",
+                "phone": "0555566521",
+                "zipcode": "18314"
+            },
+            {
+                "name": "Điểm giao dịch Xã Nhật Tựu",
+                "address": "Xã Nhật Tựu, Huyện Kim Bảng, Tỉnh Hà Nam",
+                "phone": "0955531952",
+                "zipcode": "18311"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Nam Định",
+        "address": "Xã Giao Thiện, Huyện Giao Thủy, Tỉnh Nam Định",
+        "phone": "0355544835",
+        "zipcode": "07823",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Giao Long",
+                "address": "Xã Giao Long, Huyện Giao Thủy, Tỉnh Nam Định",
+                "phone": "0355598031",
+                "zipcode": "07817"
+            },
+            {
+                "name": "Điểm giao dịch Xã Giao Hải",
+                "address": "Xã Giao Hải, Huyện Giao Thủy, Tỉnh Nam Định",
+                "phone": "0355535314",
+                "zipcode": "07818"
+            },
+            {
+                "name": "Điểm giao dịch Xã Giao Hà",
+                "address": "Xã Giao Hà, Huyện Giao Thủy, Tỉnh Nam Định",
+                "phone": "0355598765",
+                "zipcode": "33707"
+            },
+            {
+                "name": "Điểm giao dịch Xã Giao Tiến",
+                "address": "Xã Giao Tiến, Huyện Giao Thủy, Tỉnh Nam Định",
+                "phone": "0555514427",
+                "zipcode": "07809"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hoành Sơn",
+                "address": "Xã Hoành Sơn, Huyện Giao Thủy, Tỉnh Nam Định",
+                "phone": "0555500202",
+                "zipcode": "07807"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Ninh Bình",
+        "address": "Phường Nam Bình, Thành phố Ninh Bình, Tỉnh Ninh Bình",
+        "phone": "0955561085",
+        "zipcode": "08108",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Phường Thanh Bình",
+                "address": "Phường Thanh Bình, Thành phố Ninh Bình, Tỉnh Ninh Bình",
+                "phone": "0555579674",
+                "zipcode": "08106"
+            },
+            {
+                "name": "Điểm giao dịch Phường Nam Thành",
+                "address": "Phường Nam Thành, Thành phố Ninh Bình, Tỉnh Ninh Bình",
+                "phone": "0955587096",
+                "zipcode": "08118"
+            },
+            {
+                "name": "Điểm giao dịch Phường Ninh Sơn",
+                "address": "Phường Ninh Sơn, Thành phố Ninh Bình, Tỉnh Ninh Bình",
+                "phone": "0555576408",
+                "zipcode": "08110"
+            },
+            {
+                "name": "Điểm giao dịch Xã Ninh Phúc",
+                "address": "Xã Ninh Phúc, Thành phố Ninh Bình, Tỉnh Ninh Bình",
+                "phone": "0355591454",
+                "zipcode": "08111"
+            },
+            {
+                "name": "Điểm giao dịch Xã Ninh Nhất",
+                "address": "Xã Ninh Nhất, Thành phố Ninh Bình, Tỉnh Ninh Bình",
+                "phone": "0555551396",
+                "zipcode": "08115"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Thanh Hóa",
+        "address": "Xã Vĩnh Thịnh, Huyện Vĩnh Lộc, Tỉnh Thanh Hóa",
+        "phone": "0355502769",
+        "zipcode": "41119",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Vĩnh Hưng",
+                "address": "Xã Vĩnh Hưng, Huyện Vĩnh Lộc, Tỉnh Thanh Hóa",
+                "phone": "0855535190",
+                "zipcode": "33707"
+            },
+            {
+                "name": "Điểm giao dịch Xã Vĩnh Hùng",
+                "address": "Xã Vĩnh Hùng, Huyện Vĩnh Lộc, Tỉnh Thanh Hóa",
+                "phone": "0555574693",
+                "zipcode": "41108"
+            },
+            {
+                "name": "Điểm giao dịch Thị trấn Vĩnh Lộc",
+                "address": "Thị trấn Vĩnh Lộc, Huyện Vĩnh Lộc, Tỉnh Thanh Hóa",
+                "phone": "0755518470",
+                "zipcode": "41106"
+            },
+            {
+                "name": "Điểm giao dịch Xã Vĩnh Tiến",
+                "address": "Xã Vĩnh Tiến, Huyện Vĩnh Lộc, Tỉnh Thanh Hóa",
+                "phone": "0955531952",
+                "zipcode": "41112"
+            },
+            {
+                "name": "Điểm giao dịch Xã Vĩnh Quang",
+                "address": "Xã Vĩnh Quang, Huyện Vĩnh Lộc, Tỉnh Thanh Hóa",
+                "phone": "0355575924",
+                "zipcode": "41110"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Nghệ An",
+        "address": "Xã Phà Đánh, Huyện Kỳ Sơn, Tỉnh Nghệ An",
+        "phone": "0855509919",
+        "zipcode": "44412",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Mỹ Lý",
+                "address": "Xã Mỹ Lý, Huyện Kỳ Sơn, Tỉnh Nghệ An",
+                "phone": "0555538321",
+                "zipcode": "44419"
+            },
+            {
+                "name": "Điểm giao dịch Xã Nậm Càn",
+                "address": "Xã Nậm Càn, Huyện Kỳ Sơn, Tỉnh Nghệ An",
+                "phone": "0555564519",
+                "zipcode": "44413"
+            },
+            {
+                "name": "Điểm giao dịch Xã Na Ngoi",
+                "address": "Xã Na Ngoi, Huyện Kỳ Sơn, Tỉnh Nghệ An",
+                "phone": "0355575924",
+                "zipcode": "44425"
+            },
+            {
+                "name": "Điểm giao dịch Xã Mường Ải",
+                "address": "Xã Mường Ải, Huyện Kỳ Sơn, Tỉnh Nghệ An",
+                "phone": "0355588166",
+                "zipcode": "44424"
+            },
+            {
+                "name": "Điểm giao dịch Xã Mường Típ",
+                "address": "Xã Mường Típ, Huyện Kỳ Sơn, Tỉnh Nghệ An",
+                "phone": "0555566158",
+                "zipcode": "44423"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Hà Tĩnh",
+        "address": "Xã Tân Hương, Huyện Đức Thọ, Tỉnh Hà Tĩnh",
+        "phone": "0355592241",
+        "zipcode": "45733",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã An Dũng",
+                "address": "Xã An Dũng, Huyện Đức Thọ, Tỉnh Hà Tĩnh",
+                "phone": "0855501766",
+                "zipcode": "45729"
+            },
+            {
+                "name": "Điểm giao dịch Xã Đức Lạng",
+                "address": "Xã Đức Lạng, Huyện Đức Thọ, Tỉnh Hà Tĩnh",
+                "phone": "0555517933",
+                "zipcode": "45732"
+            },
+            {
+                "name": "Điểm giao dịch Xã Tân Dân",
+                "address": "Xã Tân Dân, Huyện Đức Thọ, Tỉnh Hà Tĩnh",
+                "phone": "0955533037",
+                "zipcode": "45706"
+            },
+            {
+                "name": "Điểm giao dịch Xã Liên Minh",
+                "address": "Xã Liên Minh, Huyện Đức Thọ, Tỉnh Hà Tĩnh",
+                "phone": "0555514427",
+                "zipcode": "45707"
+            },
+            {
+                "name": "Điểm giao dịch Xã Quang Vĩnh",
+                "address": "Xã Quang Vĩnh, Huyện Đức Thọ, Tỉnh Hà Tĩnh",
+                "phone": "0855583428",
+                "zipcode": "45709"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Quảng Bình",
+        "address": "Xã Phú Định, Huyện Bố Trạch, Tỉnh Quảng Bình",
+        "phone": "0555599992",
+        "zipcode": "47234",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Liên Trạch",
+                "address": "Xã Liên Trạch, Huyện Bố Trạch, Tỉnh Quảng Bình",
+                "phone": "0755577355",
+                "zipcode": "47226"
+            },
+            {
+                "name": "Điểm giao dịch Xã Thanh Trạch",
+                "address": "Xã Thanh Trạch, Huyện Bố Trạch, Tỉnh Quảng Bình",
+                "phone": "0555584266",
+                "zipcode": "47211"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phú Định",
+                "address": "Xã Phú Định, Huyện Bố Trạch, Tỉnh Quảng Bình",
+                "phone": "0555514427",
+                "zipcode": "47234"
+            },
+            {
+                "name": "Điểm giao dịch Xã Đức Trạch",
+                "address": "Xã Đức Trạch, Huyện Bố Trạch, Tỉnh Quảng Bình",
+                "phone": "0755505233",
+                "zipcode": "47209"
+            },
+            {
+                "name": "Điểm giao dịch Thị trấn NT Việt Trung",
+                "address": "Thị trấn NT Việt Trung, Huyện Bố Trạch, Tỉnh Quảng Bình",
+                "phone": "0755577153",
+                "zipcode": "33707"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Quảng Trị",
+        "address": "Xã Gio Mỹ, Huyện Gio Linh, Tỉnh Quảng Trị",
+        "phone": "0355598765",
+        "zipcode": "48307",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Linh Hải",
+                "address": "Xã Linh Hải, Huyện Gio Linh, Tỉnh Quảng Trị",
+                "phone": "0755577153",
+                "zipcode": "48325"
+            },
+            {
+                "name": "Điểm giao dịch Xã Gio Châu",
+                "address": "Xã Gio Châu, Huyện Gio Linh, Tỉnh Quảng Trị",
+                "phone": "0355570458",
+                "zipcode": "48315"
+            },
+            {
+                "name": "Điểm giao dịch Xã Trung Hải",
+                "address": "Xã Trung Hải, Huyện Gio Linh, Tỉnh Quảng Trị",
+                "phone": "0855535190",
+                "zipcode": "48309"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phong Bình",
+                "address": "Xã Phong Bình, Huyện Gio Linh, Tỉnh Quảng Trị",
+                "phone": "0555594646",
+                "zipcode": "48310"
+            },
+            {
+                "name": "Điểm giao dịch Xã Linh Trường",
+                "address": "Xã Linh Trường, Huyện Gio Linh, Tỉnh Quảng Trị",
+                "phone": "0555584729",
+                "zipcode": "48306"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Thừa Thiên Huế",
+        "address": "Xã Quảng An, Huyện Quảng Điền, Tỉnh Thừa Thiên Huế",
+        "phone": "0955574980",
+        "zipcode": "49215",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Quảng Thành",
+                "address": "Xã Quảng Thành, Huyện Quảng Điền, Tỉnh Thừa Thiên Huế",
+                "phone": "0355592241",
+                "zipcode": "49216"
+            },
+            {
+                "name": "Điểm giao dịch Xã Quảng Phước",
+                "address": "Xã Quảng Phước, Huyện Quảng Điền, Tỉnh Thừa Thiên Huế",
+                "phone": "0355544835",
+                "zipcode": "33707"
+            },
+            {
+                "name": "Điểm giao dịch Xã Quảng Lợi",
+                "address": "Xã Quảng Lợi, Huyện Quảng Điền, Tỉnh Thừa Thiên Huế",
+                "phone": "0955533037",
+                "zipcode": "49211"
+            },
+            {
+                "name": "Điểm giao dịch Xã Quảng Ngạn",
+                "address": "Xã Quảng Ngạn, Huyện Quảng Điền, Tỉnh Thừa Thiên Huế",
+                "phone": "0555574693",
+                "zipcode": "49209"
+            },
+            {
+                "name": "Điểm giao dịch Xã Quảng An",
+                "address": "Xã Quảng An, Huyện Quảng Điền, Tỉnh Thừa Thiên Huế",
+                "phone": "0555514427",
+                "zipcode": "49215"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Thành phố Đà Nẵng",
+        "address": "Xã Hòa Nhơn, Huyện Hòa Vang, Thành phố Đà Nẵng",
+        "phone": "0555592673",
+        "zipcode": "50807",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Hòa Châu",
+                "address": "Xã Hòa Châu, Huyện Hòa Vang, Thành phố Đà Nẵng",
+                "phone": "0355575083",
+                "zipcode": "50815"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hòa Khương",
+                "address": "Xã Hòa Khương, Huyện Hòa Vang, Thành phố Đà Nẵng",
+                "phone": "0555538473",
+                "zipcode": "50813"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hòa Tiến",
+                "address": "Xã Hòa Tiến, Huyện Hòa Vang, Thành phố Đà Nẵng",
+                "phone": "0555518979",
+                "zipcode": "50814"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hòa Phú",
+                "address": "Xã Hòa Phú, Huyện Hòa Vang, Thành phố Đà Nẵng",
+                "phone": "0955531952",
+                "zipcode": "50812"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hòa Liên",
+                "address": "Xã Hòa Liên, Huyện Hòa Vang, Thành phố Đà Nẵng",
+                "phone": "0555518979",
+                "zipcode": "50809"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Quảng Nam",
+        "address": "Xã Hiệp Thuận, Huyện Hiệp Đức, Tỉnh Quảng Nam",
+        "phone": "0555519416",
+        "zipcode": "52210",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Hiệp Thuận",
+                "address": "Xã Hiệp Thuận, Huyện Hiệp Đức, Tỉnh Quảng Nam",
+                "phone": "0555576408",
+                "zipcode": "52210"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phước Trà",
+                "address": "Xã Phước Trà, Huyện Hiệp Đức, Tỉnh Quảng Nam",
+                "phone": "0355535314",
+                "zipcode": "52214"
+            },
+            {
+                "name": "Điểm giao dịch Xã Quế Thọ",
+                "address": "Xã Quế Thọ, Huyện Hiệp Đức, Tỉnh Quảng Nam",
+                "phone": "0355587452",
+                "zipcode": "52209"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phước Gia",
+                "address": "Xã Phước Gia, Huyện Hiệp Đức, Tỉnh Quảng Nam",
+                "phone": "0955502771",
+                "zipcode": "52215"
+            },
+            {
+                "name": "Điểm giao dịch Xã Bình Lâm",
+                "address": "Xã Bình Lâm, Huyện Hiệp Đức, Tỉnh Quảng Nam",
+                "phone": "0355591454",
+                "zipcode": "52208"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Quảng Ngãi",
+        "address": "Xã Bình Tân Phú, Huyện Bình Sơn, Tỉnh Quảng Ngãi",
+        "phone": "0555538856",
+        "zipcode": "10000",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Bình Trị",
+                "address": "Xã Bình Trị, Huyện Bình Sơn, Tỉnh Quảng Ngãi",
+                "phone": "0555519416",
+                "zipcode": "53329"
+            },
+            {
+                "name": "Điểm giao dịch Xã Bình Hải",
+                "address": "Xã Bình Hải, Huyện Bình Sơn, Tỉnh Quảng Ngãi",
+                "phone": "0355557261",
+                "zipcode": "53328"
+            },
+            {
+                "name": "Điểm giao dịch Xã Bình Mỹ",
+                "address": "Xã Bình Mỹ, Huyện Bình Sơn, Tỉnh Quảng Ngãi",
+                "phone": "0555517553",
+                "zipcode": "53323"
+            },
+            {
+                "name": "Điểm giao dịch Xã Bình Dương",
+                "address": "Xã Bình Dương, Huyện Bình Sơn, Tỉnh Quảng Ngãi",
+                "phone": "0355598031",
+                "zipcode": "53308"
+            },
+            {
+                "name": "Điểm giao dịch Xã Bình Hiệp",
+                "address": "Xã Bình Hiệp, Huyện Bình Sơn, Tỉnh Quảng Ngãi",
+                "phone": "0555581119",
+                "zipcode": "53324"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bình Định",
+        "address": "Xã Vĩnh Sơn, Huyện Vĩnh Thạnh, Tỉnh Bình Định",
+        "phone": "0955595101",
+        "zipcode": "55714",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Vĩnh Thuận",
+                "address": "Xã Vĩnh Thuận, Huyện Vĩnh Thạnh, Tỉnh Bình Định",
+                "phone": "0355588166",
+                "zipcode": "55710"
+            },
+            {
+                "name": "Điểm giao dịch Thị trấn Vĩnh Thạnh",
+                "address": "Thị trấn Vĩnh Thạnh, Huyện Vĩnh Thạnh, Tỉnh Bình Định",
+                "phone": "0355502769",
+                "zipcode": "33707"
+            },
+            {
+                "name": "Điểm giao dịch Xã Vĩnh Kim",
+                "address": "Xã Vĩnh Kim, Huyện Vĩnh Thạnh, Tỉnh Bình Định",
+                "phone": "0555555505",
+                "zipcode": "55713"
+            },
+            {
+                "name": "Điểm giao dịch Xã Vĩnh Hiệp",
+                "address": "Xã Vĩnh Hiệp, Huyện Vĩnh Thạnh, Tỉnh Bình Định",
+                "phone": "0355594725",
+                "zipcode": "55708"
+            },
+            {
+                "name": "Điểm giao dịch Xã Vĩnh Quang",
+                "address": "Xã Vĩnh Quang, Huyện Vĩnh Thạnh, Tỉnh Bình Định",
+                "phone": "0355575083",
+                "zipcode": "55711"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Phú Yên",
+        "address": "Xã Ea Lâm, Huyện Sông Hinh, Tỉnh Phú Yên",
+        "phone": "0955507393",
+        "zipcode": "56616",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Sơn Giang",
+                "address": "Xã Sơn Giang, Huyện Sông Hinh, Tỉnh Phú Yên",
+                "phone": "0355575083",
+                "zipcode": "56609"
+            },
+            {
+                "name": "Điểm giao dịch Xã Ealy",
+                "address": "Xã Ealy, Huyện Sông Hinh, Tỉnh Phú Yên",
+                "phone": "0755577355",
+                "zipcode": "56614"
+            },
+            {
+                "name": "Điểm giao dịch Xã EaBar",
+                "address": "Xã EaBar, Huyện Sông Hinh, Tỉnh Phú Yên",
+                "phone": "0955557581",
+                "zipcode": "56613"
+            },
+            {
+                "name": "Điểm giao dịch Thị trấn Hai Riêng",
+                "address": "Thị trấn Hai Riêng, Huyện Sông Hinh, Tỉnh Phú Yên",
+                "phone": "0955533037",
+                "zipcode": "56606"
+            },
+            {
+                "name": "Điểm giao dịch Xã Ea Bá",
+                "address": "Xã Ea Bá, Huyện Sông Hinh, Tỉnh Phú Yên",
+                "phone": "0755538614",
+                "zipcode": "56615"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Khánh Hòa",
+        "address": "Phường Vĩnh Nguyên, Thành phố Nha Trang, Tỉnh Khánh Hòa",
+        "phone": "0355587191",
+        "zipcode": "57129",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Phường Vĩnh Phước",
+                "address": "Phường Vĩnh Phước, Thành phố Nha Trang, Tỉnh Khánh Hòa",
+                "phone": "0755538614",
+                "zipcode": "57109"
+            },
+            {
+                "name": "Điểm giao dịch Phường Vĩnh Hòa",
+                "address": "Phường Vĩnh Hòa, Thành phố Nha Trang, Tỉnh Khánh Hòa",
+                "phone": "0755577355",
+                "zipcode": "57111"
+            },
+            {
+                "name": "Điểm giao dịch Phường Ngọc Hiệp",
+                "address": "Phường Ngọc Hiệp, Thành phố Nha Trang, Tỉnh Khánh Hòa",
+                "phone": "0355537047",
+                "zipcode": "57115"
+            },
+            {
+                "name": "Điểm giao dịch Phường Tân Lập",
+                "address": "Phường Tân Lập, Thành phố Nha Trang, Tỉnh Khánh Hòa",
+                "phone": "0955561085",
+                "zipcode": "57127"
+            },
+            {
+                "name": "Điểm giao dịch Phường Lộc Thọ",
+                "address": "Phường Lộc Thọ, Thành phố Nha Trang, Tỉnh Khánh Hòa",
+                "phone": "0555584266",
+                "zipcode": "57106"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Ninh Thuận",
+        "address": "Xã Phước Ninh, Huyện Thuận Nam, Tỉnh Ninh Thuận",
+        "phone": "0755577153",
+        "zipcode": "59709",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Nhị Hà",
+                "address": "Xã Nhị Hà, Huyện Thuận Nam, Tỉnh Ninh Thuận",
+                "phone": "0855542616",
+                "zipcode": "59708"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phước Diêm",
+                "address": "Xã Phước Diêm, Huyện Thuận Nam, Tỉnh Ninh Thuận",
+                "phone": "0555500202",
+                "zipcode": "59712"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phước Ninh",
+                "address": "Xã Phước Ninh, Huyện Thuận Nam, Tỉnh Ninh Thuận",
+                "phone": "0355598031",
+                "zipcode": "59709"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phước Dinh",
+                "address": "Xã Phước Dinh, Huyện Thuận Nam, Tỉnh Ninh Thuận",
+                "phone": "0855535190",
+                "zipcode": "59713"
+            },
+            {
+                "name": "Điểm giao dịch Xã Cà Ná",
+                "address": "Xã Cà Ná, Huyện Thuận Nam, Tỉnh Ninh Thuận",
+                "phone": "0755541949",
+                "zipcode": "59711"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bình Thuận",
+        "address": "Xã Tân Thuận, Huyện Hàm Thuận Nam, Tỉnh Bình Thuận",
+        "phone": "0355575924",
+        "zipcode": "77716",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Hàm Cường",
+                "address": "Xã Hàm Cường, Huyện Hàm Thuận Nam, Tỉnh Bình Thuận",
+                "phone": "0355520370",
+                "zipcode": "77708"
+            },
+            {
+                "name": "Điểm giao dịch Xã Tân Thuận",
+                "address": "Xã Tân Thuận, Huyện Hàm Thuận Nam, Tỉnh Bình Thuận",
+                "phone": "0955502771",
+                "zipcode": "77716"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hàm Mỹ",
+                "address": "Xã Hàm Mỹ, Huyện Hàm Thuận Nam, Tỉnh Bình Thuận",
+                "phone": "0555574693",
+                "zipcode": "77709"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hàm Minh",
+                "address": "Xã Hàm Minh, Huyện Hàm Thuận Nam, Tỉnh Bình Thuận",
+                "phone": "0555551396",
+                "zipcode": "77707"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hàm Thạnh",
+                "address": "Xã Hàm Thạnh, Huyện Hàm Thuận Nam, Tỉnh Bình Thuận",
+                "phone": "0755599631",
+                "zipcode": "77714"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Kon Tum",
+        "address": "Xã Mường Hoong, Huyện Đắk Glei, Tỉnh Kon Tum",
+        "phone": "0555538473",
+        "zipcode": "60409",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Đắk KRoong",
+                "address": "Xã Đắk KRoong, Huyện Đắk Glei, Tỉnh Kon Tum",
+                "phone": "0955581083",
+                "zipcode": "60415"
+            },
+            {
+                "name": "Điểm giao dịch Xã Đắk Man",
+                "address": "Xã Đắk Man, Huyện Đắk Glei, Tỉnh Kon Tum",
+                "phone": "0555566158",
+                "zipcode": "60411"
+            },
+            {
+                "name": "Điểm giao dịch Xã Đắk Choong",
+                "address": "Xã Đắk Choong, Huyện Đắk Glei, Tỉnh Kon Tum",
+                "phone": "0555584497",
+                "zipcode": "60410"
+            },
+            {
+                "name": "Điểm giao dịch Xã Mường Hoong",
+                "address": "Xã Mường Hoong, Huyện Đắk Glei, Tỉnh Kon Tum",
+                "phone": "0555584729",
+                "zipcode": "60409"
+            },
+            {
+                "name": "Điểm giao dịch Thị trấn Đắk Glei",
+                "address": "Thị trấn Đắk Glei, Huyện Đắk Glei, Tỉnh Kon Tum",
+                "phone": "0755599631",
+                "zipcode": "33707"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Gia Lai",
+        "address": "Xã Ia Tul, Huyện Ia Pa, Tỉnh Gia Lai",
+        "phone": "0855569325",
+        "zipcode": "62212",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Ia Tul",
+                "address": "Xã Ia Tul, Huyện Ia Pa, Tỉnh Gia Lai",
+                "phone": "0355592241",
+                "zipcode": "62212"
+            },
+            {
+                "name": "Điểm giao dịch Xã Ia Broăi",
+                "address": "Xã Ia Broăi, Huyện Ia Pa, Tỉnh Gia Lai",
+                "phone": "0355520370",
+                "zipcode": "62211"
+            },
+            {
+                "name": "Điểm giao dịch Xã Chư Mố",
+                "address": "Xã Chư Mố, Huyện Ia Pa, Tỉnh Gia Lai",
+                "phone": "0555584729",
+                "zipcode": "62213"
+            },
+            {
+                "name": "Điểm giao dịch Xã Ia Trok",
+                "address": "Xã Ia Trok, Huyện Ia Pa, Tỉnh Gia Lai",
+                "phone": "0855501766",
+                "zipcode": "62210"
+            },
+            {
+                "name": "Điểm giao dịch Xã Kim Tân",
+                "address": "Xã Kim Tân, Huyện Ia Pa, Tỉnh Gia Lai",
+                "phone": "0355575924",
+                "zipcode": "62206"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Đắk Lắk",
+        "address": "Xã Cư San, Huyện M'Đrắk, Tỉnh Đắk Lắk",
+        "phone": "0355582374",
+        "zipcode": "64511",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Ea Lai",
+                "address": "Xã Ea Lai, Huyện M'Đrắk, Tỉnh Đắk Lắk",
+                "phone": "0355591454",
+                "zipcode": "64516"
+            },
+            {
+                "name": "Điểm giao dịch Thị trấn M'Đrắk",
+                "address": "Thị trấn M'Đrắk, Huyện M'Đrắk, Tỉnh Đắk Lắk",
+                "phone": "0755599631",
+                "zipcode": "64506"
+            },
+            {
+                "name": "Điểm giao dịch Xã Ea M' Doal",
+                "address": "Xã Ea M' Doal, Huyện M'Đrắk, Tỉnh Đắk Lắk",
+                "phone": "0355570458",
+                "zipcode": "33707"
+            },
+            {
+                "name": "Điểm giao dịch Xã Ea Riêng",
+                "address": "Xã Ea Riêng, Huyện M'Đrắk, Tỉnh Đắk Lắk",
+                "phone": "0755541949",
+                "zipcode": "64508"
+            },
+            {
+                "name": "Điểm giao dịch Xã Cư M'ta",
+                "address": "Xã Cư M'ta, Huyện M'Đrắk, Tỉnh Đắk Lắk",
+                "phone": "0755518470",
+                "zipcode": "64507"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Đắk Nông",
+        "address": "Thị trấn Đắk Mil, Huyện Đắk Mil, Tỉnh Đắk Nông",
+        "phone": "0555581119",
+        "zipcode": "65506",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Đắk R'La",
+                "address": "Xã Đắk R'La, Huyện Đắk Mil, Tỉnh Đắk Nông",
+                "phone": "0555538473",
+                "zipcode": "65514"
+            },
+            {
+                "name": "Điểm giao dịch Xã Đắk Gằn",
+                "address": "Xã Đắk Gằn, Huyện Đắk Mil, Tỉnh Đắk Nông",
+                "phone": "0355570458",
+                "zipcode": "65513"
+            },
+            {
+                "name": "Điểm giao dịch Xã Đắk N'Drót",
+                "address": "Xã Đắk N'Drót, Huyện Đắk Mil, Tỉnh Đắk Nông",
+                "phone": "0555566158",
+                "zipcode": "65512"
+            },
+            {
+                "name": "Điểm giao dịch Xã Đắk Sắk",
+                "address": "Xã Đắk Sắk, Huyện Đắk Mil, Tỉnh Đắk Nông",
+                "phone": "0755551850",
+                "zipcode": "65509"
+            },
+            {
+                "name": "Điểm giao dịch Xã Thuận An",
+                "address": "Xã Thuận An, Huyện Đắk Mil, Tỉnh Đắk Nông",
+                "phone": "0355598765",
+                "zipcode": "65507"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Lâm Đồng",
+        "address": "Xã Đạ Tồn, Huyện Đạ Huoai, Tỉnh Lâm Đồng",
+        "phone": "0355535314",
+        "zipcode": "66659",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Đạ Tồn",
+                "address": "Xã Đạ Tồn, Huyện Đạ Huoai, Tỉnh Lâm Đồng",
+                "phone": "0555517553",
+                "zipcode": "66659"
+            },
+            {
+                "name": "Điểm giao dịch Xã Đoàn Kết",
+                "address": "Xã Đoàn Kết, Huyện Đạ Huoai, Tỉnh Lâm Đồng",
+                "phone": "0555511516",
+                "zipcode": "66662"
+            },
+            {
+                "name": "Điểm giao dịch Thị trấn Đạ M'ri",
+                "address": "Thị trấn Đạ M'ri, Huyện Đạ Huoai, Tỉnh Lâm Đồng",
+                "phone": "0355542363",
+                "zipcode": "66664"
+            },
+            {
+                "name": "Điểm giao dịch Xã Ma Đa Guôi",
+                "address": "Xã Ma Đa Guôi, Huyện Đạ Huoai, Tỉnh Lâm Đồng",
+                "phone": "0755533516",
+                "zipcode": "66661"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phước Lộc",
+                "address": "Xã Phước Lộc, Huyện Đạ Huoai, Tỉnh Lâm Đồng",
+                "phone": "0755578171",
+                "zipcode": "66658"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bình Phước",
+        "address": "Phường Tân Phú, Thành phố Đồng Xoài, Tỉnh Bình Phước",
+        "phone": "0555597774",
+        "zipcode": "67106",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Tiến Hưng",
+                "address": "Xã Tiến Hưng, Thành phố Đồng Xoài, Tỉnh Bình Phước",
+                "phone": "0555555505",
+                "zipcode": "67109"
+            },
+            {
+                "name": "Điểm giao dịch Phường Tân Xuân",
+                "address": "Phường Tân Xuân, Thành phố Đồng Xoài, Tỉnh Bình Phước",
+                "phone": "0955506092",
+                "zipcode": "67111"
+            },
+            {
+                "name": "Điểm giao dịch Phường Tân Bình",
+                "address": "Phường Tân Bình, Thành phố Đồng Xoài, Tỉnh Bình Phước",
+                "phone": "0955560106",
+                "zipcode": "67110"
+            },
+            {
+                "name": "Điểm giao dịch Xã Tân Thành",
+                "address": "Xã Tân Thành, Thành phố Đồng Xoài, Tỉnh Bình Phước",
+                "phone": "0555533449",
+                "zipcode": "67108"
+            },
+            {
+                "name": "Điểm giao dịch Phường Tiến Thành",
+                "address": "Phường Tiến Thành, Thành phố Đồng Xoài, Tỉnh Bình Phước",
+                "phone": "0955595101",
+                "zipcode": "67107"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Tây Ninh",
+        "address": "Xã Phước Chỉ, Thị xã Trảng Bàng, Tỉnh Tây Ninh",
+        "phone": "0555514427",
+        "zipcode": "80914",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Phường Lộc Hưng",
+                "address": "Phường Lộc Hưng, Thị xã Trảng Bàng, Tỉnh Tây Ninh",
+                "phone": "0555592673",
+                "zipcode": "80908"
+            },
+            {
+                "name": "Điểm giao dịch Phường Gia Lộc",
+                "address": "Phường Gia Lộc, Thị xã Trảng Bàng, Tỉnh Tây Ninh",
+                "phone": "0755559305",
+                "zipcode": "80907"
+            },
+            {
+                "name": "Điểm giao dịch Phường An Hòa",
+                "address": "Phường An Hòa, Thị xã Trảng Bàng, Tỉnh Tây Ninh",
+                "phone": "0955595101",
+                "zipcode": "80906"
+            },
+            {
+                "name": "Điểm giao dịch Phường An Tịnh",
+                "address": "Phường An Tịnh, Thị xã Trảng Bàng, Tỉnh Tây Ninh",
+                "phone": "0755511409",
+                "zipcode": "33707"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phước Chỉ",
+                "address": "Xã Phước Chỉ, Thị xã Trảng Bàng, Tỉnh Tây Ninh",
+                "phone": "0355584583",
+                "zipcode": "80914"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bình Dương",
+        "address": "Xã Trừ Văn Thố, Huyện Bàu Bàng, Tỉnh Bình Dương",
+        "phone": "0955502771",
+        "zipcode": "75707",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Lai Hưng",
+                "address": "Xã Lai Hưng, Huyện Bàu Bàng, Tỉnh Bình Dương",
+                "phone": "0755525238",
+                "zipcode": "75710"
+            },
+            {
+                "name": "Điểm giao dịch Thị trấn Lai Uyên",
+                "address": "Thị trấn Lai Uyên, Huyện Bàu Bàng, Tỉnh Bình Dương",
+                "phone": "0555522327",
+                "zipcode": "75706"
+            },
+            {
+                "name": "Điểm giao dịch Xã Trừ Văn Thố",
+                "address": "Xã Trừ Văn Thố, Huyện Bàu Bàng, Tỉnh Bình Dương",
+                "phone": "0555597774",
+                "zipcode": "75707"
+            },
+            {
+                "name": "Điểm giao dịch Xã Long Nguyên",
+                "address": "Xã Long Nguyên, Huyện Bàu Bàng, Tỉnh Bình Dương",
+                "phone": "0555591626",
+                "zipcode": "75709"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hưng Hòa",
+                "address": "Xã Hưng Hòa, Huyện Bàu Bàng, Tỉnh Bình Dương",
+                "phone": "0555517553",
+                "zipcode": "75712"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Đồng Nai",
+        "address": "Xã Phú Hòa, Huyện Định Quán, Tỉnh Đồng Nai",
+        "phone": "0755599631",
+        "zipcode": "76707",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Suối Nho",
+                "address": "Xã Suối Nho, Huyện Định Quán, Tỉnh Đồng Nai",
+                "phone": "0955507393",
+                "zipcode": "76718"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phú Vinh",
+                "address": "Xã Phú Vinh, Huyện Định Quán, Tỉnh Đồng Nai",
+                "phone": "0555558822",
+                "zipcode": "76709"
+            },
+            {
+                "name": "Điểm giao dịch Xã Gia Canh",
+                "address": "Xã Gia Canh, Huyện Định Quán, Tỉnh Đồng Nai",
+                "phone": "0355588166",
+                "zipcode": "76719"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phú Cường",
+                "address": "Xã Phú Cường, Huyện Định Quán, Tỉnh Đồng Nai",
+                "phone": "0555555505",
+                "zipcode": "76715"
+            },
+            {
+                "name": "Điểm giao dịch Xã Ngọc Định",
+                "address": "Xã Ngọc Định, Huyện Định Quán, Tỉnh Đồng Nai",
+                "phone": "0955595101",
+                "zipcode": "76712"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bà Rịa - Vũng Tàu",
+        "address": "Phường Phước Trung, Thành phố Bà Rịa, Tỉnh Bà Rịa - Vũng Tàu",
+        "phone": "0555566158",
+        "zipcode": "78107",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Phường Long Tâm",
+                "address": "Phường Long Tâm, Thành phố Bà Rịa, Tỉnh Bà Rịa - Vũng Tàu",
+                "phone": "0755559305",
+                "zipcode": "78110"
+            },
+            {
+                "name": "Điểm giao dịch Phường Phước Hưng",
+                "address": "Phường Phước Hưng, Thành phố Bà Rịa, Tỉnh Bà Rịa - Vũng Tàu",
+                "phone": "0555555505",
+                "zipcode": "78114"
+            },
+            {
+                "name": "Điểm giao dịch Phường Phước Hiệp",
+                "address": "Phường Phước Hiệp, Thành phố Bà Rịa, Tỉnh Bà Rịa - Vũng Tàu",
+                "phone": "0555519416",
+                "zipcode": "78106"
+            },
+            {
+                "name": "Điểm giao dịch Phường Phước Trung",
+                "address": "Phường Phước Trung, Thành phố Bà Rịa, Tỉnh Bà Rịa - Vũng Tàu",
+                "phone": "0355587191",
+                "zipcode": "78107"
+            },
+            {
+                "name": "Điểm giao dịch Phường Long Hương",
+                "address": "Phường Long Hương, Thành phố Bà Rịa, Tỉnh Bà Rịa - Vũng Tàu",
+                "phone": "0555599992",
+                "zipcode": "78116"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Thành phố Hồ Chí Minh",
+        "address": "Xã Tân Phú Trung, Huyện Củ Chi, Thành phố Hồ Chí Minh",
+        "phone": "0555500202",
+        "zipcode": "71609",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Tân Thạnh Đông",
+                "address": "Xã Tân Thạnh Đông, Huyện Củ Chi, Thành phố Hồ Chí Minh",
+                "phone": "0755511409",
+                "zipcode": "71610"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phước Hiệp",
+                "address": "Xã Phước Hiệp, Huyện Củ Chi, Thành phố Hồ Chí Minh",
+                "phone": "0355575083",
+                "zipcode": "71626"
+            },
+            {
+                "name": "Điểm giao dịch Xã Nhuận Đức",
+                "address": "Xã Nhuận Đức, Huyện Củ Chi, Thành phố Hồ Chí Minh",
+                "phone": "0555538321",
+                "zipcode": "71618"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phú Mỹ Hưng",
+                "address": "Xã Phú Mỹ Hưng, Huyện Củ Chi, Thành phố Hồ Chí Minh",
+                "phone": "0555591637",
+                "zipcode": "71621"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phước Vĩnh An",
+                "address": "Xã Phước Vĩnh An, Huyện Củ Chi, Thành phố Hồ Chí Minh",
+                "phone": "0555501147",
+                "zipcode": "71615"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Long An",
+        "address": "Xã Tân Ân, Huyện Cần Đước, Tỉnh Long An",
+        "phone": "0755577153",
+        "zipcode": "82417",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Tân Ân",
+                "address": "Xã Tân Ân, Huyện Cần Đước, Tỉnh Long An",
+                "phone": "0355588166",
+                "zipcode": "82417"
+            },
+            {
+                "name": "Điểm giao dịch Xã Long Hòa",
+                "address": "Xã Long Hòa, Huyện Cần Đước, Tỉnh Long An",
+                "phone": "0555555505",
+                "zipcode": "82410"
+            },
+            {
+                "name": "Điểm giao dịch Xã Long Cang",
+                "address": "Xã Long Cang, Huyện Cần Đước, Tỉnh Long An",
+                "phone": "0755577355",
+                "zipcode": "82420"
+            },
+            {
+                "name": "Điểm giao dịch Xã Long Sơn",
+                "address": "Xã Long Sơn, Huyện Cần Đước, Tỉnh Long An",
+                "phone": "0555517933",
+                "zipcode": "82415"
+            },
+            {
+                "name": "Điểm giao dịch Xã Long Định",
+                "address": "Xã Long Định, Huyện Cần Đước, Tỉnh Long An",
+                "phone": "0555579674",
+                "zipcode": "82414"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Tiền Giang",
+        "address": "Xã Tân Hưng, Huyện Cái Bè, Tỉnh Tiền Giang",
+        "phone": "0955581083",
+        "zipcode": "84925",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Mỹ Tân",
+                "address": "Xã Mỹ Tân, Huyện Cái Bè, Tỉnh Tiền Giang",
+                "phone": "0355535314",
+                "zipcode": "84917"
+            },
+            {
+                "name": "Điểm giao dịch Xã An Cư",
+                "address": "Xã An Cư, Huyện Cái Bè, Tỉnh Tiền Giang",
+                "phone": "0555576408",
+                "zipcode": "84908"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hậu Mỹ Trinh",
+                "address": "Xã Hậu Mỹ Trinh, Huyện Cái Bè, Tỉnh Tiền Giang",
+                "phone": "0555584266",
+                "zipcode": "84912"
+            },
+            {
+                "name": "Điểm giao dịch Thị trấn Cái Bè",
+                "address": "Thị trấn Cái Bè, Huyện Cái Bè, Tỉnh Tiền Giang",
+                "phone": "0855535190",
+                "zipcode": "84906"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hậu Thành",
+                "address": "Xã Hậu Thành, Huyện Cái Bè, Tỉnh Tiền Giang",
+                "phone": "0755525238",
+                "zipcode": "84909"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bến Tre",
+        "address": "Xã Tân Phú Tây, Huyện Mỏ Cày Bắc, Tỉnh Bến Tre",
+        "phone": "0855535190",
+        "zipcode": "86410",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Hòa Lộc",
+                "address": "Xã Hòa Lộc, Huyện Mỏ Cày Bắc, Tỉnh Bến Tre",
+                "phone": "0555584729",
+                "zipcode": "86408"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hưng Khánh Trung A",
+                "address": "Xã Hưng Khánh Trung A, Huyện Mỏ Cày Bắc, Tỉnh Bến Tre",
+                "phone": "0955502771",
+                "zipcode": "86414"
+            },
+            {
+                "name": "Điểm giao dịch Xã Tân Phú Tây",
+                "address": "Xã Tân Phú Tây, Huyện Mỏ Cày Bắc, Tỉnh Bến Tre",
+                "phone": "0555500202",
+                "zipcode": "86410"
+            },
+            {
+                "name": "Điểm giao dịch Xã Tân Thành Bình",
+                "address": "Xã Tân Thành Bình, Huyện Mỏ Cày Bắc, Tỉnh Bến Tre",
+                "phone": "0355599168",
+                "zipcode": "86409"
+            },
+            {
+                "name": "Điểm giao dịch Xã Thạnh Ngãi",
+                "address": "Xã Thạnh Ngãi, Huyện Mỏ Cày Bắc, Tỉnh Bến Tre",
+                "phone": "0555592815",
+                "zipcode": "86411"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Trà Vinh",
+        "address": "Xã Long Vĩnh, Huyện Duyên Hải, Tỉnh Trà Vinh",
+        "phone": "0855521873",
+        "zipcode": "87711",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Đông Hải",
+                "address": "Xã Đông Hải, Huyện Duyên Hải, Tỉnh Trà Vinh",
+                "phone": "0955502771",
+                "zipcode": "87712"
+            },
+            {
+                "name": "Điểm giao dịch Xã Ngũ Lạc",
+                "address": "Xã Ngũ Lạc, Huyện Duyên Hải, Tỉnh Trà Vinh",
+                "phone": "0955578575",
+                "zipcode": "87710"
+            },
+            {
+                "name": "Điểm giao dịch Xã Long Vĩnh",
+                "address": "Xã Long Vĩnh, Huyện Duyên Hải, Tỉnh Trà Vinh",
+                "phone": "0355584583",
+                "zipcode": "87711"
+            },
+            {
+                "name": "Điểm giao dịch Thị trấn Long Thành",
+                "address": "Thị trấn Long Thành, Huyện Duyên Hải, Tỉnh Trà Vinh",
+                "phone": "0355587452",
+                "zipcode": "87706"
+            },
+            {
+                "name": "Điểm giao dịch Xã Đôn Xuân",
+                "address": "Xã Đôn Xuân, Huyện Duyên Hải, Tỉnh Trà Vinh",
+                "phone": "0755505233",
+                "zipcode": "87707"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Vĩnh Long",
+        "address": "Xã Hiếu Nghĩa, Huyện Vũng Liêm, Tỉnh Vĩnh Long",
+        "phone": "0355590019",
+        "zipcode": "85725",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Trung Nghĩa",
+                "address": "Xã Trung Nghĩa, Huyện Vũng Liêm, Tỉnh Vĩnh Long",
+                "phone": "0555592673",
+                "zipcode": "85720"
+            },
+            {
+                "name": "Điểm giao dịch Xã Trung An",
+                "address": "Xã Trung An, Huyện Vũng Liêm, Tỉnh Vĩnh Long",
+                "phone": "0555597774",
+                "zipcode": "85718"
+            },
+            {
+                "name": "Điểm giao dịch Xã Quới Thiện",
+                "address": "Xã Quới Thiện, Huyện Vũng Liêm, Tỉnh Vĩnh Long",
+                "phone": "0555584497",
+                "zipcode": "85722"
+            },
+            {
+                "name": "Điểm giao dịch Xã Trung Ngãi",
+                "address": "Xã Trung Ngãi, Huyện Vũng Liêm, Tỉnh Vĩnh Long",
+                "phone": "0555594646",
+                "zipcode": "85719"
+            },
+            {
+                "name": "Điểm giao dịch Xã Hiếu Phụng",
+                "address": "Xã Hiếu Phụng, Huyện Vũng Liêm, Tỉnh Vĩnh Long",
+                "phone": "0355544835",
+                "zipcode": "85716"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Đồng Tháp",
+        "address": "Xã An Nhơn, Huyện Châu Thành, Tỉnh Đồng Tháp",
+        "phone": "0555566521",
+        "zipcode": "81907",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Hòa Tân",
+                "address": "Xã Hòa Tân, Huyện Châu Thành, Tỉnh Đồng Tháp",
+                "phone": "0555500202",
+                "zipcode": "81917"
+            },
+            {
+                "name": "Điểm giao dịch Xã Tân Bình",
+                "address": "Xã Tân Bình, Huyện Châu Thành, Tỉnh Đồng Tháp",
+                "phone": "0555538473",
+                "zipcode": "81910"
+            },
+            {
+                "name": "Điểm giao dịch Xã An Nhơn",
+                "address": "Xã An Nhơn, Huyện Châu Thành, Tỉnh Đồng Tháp",
+                "phone": "0555519416",
+                "zipcode": "81907"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phú Long",
+                "address": "Xã Phú Long, Huyện Châu Thành, Tỉnh Đồng Tháp",
+                "phone": "0955506092",
+                "zipcode": "81913"
+            },
+            {
+                "name": "Điểm giao dịch Xã An Hiệp",
+                "address": "Xã An Hiệp, Huyện Châu Thành, Tỉnh Đồng Tháp",
+                "phone": "0555597774",
+                "zipcode": "33707"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh An Giang",
+        "address": "Thị trấn Cái Dầu, Huyện Châu Phú, Tỉnh An Giang",
+        "phone": "0755533516",
+        "zipcode": "90606",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Khánh Hòa",
+                "address": "Xã Khánh Hòa, Huyện Châu Phú, Tỉnh An Giang",
+                "phone": "0955578575",
+                "zipcode": "90609"
+            },
+            {
+                "name": "Điểm giao dịch Xã Mỹ Phú",
+                "address": "Xã Mỹ Phú, Huyện Châu Phú, Tỉnh An Giang",
+                "phone": "0355587452",
+                "zipcode": "90608"
+            },
+            {
+                "name": "Điểm giao dịch Xã Bình Long",
+                "address": "Xã Bình Long, Huyện Châu Phú, Tỉnh An Giang",
+                "phone": "0355582374",
+                "zipcode": "90615"
+            },
+            {
+                "name": "Điểm giao dịch Xã Bình Thủy",
+                "address": "Xã Bình Thủy, Huyện Châu Phú, Tỉnh An Giang",
+                "phone": "0555591626",
+                "zipcode": "90618"
+            },
+            {
+                "name": "Điểm giao dịch Xã Mỹ Đức",
+                "address": "Xã Mỹ Đức, Huyện Châu Phú, Tỉnh An Giang",
+                "phone": "0355544835",
+                "zipcode": "90610"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Kiên Giang",
+        "address": "Xã Mong Thọ A, Huyện Châu Thành, Tỉnh Kiên Giang",
+        "phone": "0355570458",
+        "zipcode": "91710",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Thạnh Lộc",
+                "address": "Xã Thạnh Lộc, Huyện Châu Thành, Tỉnh Kiên Giang",
+                "phone": "0955574980",
+                "zipcode": "91711"
+            },
+            {
+                "name": "Điểm giao dịch Xã Mong Thọ B",
+                "address": "Xã Mong Thọ B, Huyện Châu Thành, Tỉnh Kiên Giang",
+                "phone": "0355570458",
+                "zipcode": "91708"
+            },
+            {
+                "name": "Điểm giao dịch Xã Mong Thọ",
+                "address": "Xã Mong Thọ, Huyện Châu Thành, Tỉnh Kiên Giang",
+                "phone": "0755538614",
+                "zipcode": "91709"
+            },
+            {
+                "name": "Điểm giao dịch Xã Bình An",
+                "address": "Xã Bình An, Huyện Châu Thành, Tỉnh Kiên Giang",
+                "phone": "0555519416",
+                "zipcode": "91714"
+            },
+            {
+                "name": "Điểm giao dịch Xã Minh Hòa",
+                "address": "Xã Minh Hòa, Huyện Châu Thành, Tỉnh Kiên Giang",
+                "phone": "0355594725",
+                "zipcode": "91715"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Thành phố Cần Thơ",
+        "address": "Phường Thuận Hưng, Quận Thốt Nốt, Thành phố Cần Thơ",
+        "phone": "0355587452",
+        "zipcode": "94413",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Phường Thốt Nốt",
+                "address": "Phường Thốt Nốt, Quận Thốt Nốt, Thành phố Cần Thơ",
+                "phone": "0855535190",
+                "zipcode": "94406"
+            },
+            {
+                "name": "Điểm giao dịch Phường Thới Thuận",
+                "address": "Phường Thới Thuận, Quận Thốt Nốt, Thành phố Cần Thơ",
+                "phone": "0355502769",
+                "zipcode": "94407"
+            },
+            {
+                "name": "Điểm giao dịch Phường Tân Hưng",
+                "address": "Phường Tân Hưng, Quận Thốt Nốt, Thành phố Cần Thơ",
+                "phone": "0955557581",
+                "zipcode": "94414"
+            },
+            {
+                "name": "Điểm giao dịch Phường Tân Lộc",
+                "address": "Phường Tân Lộc, Quận Thốt Nốt, Thành phố Cần Thơ",
+                "phone": "0955503109",
+                "zipcode": "94412"
+            },
+            {
+                "name": "Điểm giao dịch Phường Thuận An",
+                "address": "Phường Thuận An, Quận Thốt Nốt, Thành phố Cần Thơ",
+                "phone": "0855588611",
+                "zipcode": "94408"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Hậu Giang",
+        "address": "Xã Lương Nghĩa, Huyện Long Mỹ, Tỉnh Hậu Giang",
+        "phone": "0955574980",
+        "zipcode": "95308",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Vĩnh Thuận Đông",
+                "address": "Xã Vĩnh Thuận Đông, Huyện Long Mỹ, Tỉnh Hậu Giang",
+                "phone": "0355598031",
+                "zipcode": "95313"
+            },
+            {
+                "name": "Điểm giao dịch Xã Vĩnh Viễn A",
+                "address": "Xã Vĩnh Viễn A, Huyện Long Mỹ, Tỉnh Hậu Giang",
+                "phone": "0955531815",
+                "zipcode": "95307"
+            },
+            {
+                "name": "Điểm giao dịch Xã Xà Phiên",
+                "address": "Xã Xà Phiên, Huyện Long Mỹ, Tỉnh Hậu Giang",
+                "phone": "0755538614",
+                "zipcode": "95310"
+            },
+            {
+                "name": "Điểm giao dịch Xã Thuận Hòa",
+                "address": "Xã Thuận Hòa, Huyện Long Mỹ, Tỉnh Hậu Giang",
+                "phone": "0555566158",
+                "zipcode": "95311"
+            },
+            {
+                "name": "Điểm giao dịch Xã Lương Nghĩa",
+                "address": "Xã Lương Nghĩa, Huyện Long Mỹ, Tỉnh Hậu Giang",
+                "phone": "0355537047",
+                "zipcode": "95308"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Sóc Trăng",
+        "address": "Phường 2, Thị xã Vĩnh Châu, Tỉnh Sóc Trăng",
+        "phone": "0855542616",
+        "zipcode": "96807",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Vĩnh Hiệp",
+                "address": "Xã Vĩnh Hiệp, Thị xã Vĩnh Châu, Tỉnh Sóc Trăng",
+                "phone": "0555564519",
+                "zipcode": "96812"
+            },
+            {
+                "name": "Điểm giao dịch Phường Khánh Hòa",
+                "address": "Phường Khánh Hòa, Thị xã Vĩnh Châu, Tỉnh Sóc Trăng",
+                "phone": "0555597774",
+                "zipcode": "96811"
+            },
+            {
+                "name": "Điểm giao dịch Xã Lai Hòa",
+                "address": "Xã Lai Hòa, Thị xã Vĩnh Châu, Tỉnh Sóc Trăng",
+                "phone": "0355535314",
+                "zipcode": "96815"
+            },
+            {
+                "name": "Điểm giao dịch Phường 2",
+                "address": "Phường 2, Thị xã Vĩnh Châu, Tỉnh Sóc Trăng",
+                "phone": "0555591637",
+                "zipcode": "96807"
+            },
+            {
+                "name": "Điểm giao dịch Xã Vĩnh Hải",
+                "address": "Xã Vĩnh Hải, Thị xã Vĩnh Châu, Tỉnh Sóc Trăng",
+                "phone": "0855542616",
+                "zipcode": "96809"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Bạc Liêu",
+        "address": "Xã Phong Thạnh, Thị xã Giá Rai, Tỉnh Bạc Liêu",
+        "phone": "0555594646",
+        "zipcode": "97511",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Tân Phong",
+                "address": "Xã Tân Phong, Thị xã Giá Rai, Tỉnh Bạc Liêu",
+                "phone": "0555584729",
+                "zipcode": "97513"
+            },
+            {
+                "name": "Điểm giao dịch Phường Hộ Phòng",
+                "address": "Phường Hộ Phòng, Thị xã Giá Rai, Tỉnh Bạc Liêu",
+                "phone": "0555592673",
+                "zipcode": "97507"
+            },
+            {
+                "name": "Điểm giao dịch Phường 1",
+                "address": "Phường 1, Thị xã Giá Rai, Tỉnh Bạc Liêu",
+                "phone": "0755525238",
+                "zipcode": "97506"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phong Thạnh A",
+                "address": "Xã Phong Thạnh A, Thị xã Giá Rai, Tỉnh Bạc Liêu",
+                "phone": "0355584583",
+                "zipcode": "97512"
+            },
+            {
+                "name": "Điểm giao dịch Xã Phong Thạnh",
+                "address": "Xã Phong Thạnh, Thị xã Giá Rai, Tỉnh Bạc Liêu",
+                "phone": "0555517553",
+                "zipcode": "97511"
+            }
+        ]
+    },
+    {
+        "name": "Điểm tập kết Tỉnh Cà Mau",
+        "address": "Thị trấn Cái Đôi Vàm, Huyện Phú Tân, Tỉnh Cà Mau",
+        "phone": "0355585631",
+        "zipcode": "98507",
+        "offices": [
+            {
+                "name": "Điểm giao dịch Xã Phú Mỹ",
+                "address": "Xã Phú Mỹ, Huyện Phú Tân, Tỉnh Cà Mau",
+                "phone": "0855535190",
+                "zipcode": "98512"
+            },
+            {
+                "name": "Điểm giao dịch Xã Việt Thắng",
+                "address": "Xã Việt Thắng, Huyện Phú Tân, Tỉnh Cà Mau",
+                "phone": "0955561085",
+                "zipcode": "98514"
+            },
+            {
+                "name": "Điểm giao dịch Xã Nguyễn Việt Khái",
+                "address": "Xã Nguyễn Việt Khái, Huyện Phú Tân, Tỉnh Cà Mau",
+                "phone": "0355575924",
+                "zipcode": "98506"
+            },
+            {
+                "name": "Điểm giao dịch Xã Tân Hưng Tây",
+                "address": "Xã Tân Hưng Tây, Huyện Phú Tân, Tỉnh Cà Mau",
+                "phone": "0755518470",
+                "zipcode": "98509"
+            },
+            {
+                "name": "Điểm giao dịch Xã Rạch Chèo",
+                "address": "Xã Rạch Chèo, Huyện Phú Tân, Tỉnh Cà Mau",
+                "phone": "0555500202",
+                "zipcode": "98508"
+            }
+        ]
+    }
+]
