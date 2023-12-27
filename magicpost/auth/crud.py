@@ -9,6 +9,13 @@ from magicpost.auth.schemas import UserCreate
 from magicpost.config import get_settings
 
 
+def read_users(role: Role, offset: int, limit: int, db: Session):
+    stmt = select(User).offset(offset).limit(limit)
+    if role:
+        stmt = stmt.where(User.role == role)
+    return db.exec(stmt).all()
+
+
 def create_user(user: UserCreate, authorized_user: User, db: Session):
     db_user = None
 
