@@ -33,6 +33,7 @@ class OfficeRead(BaseModel):
     phone: str = Field(pattern=PHONE_REGEX)
     zipcode: str = Field(pattern=ZIPCODE_REGEX, min_length=1, max_length=5)
     hub_id: PositiveInt
+    manager: str = Field(default=None)
     created_at: datetime = Field(default=datetime.utcnow())
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 

@@ -3,12 +3,13 @@ from typing import Optional
 from fastapi import Depends, HTTPException, status
 from sqlmodel import Session, or_, select
 
+from magicpost.auth.models import Role, User
 from magicpost.database import get_session
 from magicpost.hub.exceptions import HubNotFound
 from magicpost.hub.models import Hub
 from magicpost.item.models import Item, ItemStatus
 from magicpost.office.models import Office
-from magicpost.office.schemas import OfficeCreate, OfficeUpdate
+from magicpost.office.schemas import OfficeCreate, OfficeRead, OfficeUpdate
 
 
 def create_office(office: OfficeCreate, db: Session = Depends(get_session)):
@@ -25,8 +26,22 @@ def create_office(office: OfficeCreate, db: Session = Depends(get_session)):
 
 
 def read_offices(offset: int = 0, limit: int = 20, db: Session = Depends(get_session)):
-    offices = db.exec(select(Office).offset(offset).limit(limit)).all()
-    return offices
+    stmt = (
+        select(Office, User)
+        .where(Office.id == User.office_id)
+        .where(User.role == Role.OFFICE_MANAGER)
+        .offset(offset)
+        .limit(limit)
+    )
+
+    r_offices = []
+
+    for office, user in db.exec(stmt):
+        r_office = OfficeRead.model_validate(office.model_dump(exclude={"hub"}))
+        r_office.manager = user.username if user else None
+        r_offices.append(r_office)
+
+    return r_offices
 
 
 def read_office(office_id: int, db: Session = Depends(get_session)):

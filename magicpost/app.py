@@ -24,7 +24,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(lifespan=lifespan, title="MagicPost")
+app = FastAPI(lifespan=lifespan, title="MagicPost", docs_url="/")
 
 origins = [
     "http://localhost:3000",
