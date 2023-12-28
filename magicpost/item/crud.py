@@ -99,9 +99,9 @@ def read_items(
     if receiver_zipcode:
         filter_fields["receiver_zipcode"] = receiver_zipcode
 
-    stmt = select(Item).filter_by(**filter_fields)
+    stmt = select(Item).filter_by(**filter_fields).offset(offset).limit(limit)
 
-    return db.exec(stmt).offset(offset).limit(limit).all()
+    return db.exec(stmt).all()
 
 
 def read_item(db: Session, item_id: int):

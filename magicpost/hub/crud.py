@@ -1,10 +1,11 @@
 from fastapi import Depends
 from sqlmodel import Session, select
 
+from magicpost.auth.models import Role, User
 from magicpost.database import get_session
 from magicpost.hub.exceptions import HubNotFound
 from magicpost.hub.models import Hub
-from magicpost.hub.schemas import HubCreate, HubUpdate
+from magicpost.hub.schemas import HubCreate, HubRead, HubUpdate
 
 
 def create_hub(hub: HubCreate, db: Session = Depends(get_session)):
@@ -16,8 +17,22 @@ def create_hub(hub: HubCreate, db: Session = Depends(get_session)):
 
 
 def read_hubs(offset: int = 0, limit: int = 20, db: Session = Depends(get_session)):
-    hubs = db.exec(select(Hub).offset(offset).limit(limit)).all()
-    return hubs
+    stmt = (
+        select(Hub, User)
+        .where(User.hub_id == Hub.id)
+        .where(User.role == Role.HUB_MANAGER)
+        .offset(offset)
+        .limit(limit)
+    )
+
+    r_hubs = []
+    for hub, user in db.exec(stmt):
+        r_hub = HubRead.model_validate(hub.model_dump(exclude={"offices"}))
+        r_hub.manager = user.username if user else None
+
+        r_hubs.append(r_hub)
+
+    return r_hubs
 
 
 def read_hub(hub_id: int, db: Session = Depends(get_session)):
@@ -32,7 +47,16 @@ def update_hub(hub_id: int, hub: HubUpdate, db: Session = Depends(get_session)):
     if not hub_to_update:
         raise HubNotFound()
 
-    team_data = hub.dict(exclude_unset=True)
+    if hub.manager:
+        stmt = select(User).where(User.username == hub.manager)
+        user = db.exec(stmt).one()
+        if not user:
+            raise HubNotFound()
+
+        user.hub_id = hub_id
+        db.add(user)
+
+    team_data = hub.dict(exclude_unset=True, exclude={"manager"})
     for key, value in team_data.items():
         setattr(hub_to_update, key, value)
 

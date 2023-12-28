@@ -32,9 +32,42 @@ To run the tests, use the following command:
 pytest
 ```
 
+## Restore database & using PostgreSQL as production database.
+
+> Require psql, pg_dump (included with PostgresSQL). Only tested on Linux, PostgresSQL 16.1.
+
+1. **Connect to the database as superuser**
+    ```bash
+    sudo -iu postgresql psql
+    ```
+
+2. **Create database**
+
+    ```bash
+    sudo -iu postgresql createdb -T template0 magicpost_db
+    ```
+
+3. **Restore data**
+    ```
+    sudo -iu postgresql psql magicpost_db magicpost/data/magicpost-27-12-2023.dump
+    ```
+
+4. **Create user with permission**
+
+    ```sql
+    CREATE USER magicpost_user WITH PASSWORD 'magicpost_password';
+    GRANT ALL PRIVILEGES ON DATABASE magicpost_db TO magicpost_user;
+    ```
+
+5. **Run application with database**
+
+    ```bash
+    DATABASE_URL=postgresql://magicpost_user:magicpost_password@localhost/magicpost_db uvicorn magicpost.app:app --reload
+    ```
+
 ## Docker Support
 
-...
+Just run the dockerfile.
 
 ## API Documentation
 

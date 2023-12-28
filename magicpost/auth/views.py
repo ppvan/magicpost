@@ -1,11 +1,11 @@
 from datetime import timedelta
-from typing import Annotated
+from typing import Annotated, List
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Query
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlmodel import Session, select
 
-from magicpost.auth.crud import create_user
+from magicpost.auth.crud import create_user, read_users
 from magicpost.auth.dependencies import (
     authenticate_user,
     create_access_token,
@@ -15,7 +15,7 @@ from magicpost.auth.exceptions import (
     InvalidUsernameOrPasswordException,
     UsernameAlreadyExists,
 )
-from magicpost.auth.models import User
+from magicpost.auth.models import Role, User
 from magicpost.auth.schemas import UserCreate, UserRead
 from magicpost.database import get_session
 
@@ -62,3 +62,13 @@ def login(
 @router.get("/users/me")
 def read_users_me(current_user: Annotated[User, Depends(get_current_active_user)]):
     return current_user
+
+
+@router.get("/users/", response_model=List[UserRead])
+def get_users(
+    role: Role | None = Query(default=None),
+    offset: int = 0,
+    limit: int = Query(default=100, lte=100),
+    db: Session = Depends(get_session),
+):
+    return read_users(role=role, offset=offset, limit=limit, db=db)
