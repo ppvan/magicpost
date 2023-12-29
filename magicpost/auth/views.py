@@ -15,7 +15,7 @@ from magicpost.auth.exceptions import (
     InvalidUsernameOrPasswordException,
     UsernameAlreadyExists,
 )
-from magicpost.auth.models import Role, User
+from magicpost.auth.models import User
 from magicpost.auth.schemas import UserCreate, UserRead
 from magicpost.database import get_session
 
@@ -64,11 +64,11 @@ def read_users_me(current_user: Annotated[User, Depends(get_current_active_user)
     return current_user
 
 
-@router.get("/users/", response_model=List[UserRead])
+@router.get("/users/", response_model=List[UserRead], dependencies=[])
 def get_users(
-    role: Role | None = Query(default=None),
+    current_user: Annotated[User, Depends(get_current_active_user)],
     offset: int = 0,
     limit: int = Query(default=100, lte=100),
     db: Session = Depends(get_session),
 ):
-    return read_users(role=role, offset=offset, limit=limit, db=db)
+    return read_users(authorized_user=current_user, offset=offset, limit=limit, db=db)
