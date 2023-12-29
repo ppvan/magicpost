@@ -54,7 +54,7 @@ def get_office_items(
 def update_a_office(
     office_id: int, hub: OfficeUpdate, db: Session = Depends(get_session)
 ):
-    return update_office(office_id=office_id, hub=hub, db=db)
+    return update_office(office_id=office_id, office=hub, db=db)
 
 
 @router.delete("/{office_id}", dependencies=president_required_deps)

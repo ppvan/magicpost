@@ -50,6 +50,9 @@ class ItemRead(BaseModel):
     type: ItemType
     status: ItemStatus = Field(default=ItemStatus.PENDING)
     notes: Optional[str] = Field(default="")
+
+    current_pos: Optional[str] = Field(default="")
+
     created_at: datetime = Field(default=datetime.utcnow())
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 

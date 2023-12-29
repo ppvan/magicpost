@@ -13,16 +13,31 @@ def create_hub(hub: HubCreate, db: Session = Depends(get_session)):
     db.add(db_hub)
     db.commit()
     db.refresh(db_hub)
-    return db_hub
+
+    r_hub = HubRead.model_validate(db_hub.model_dump(exclude={"offices"}))
+
+    if hub.manager:
+        stmt = select(User).where(User.username == hub.manager)
+        user = db.exec(stmt).one()
+        if not user:
+            raise HubNotFound()
+
+        user.hub_id = db_hub.id
+        r_hub.manager = user.username
+        db.add(user)
+        db.commit()
+
+    return r_hub
 
 
 def read_hubs(offset: int = 0, limit: int = 20, db: Session = Depends(get_session)):
     stmt = (
         select(Hub, User)
-        .where(User.hub_id == Hub.id)
+        .join(User, isouter=True)
         .where(User.role == Role.HUB_MANAGER)
         .offset(offset)
         .limit(limit)
+        .order_by(Hub.id.desc())
     )
 
     r_hubs = []
@@ -70,6 +85,11 @@ def delete_hub(hub_id: int, db: Session = Depends(get_session)):
     hub = db.get(Hub, hub_id)
     if not hub:
         raise HubNotFound()
+
+    stmt = select(User).where(User.hub_id == hub_id)
+    user = db.exec(stmt).one()
+    user.hub_id = None
+    db.add(user)
 
     db.delete(hub)
     db.commit()

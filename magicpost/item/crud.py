@@ -2,10 +2,17 @@ from typing import Optional
 
 from sqlmodel import Session, select
 
+from magicpost.address.views import make_address
 from magicpost.hub.models import Hub
 from magicpost.item.exceptions import ItemNotFound, NoNextZipcodeFound
 from magicpost.item.models import Item, ItemPath, ItemPathState, ItemStatus
-from magicpost.item.schemas import ItemCreate, ItemUpdate, OrderCreate, OrderUpdate
+from magicpost.item.schemas import (
+    ItemCreate,
+    ItemRead,
+    ItemUpdate,
+    OrderCreate,
+    OrderUpdate,
+)
 from magicpost.office.exceptions import OfficeNotFound
 from magicpost.office.models import Office
 from magicpost.utils import find_next, is_valid_zipcode
@@ -85,23 +92,39 @@ def confirm_items(db: Session, order: OrderUpdate):
 
 def read_items(
     db: Session,
-    status: Optional[ItemStatus] = None,
-    sender_zipcode: Optional[str] = None,
-    receiver_zipcode: Optional[str] = None,
+    status: Optional[ItemStatus],
     offset: int = 0,
     limit: int = 100,
 ):
     filter_fields = {}
     if status:
         filter_fields["status"] = status
-    if sender_zipcode:
-        filter_fields["sender_zipcode"] = sender_zipcode
-    if receiver_zipcode:
-        filter_fields["receiver_zipcode"] = receiver_zipcode
 
-    stmt = select(Item).filter_by(**filter_fields).offset(offset).limit(limit)
+    stmt = (
+        select(Item)
+        .filter_by(**filter_fields)
+        .order_by(Item.updated_at)
+        .offset(offset)
+        .limit(limit)
+    )
 
-    return db.exec(stmt).all()
+    r_items = []
+
+    for item in db.exec(stmt):
+        path_stmt = (
+            select(ItemPath)
+            .where(ItemPath.item_id == item.id)
+            .where(ItemPath.state == ItemPathState.DONE)
+            .order_by(ItemPath.updated_at)
+        )
+        path = db.exec(path_stmt).first()
+        r_item = ItemRead.model_validate(item.model_dump())
+        r_items.append(r_item)
+
+        if path:
+            r_item.current_pos = make_address(path.zipcode).address
+
+    return r_items
 
 
 def read_item(db: Session, item_id: int):
@@ -167,8 +190,10 @@ def read_items_unconfirmed(db: Session, zipcode: str):
 def update_item_status(db: Session, item_id: int, item: ItemUpdate):
     db_item = valid_item_id(db, item_id)
     db_item.status = item.status
+
     db.add(db_item)
     db.commit()
+    db.refresh(db_item)
 
     return db_item
 

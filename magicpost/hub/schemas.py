@@ -10,6 +10,7 @@ class HubCreate(BaseModel):
     address: str = Field(min_length=1)
     phone: str = Field(pattern=PHONE_REGEX, min_length=1, max_length=10)
     zipcode: str = Field(pattern=ZIPCODE_REGEX, min_length=1, max_length=5)
+    manager: str = None
 
 
 class HubRead(BaseModel):

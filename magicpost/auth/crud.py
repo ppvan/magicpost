@@ -10,7 +10,7 @@ from magicpost.config import get_settings
 
 
 def read_users(role: Role, offset: int, limit: int, db: Session):
-    stmt = select(User).offset(offset).limit(limit)
+    stmt = select(User).order_by(User.id.desc()).offset(offset).limit(limit)
     if role:
         stmt = stmt.where(User.role == role)
     return db.exec(stmt).all()
@@ -63,7 +63,7 @@ def create_hub_manager(user: UserCreate, authorized_user: User):
     db_user = User.model_validate(user)
     db_user.hashed_password = get_password_hash(user.password)
     db_user.managed_by = authorized_user.id
-    db_user.hub_id = user.department_id
+    # db_user.hub_id = user.department_id
 
     return db_user
 
@@ -78,7 +78,7 @@ def create_office_manager(user: UserCreate, authorized_user: User):
     db_user = User.model_validate(user)
     db_user.hashed_password = get_password_hash(user.password)
     db_user.managed_by = authorized_user.id
-    db_user.office_id = user.department_id
+    # db_user.office_id = user.department_id
 
     return db_user
 
@@ -93,7 +93,7 @@ def create_hub_staff(user: UserCreate, authorized_user: User):
     db_user = User.model_validate(user)
     db_user.hashed_password = get_password_hash(user.password)
     db_user.managed_by = authorized_user.id
-    db_user.hub_id = user.department_id
+    # db_user.hub_id = user.department_id
 
     return db_user
 
@@ -108,7 +108,7 @@ def create_office_staff(user: UserCreate, authorized_user: User):
     db_user = User.model_validate(user)
     db_user.hashed_password = get_password_hash(user.password)
     db_user.managed_by = authorized_user.id
-    db_user.office_id = user.department_id
+    # db_user.office_id = user.department_id
 
     return db_user
 
