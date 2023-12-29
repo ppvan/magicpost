@@ -1,3 +1,4 @@
+import enum
 from datetime import date
 
 from sqlmodel import Session, select
@@ -9,10 +10,28 @@ from magicpost.auth.schemas import UserCreate
 from magicpost.config import get_settings
 
 
-def read_users(role: Role, offset: int, limit: int, db: Session):
+class CustomRole(str, enum.Enum):
+    PRESIDENT = "president"
+    HUB_STAFF = "hub_staff"
+    OFFICE_STAFF = "office_staff"
+
+
+def read_users(authorized_user: User, offset: int, limit: int, db: Session):
     stmt = select(User).order_by(User.id.desc()).offset(offset).limit(limit)
-    if role:
-        stmt = stmt.where(User.role == role)
+
+    if authorized_user.role in (Role.PRESIDENT, Role.ADMIN):
+        stmt = stmt
+    elif authorized_user.role in (Role.HUB_MANAGER):
+        stmt = stmt.where(User.role == Role.HUB_STAFF).where(
+            User.hub_id == authorized_user.hub_id
+        )
+    elif authorized_user.role in (Role.OFFICE_MANAGER):
+        stmt = stmt.where(User.role == Role.OFFICE_STAFF).where(
+            User.hub_id == authorized_user.office_id
+        )
+    else:
+        return []
+
     return db.exec(stmt).all()
 
 
