@@ -22,14 +22,29 @@ def create_office(office: OfficeCreate, db: Session = Depends(get_session)):
     db.add(db_office)
     db.commit()
     db.refresh(db_office)
+
+    r_office = OfficeRead.model_validate(db_office.model_dump(exclude={"hub"}))
+
+    if office.manager:
+        stmt = select(User).where(User.username == office.manager)
+        user = db.exec(stmt).one()
+        if not user:
+            raise HubNotFound()
+
+        user.office_id = db_office.id
+        r_office.manager = user.username
+        db.add(user)
+        db.commit()
+
     return db_office
 
 
-def read_offices(offset: int = 0, limit: int = 20, db: Session = Depends(get_session)):
+def read_offices(offset: int = 0, limit: int = 100, db: Session = Depends(get_session)):
     stmt = (
         select(Office, User)
         .where(Office.id == User.office_id)
         .where(User.role == Role.OFFICE_MANAGER)
+        .order_by(Office.id.desc())
         .offset(offset)
         .limit(limit)
     )
@@ -64,7 +79,19 @@ def update_office(
             detail=f"Office not found with id: {office_id}",
         )
 
-    team_data = office.dict(exclude_unset=True)
+    if office.manager:
+        stmt = select(User).where(User.username == office.manager)
+        user = db.exec(stmt).one()
+        if not user:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=f"Office not found with id: {office_id}",
+            )
+
+        user.office_id = office_id
+        db.add(user)
+
+    team_data = office.dict(exclude_unset=True, exclude={"manager"})
     for key, value in team_data.items():
         setattr(office_to_update, key, value)
 
@@ -81,6 +108,11 @@ def delete_office(office_id: int, db: Session = Depends(get_session)):
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"ServiceOffice not found with id: {office_id}",
         )
+
+    stmt = select(User).where(User.office_id == office_id)
+    user = db.exec(stmt).one()
+    user.office_id = None
+    db.add(user)
 
     db.delete(office)
     db.commit()

@@ -33,18 +33,16 @@ protected_deps = [Depends(login_required)]
 router = APIRouter(prefix="/api/v1/items", tags=["Items"])
 
 
-@router.get("", response_model=List[ItemRead])
+@router.get("/", response_model=List[ItemRead])
 def get_items(
     status: Optional[ItemStatus] = None,
-    sender_zipcode: Optional[str] = None,
-    receiver_zipcode: Optional[str] = None,
     offset: int = 0,
-    limit: int = Query(default=100, lte=100),
+    limit: int = Query(default=500, lte=500),
     db: Session = Depends(get_session),
 ):
     """Trả về tất cả đơn hàng, có thể page offset và limit, lọc để thống kê."""
 
-    return read_items(db=db, offset=offset, limit=limit)
+    return read_items(db=db, offset=offset, limit=limit, status=status)
 
 
 @router.get("/stats/{zipcode}")
@@ -84,7 +82,7 @@ def get_next_zipcode(item_id: int, zipcode: str, db: Session = Depends(get_sessi
     return read_next_zipcode(db=db, item_id=item_id, zipcode=zipcode)
 
 
-@router.get("{item_id}/paths", response_model=List[ItemPathRead])
+@router.get("/{item_id}/paths", response_model=List[ItemPathRead])
 def get_items_path(item_id: str, db: Session = Depends(get_session)):
     """Tiến trình hiện tại của đơn hàng, sắp xếp theo thời gian"""
     return read_item_paths(db=db, item_id=item_id)

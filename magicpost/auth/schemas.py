@@ -13,7 +13,6 @@ class UserCreate(BaseModel):
     birth: date
     phone: str = Field(pattern=PHONE_REGEX, min_length=1, max_length=10)
     role: Role
-    department_id: int = Field(gt=0)
 
 
 class UserRead(BaseModel):

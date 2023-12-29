@@ -11,6 +11,7 @@ class OfficeCreate(BaseModel):
     address: str = Field(min_length=1)
     phone: str = Field(pattern=PHONE_REGEX)
     zipcode: str = Field(pattern=ZIPCODE_REGEX, min_length=1, max_length=5)
+    manager: str = Field(default=None)
     hub_id: PositiveInt
 
     model_config = ConfigDict(
@@ -43,3 +44,5 @@ class OfficeUpdate(BaseModel):
     address: Optional[str] = None
     phone: Optional[str] = None
     zipcode: Optional[str] = None
+    manager: str = Field(default=None)
+    hub_id: int = Field(default=None)

@@ -97,7 +97,7 @@ def get_current_active_user(current_user: Annotated[User, Depends(get_current_us
 
 
 def login_required(current_user: Annotated[User, Depends(get_current_active_user)]):
-    if current_user.is_staff:
+    if not current_user.is_staff:
         raise InactiveUserException()
 
     return current_user

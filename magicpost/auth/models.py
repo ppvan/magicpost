@@ -27,4 +27,7 @@ class User(MyBaseModel, table=True):
     role: Role
     managed_by: Optional[int] = Field(default=None, foreign_key="user.id")
     office_id: Optional[int] = Field(default=None, foreign_key="office.id")
-    hub_id: Optional[int] = Field(default=None, foreign_key="hub.id")
+    hub_id: Optional[int] = Field(
+        default=None,
+        foreign_key="hub.id",
+    )

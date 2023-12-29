@@ -5,5 +5,5 @@ class MyBaseModel(SQLModel):
     pass
 
 
-PHONE_REGEX = r"^(03|05|07|08|09|01[2|6|8|9])([0-9]{8})$"
+PHONE_REGEX = r"^([0-9]{10})$"
 ZIPCODE_REGEX = r"^[0-9]{5}$"
