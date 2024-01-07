@@ -110,9 +110,10 @@ def delete_office(office_id: int, db: Session = Depends(get_session)):
         )
 
     stmt = select(User).where(User.office_id == office_id)
-    user = db.exec(stmt).one()
-    user.office_id = None
-    db.add(user)
+    user = db.exec(stmt).one_or_none()
+    if user:
+        user.office_id = None
+        db.add(user)
 
     db.delete(office)
     db.commit()

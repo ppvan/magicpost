@@ -87,9 +87,11 @@ def delete_hub(hub_id: int, db: Session = Depends(get_session)):
         raise HubNotFound()
 
     stmt = select(User).where(User.hub_id == hub_id)
-    user = db.exec(stmt).one()
-    user.hub_id = None
-    db.add(user)
+    user = db.exec(stmt).one_or_none()
+
+    if user:
+        user.hub_id = None
+        db.add(user)
 
     db.delete(hub)
     db.commit()

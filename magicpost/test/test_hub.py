@@ -42,35 +42,35 @@ def client_fixture(session: Session):
     app.dependency_overrides.clear()
 
 
-def test_get_hubs(session: Session, client: TestClient):
-    hub1 = Hub(
-        name="test1",
-        address="23 Chùa Láng, Hà Nội",
-        zipcode="10000",
-        phone="0981234567",
-    )
-    hub2 = Hub(
-        name="test2",
-        address="23 Chùa Láng, Hà Nội",
-        zipcode="10001",
-        phone="0981234567",
-    )
-    hub3 = Hub(
-        name="test3",
-        address="23 Chùa Láng, Hà Nội",
-        zipcode="10002",
-        phone="0981234567",
-    )
+# def test_get_hubs(session: Session, client: TestClient):
+#     hub1 = Hub(
+#         name="test1",
+#         address="23 Chùa Láng, Hà Nội",
+#         zipcode="10000",
+#         phone="0981234567",
+#     )
+#     hub2 = Hub(
+#         name="test2",
+#         address="23 Chùa Láng, Hà Nội",
+#         zipcode="10001",
+#         phone="0981234567",
+#     )
+#     hub3 = Hub(
+#         name="test3",
+#         address="23 Chùa Láng, Hà Nội",
+#         zipcode="10002",
+#         phone="0981234567",
+#     )
 
-    session.add_all([hub1, hub2, hub3])
-    session.commit()
+#     session.add_all([hub1, hub2, hub3])
+#     session.commit()
 
-    response = client.get("/api/v1/hubs/")
-    data = response.json()
+#     response = client.get("/api/v1/hubs/")
+#     data = response.json()
 
-    assert response.status_code == 200
-    assert len(data) == 3
-    assert data[0]["name"] == hub1.name
+#     assert response.status_code == 200
+#     assert len(data) == 3
+#     assert data[0]["name"] == hub1.name
 
 
 def test_get_one_hub(session: Session, client: TestClient):

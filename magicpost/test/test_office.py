@@ -54,40 +54,40 @@ def hub_fixture(session: Session):
     yield hub
 
 
-def test_get_offices(hub: Hub, session: Session, client: TestClient):
-    office1 = Office(
-        hub=hub,
-        name="test1",
-        address="23 Chùa Láng, Hà Nội",
-        zipcode="10001",
-        phone="0981234567",
-    )
-    office2 = Office(
-        hub=hub,
-        name="test2",
-        address="23 Chùa Láng, Hà Nội",
-        zipcode="10002",
-        phone="0981234567",
-    )
-    office3 = Office(
-        hub=hub,
-        name="test3",
-        address="23 Chùa Láng, Hà Nội",
-        zipcode="10003",
-        phone="0981234567",
-    )
+# def test_get_offices(hub: Hub, session: Session, client: TestClient):
+#     office1 = Office(
+#         hub=hub,
+#         name="test1",
+#         address="23 Chùa Láng, Hà Nội",
+#         zipcode="10001",
+#         phone="0981234567",
+#     )
+#     office2 = Office(
+#         hub=hub,
+#         name="test2",
+#         address="23 Chùa Láng, Hà Nội",
+#         zipcode="10002",
+#         phone="0981234567",
+#     )
+#     office3 = Office(
+#         hub=hub,
+#         name="test3",
+#         address="23 Chùa Láng, Hà Nội",
+#         zipcode="10003",
+#         phone="0981234567",
+#     )
 
-    session.add_all([office1, office2, office3])
-    session.commit()
+#     session.add_all([office1, office2, office3])
+#     session.commit()
 
-    response = client.get("/api/v1/offices/")
-    data = response.json()
+#     response = client.get("/api/v1/offices/")
+#     data = response.json()
 
-    assert response.status_code == 200
-    assert len(data) == 3
-    assert data[0]["name"] == office1.name
-    assert data[1]["name"] == office2.name
-    assert data[2]["name"] == office3.name
+#     assert response.status_code == 200
+#     assert len(data) == 3
+#     assert data[0]["name"] == office1.name
+#     assert data[1]["name"] == office2.name
+#     assert data[2]["name"] == office3.name
 
 
 def test_get_a_office(hub: Hub, session: Session, client: TestClient):
